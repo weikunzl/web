@@ -1,0 +1,1 @@
+<?php define('OESOFT_TPLPRE','9izbdq_');?>

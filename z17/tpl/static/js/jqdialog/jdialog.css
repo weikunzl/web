@@ -1,0 +1,25 @@
+/* jquery dialog样式 */
+#jd_shadow{z-index:999;position:absolute;background-color:#000000; top:0px; left:0px; filter:alpha(opacity=25);-moz-opacity:0.25;opacity:0.25;}
+#jd_dialog{z-index:1000;position:absolute;}
+#jd_dialog_s{position:absolute;top:5px;left:5px;filter:alpha(opacity=30);-moz-opacity:0.4;opacity:0.4;}
+
+/* 窗口边框样式 */
+#jd_dialog_m{position:absolute;}
+#jd_dialog_m{border:4px solid #664e47;background-color:#ffffff;}
+
+/* 标题样式 */
+#jd_dialog_m_h{
+	float:left;width:100%;height:30px;cursor:move;background-color:#fcf8ef;
+	background:url(dialog_titlebg.gif) repeat-x;
+	border-bottom:dashed 1px #dddddd;
+}
+
+/* 标题左右样式 */
+#jd_dialog_m_h_l{float:left;color:#333333;padding-top:6px;padding-left:5px;font-weight:bold;}
+#jd_dialog_m_h_r{float:right;color:#7b5035;padding-top:6px;padding-right:8px;cursor:pointer;}
+
+/* 载入内容框样式 */
+#jd_dialog_m_b{float:left;width:100%;}
+#jd_dialog_m_b_1{position:absolute;alpha(opacity=0);-moz-opacity:0.0;opacity:0.0;}
+#jd_dialog_m_b_2{ clear:both;}
+#jd_dialog_m_b_2 {background:url(jdloading.gif) no-repeat 50% 50%;display:inline-block;}

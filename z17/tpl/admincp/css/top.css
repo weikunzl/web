@@ -1,0 +1,31 @@
+@CHARSET "utf-8";
+body{background:url(../images/header_bg.png) repeat-x; font-size:12px; font-family:"verdana,Arial";  margin:0px; padding:0px; color:#ffffff; }
+div{margin:0 auto; padding:0;}
+h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p{margin:0; padding:0; border:none; list-style-type:none;}
+a{ color:#ffffff;text-decoration:none;}
+a:hover{ color:#FB9337;}
+
+/* top */
+#top {min-width:725px; position:relative; width:100%; height:69px; margin-bottom:10px;overflow:hidden; background:url(../images/header_bg.png) repeat-x;}
+#top .logo{float:left;position:absolute; left:18px; top:18px; width:118px; height:30px; text-indent:-999em; background:url(../images/logo.png) no-repeat;}
+#navs{position:relative;}
+#navs ul { margin-left:130px; padding-top:40px;}
+#navs li {float:left; display:inline; height:29px;margin-right:5px;width:90px;}
+#navs li a{float:left; width:92px;padding-top:2px;line-height:29px; font-size:14px; color:#ffffff; background:url(../images/navbgs_nohover.png) 0px 0px repeat-x; text-align:center; text-decoration:none; font-weight:;}
+#navs a.current{color:#FB9337; background:url(../images/navbgs_hover.png) repeat-x; line-height:28px;}
+
+#right{float:left;width:600px;}
+#right p { position:absolute; right:12px; top:7px; *top:5px;}
+#right p span, #header p a { float:left; margin:0 9px; *padding-top:2px;}
+#right p .line { margin:0; padding:0; color:#ccc;}
+
+#header h1 { position:absolute; left:18px; top:18px; width:215px; height:32px; text-indent:-999em; background:url(../images/logo.png) no-repeat;}
+#header ul { margin-left:277px; padding-top:40px;}
+#header li { float:left; display:inline; height:29px;margin-right:5px;  }
+#header li a { float:left; padding:2px 18px 0; line-height:29px; font-size:14px; color:#222; background-position: right -34px;}
+#header .current { background-position: 0 -68px}
+#header .current a { background-position: right -102px}
+#header p { position:absolute; right:12px; top:7px; *top:5px;}
+#header p span, #header p a { float:left; margin:0 9px; *padding-top:2px;}
+#header p .line { margin:0; padding:0; color:#ccc;}
+

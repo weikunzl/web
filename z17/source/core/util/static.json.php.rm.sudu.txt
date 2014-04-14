@@ -1,0 +1,431 @@
+<?php
+/*********************/
+/*                   */
+/*  Version : 5.1.0  */
+/*  Author  : RM     */
+/*  Comment : 071223 */
+/*                   */
+/*********************/
+
+class XJson
+{
+
+    const JSON_SLICE = 1;
+    const JSON_IN_STR = 2;
+    const JSON_IN_ARR = 4;
+    const JSON_IN_OBJ = 8;
+    const JSON_IN_CMT = 16;
+
+    public static function encode( $var )
+    {
+        switch ( ( $var ) )
+        {
+        case "boolean" :
+            return $var ? "true" : "false";
+        case "NULL" :
+            return "null";
+        case "integer" :
+            return ( integer )$var;
+        case "double" :
+        case "float" :
+            return ( double )$var;
+        case "string" :
+            if ( ( "json_encode" ) )
+            {
+                return ( $var );
+            }
+            if ( ( $enc = ( IWeb::$app->charset ) ) !== "UTF-8" )
+            {
+                $var = ( $enc, "UTF-8", $var );
+            }
+            $ascii = "";
+            $strlen_var = ( $var );
+            $c = 0;
+            for ( ; $c < $strlen_var; default :
+ switch ( TRUE )
+ {
+ ++$c )
+                {
+                    $ord_var_c = ( $var[$c] );
+                    $ascii .= "\\b";
+                    continue;
+                    $ascii .= "\\t";
+                    continue;
+                    $ascii .= "\\n";
+                    continue;
+                    $ascii .= "\\f";
+                    continue;
+                    $ascii .= "\\r";
+                    continue;
+                    $ascii .= "\\".$var[$c];
+                    continue;
+                    $ascii .= $var[$c];
+                    continue;
+                    $char = ( "C*", $ord_var_c, ( $var[$c + 1] ) );
+                    $c += 1;
+                    $utf16 = self::utf8toutf16be( $char );
+                    $ascii .= ( "\\u%04s", ( $utf16 ) );
+                    continue;
+                    $char = ( "C*", $ord_var_c, ( $var[$c + 1] ), ( $var[$c + 2] ) );
+                    $c += 2;
+                    $utf16 = self::utf8toutf16be( $char );
+                    $ascii .= ( "\\u%04s", ( $utf16 ) );
+                    continue;
+                    $char = ( "C*", $ord_var_c, ( $var[$c + 1] ), ( $var[$c + 2] ), ( $var[$c + 3] ) );
+                    $c += 3;
+                    $utf16 = self::utf8toutf16be( $char );
+                    $ascii .= ( "\\u%04s", ( $utf16 ) );
+                    continue;
+                    $char = ( "C*", $ord_var_c, ( $var[$c + 1] ), ( $var[$c + 2] ), ( $var[$c + 3] ), ( $var[$c + 4] ) );
+                    $c += 4;
+                    $utf16 = self::utf8toutf16be( $char );
+                    $ascii .= ( "\\u%04s", ( $utf16 ) );
+                }
+                continue;
+                $char = ( "C*", $ord_var_c, ( $var[$c + 1] ), ( $var[$c + 2] ), ( $var[$c + 3] ), ( $var[$c + 4] ), ( $var[$c + 5] ) );
+                $c += 5;
+                $utf16 = self::utf8toutf16be( $char );
+                $ascii .= ( "\\u%04s", ( $utf16 ) );
+            }
+            return "\"".$ascii."\"";
+        case "array" :
+            if ( ( $var ) && ( $var ) && ( $var ) !== ( 0, ( $var ) - 1 ) )
+            {
+                return "{".( ",", ( array( "JSON", "nameValue" ), ( $var ), ( $var ) ) )."}";
+            }
+            return "[".( ",", ( array( "JSON", "encode" ), $var ) )."]";
+        case "object" :
+            if ( $var instanceof Traversable )
+            {
+                $vars = array( );
+                foreach ( $var as $k => $v )
+                {
+                    $vars[$k] = $v;
+                }
+            }
+            else
+            {
+                $vars = ( $var );
+            }
+            return "{".( ",", ( array( "JSON", "nameValue" ), ( $vars ), ( $vars ) ) )."}";
+        }
+        return "";
+    }
+
+    protected static function nameValue( $name, $value )
+    {
+        return ( self::encode( $name ) ).":".self::encode( $value );
+    }
+
+    protected static function reduceString( $str )
+    {
+        $str = ( array( "#^\\s*//(.+)\$#m", "#^\\s*/\\*(.+)\\*/#Us", "#/\\*(.+)\\*/\\s*\$#Us" ), "", $str );
+        return ( $str );
+    }
+
+    public static function decode( $str, $useArray = TRUE )
+    {
+        if ( ( "json_decode" ) )
+        {
+            return ( $str, $useArray );
+        }
+        $str = self::reducestring( $str );
+        switch ( ( $str ) )
+        {
+        case "true" :
+            return TRUE;
+        case "false" :
+            return FALSE;
+        case "null" :
+            return;
+        default :
+            if ( ( $str ) )
+            {
+                return ( double )$str == ( integer )$str ? ( integer )$str : ( double )$str;
+            }
+            if ( ( "/^(\"|').+(\\1)\$/s", $str, $m ) && $m[1] == $m[2] )
+            {
+                $delim = ( $str, 0, 1 );
+                $chrs = ( $str, 1, -1 );
+                $utf8 = "";
+                $strlen_chrs = ( $chrs );
+                $c = 0;
+                for ( ; $c < $strlen_chrs; default :
+ switch ( TRUE )
+ {
+ ++$c )
+                    {
+                        $substr_chrs_c_2 = ( $chrs, $c, 2 );
+                        $ord_chrs_c = ( $chrs[$c] );
+                        $utf8 .= ( 8 );
+                        ++$c;
+                        continue;
+                        $utf8 .= ( 9 );
+                        ++$c;
+                        continue;
+                        $utf8 .= ( 10 );
+                        ++$c;
+                        continue;
+                        $utf8 .= ( 12 );
+                        ++$c;
+                        continue;
+                        $utf8 .= ( 13 );
+                        ++$c;
+                        continue;
+                        if ( $delim == "\"" && !( $substr_chrs_c_2 != "\\'" ) || ( !( $delim == "'" ) && !( $substr_chrs_c_2 != "\\\"" ) ) )
+                        {
+                            $utf8 .= $chrs[++$c];
+                        }
+                        continue;
+                        $utf16 = ( ( ( $chrs, $c + 2, 2 ) ) ).( ( ( $chrs, $c + 4, 2 ) ) );
+                        $utf8 .= self::utf16betoutf8( $utf16 );
+                        $c += 5;
+                        continue;
+                        $utf8 .= $chrs[$c];
+                        continue;
+                        $utf8 .= ( $chrs, $c, 2 );
+                        ++$c;
+                        continue;
+                        $utf8 .= ( $chrs, $c, 3 );
+                        $c += 2;
+                        continue;
+                        $utf8 .= ( $chrs, $c, 4 );
+                        $c += 3;
+                        continue;
+                        $utf8 .= ( $chrs, $c, 5 );
+                        $c += 4;
+                    }
+                    continue;
+                    $utf8 .= ( $chrs, $c, 6 );
+                    $c += 5;
+                }
+                return $utf8;
+            }
+            if ( !( "/^\\[.*\\]\$/s", $str ) || !( "/^\\{.*\\}\$/s", $str ) )
+            {
+                break;
+            }
+            if ( $str[0] == "[" )
+            {
+                $stk = array(
+                    self::JSON_IN_ARR
+                );
+                $arr = array( );
+            }
+            else if ( $useArray )
+            {
+                $stk = array(
+                    self::JSON_IN_OBJ
+                );
+                $obj = array( );
+            }
+            else
+            {
+                $stk = array(
+                    self::JSON_IN_OBJ
+                );
+                $obj = new stdClass( );
+            }
+            $chrs = ( $str, 1, -1 );
+            $chrs = self::reducestring( $chrs );
+            if ( $chrs == "" )
+            {
+                if ( $str[0] == self::JSON_IN_ARR )
+                {
+                    return $arr;
+                }
+                return $obj;
+            }
+            $strlen_chrs = ( $chrs );
+            $c = 0;
+            for ( ; $c <= $strlen_chrs; ++$c )
+            {
+                $top = ( $chrs );
+                $substr_chrs_c_2 = ( $chrs, $c, 2 );
+                if ( $c == $strlen_chrs || $chrs[$c] == "," && $top['what'] == self::JSON_SLICE )
+                {
+                    $slice = ( $chrs, $top['where'], $c - $top['where'] );
+                    if ( $top['where'] == self::JSON_IN_ARR )
+                    {
+                    }
+                    else
+                    {
+                        if ( !( $top['where'] == self::JSON_IN_OBJ ) )
+                        {
+                            continue;
+                        }
+                        if ( ( "/^\\s*([\"'].*[^\\\\][\"'])\\s*:\\s*(\\S.*),?\$/Uis", $slice, $parts ) )
+                        {
+                            $key = self::decode( $parts[1], $useArray );
+                            $val = self::decode( $parts[2], $useArray );
+                            if ( $useArray )
+                            {
+                                $obj[$key] = $val;
+                            }
+                            else
+                            {
+                                $obj->$key = $val;
+                            }
+                        }
+                        else
+                        {
+                            if ( !( "/^\\s*(\\w+)\\s*:\\s*(\\S.*),?\$/Uis", $slice, $parts ) )
+                            {
+                                continue;
+                            }
+                            $key = $parts[1];
+                            $val = self::decode( $parts[2], $useArray );
+                            if ( $useArray )
+                            {
+                                $obj[$key] = $val;
+                            }
+                            else
+                            {
+                                $obj->$key = $val;
+                            }
+                        }
+                    }
+                }
+                else if ( ( $chrs[$c] == "\"" || $chrs[$c] == "'" ) && $top['what'] != self::JSON_IN_STR )
+                {
+                }
+                else if ( $chrs[$c] == $top['delim'] && $top['what'] == self::JSON_IN_STR && ( $chrs[$c - 1] != "\\" || $chrs[$c - 1] == "\\" && $chrs[$c - 2] == "\\" ) )
+                {
+                }
+                else if ( $chrs[$c] == "[" && ( $top['what'], array(
+                        self::JSON_SLICE,
+                        self::JSON_IN_ARR,
+                        self::JSON_IN_OBJ
+                    ) ) )
+                {
+                }
+                else if ( $chrs[$c] == "]" && $top['what'] == self::JSON_IN_ARR )
+                {
+                }
+                else if ( $chrs[$c] == "{" && ( $top['what'], array(
+                        self::JSON_SLICE,
+                        self::JSON_IN_ARR,
+                        self::JSON_IN_OBJ
+                    ) ) )
+                {
+                }
+                else if ( $chrs[$c] == "}" && $top['what'] == self::JSON_IN_OBJ )
+                {
+                }
+                else
+                {
+                    if ( $substr_chrs_c_2 == "/*" && ( $top['what'], array(
+                        self::JSON_SLICE,
+                        self::JSON_IN_ARR,
+                        self::JSON_IN_OBJ
+                    ) ) )
+                    {
+                        ++$c;
+                    }
+                    else
+                    {
+                        if ( !( $substr_chrs_c_2 == "*/" ) && !( $top['what'] == self::JSON_IN_CMT ) )
+                        {
+                            continue;
+                        }
+                        ++$c;
+                        $i = $top['where'];
+                        for ( ; $i <= $c; ++$i )
+                        {
+                            $chrs = ( $chrs, " ", $i, 1 );
+                        }
+                    }
+                }
+            }
+            if ( $top['what'] == self::JSON_IN_ARR )
+            {
+                return $arr;
+            }
+            if ( !( $top['what'] == self::JSON_IN_OBJ ) )
+            {
+                break;
+            }
+            return $obj;
+        }
+    }
+
+    protected static function utf8ToUnicode( &$str )
+    {
+        $unicode = array( );
+        $values = array( );
+        $lookingFor = 1;
+        $i = 0;
+        for ( ; $i < ( $str ); ++$i )
+        {
+            $thisValue = ( $str[$i] );
+            if ( $thisValue < 128 )
+            {
+                $unicode[] = $thisValue;
+            }
+            else
+            {
+                if ( ( $values ) == 0 )
+                {
+                    $lookingFor = $thisValue < 224 ? 2 : 3;
+                }
+                $values[] = $thisValue;
+                if ( ( $values ) == $lookingFor )
+                {
+                    $number = $lookingFor == 3 ? $values[0] % 16 * 4096 + $values[1] % 64 * 64 + $values[2] % 64 : $values[0] % 32 * 64 + $values[1] % 64;
+                    $unicode[] = $number;
+                    $values = array( );
+                    $lookingFor = 1;
+                }
+            }
+        }
+        return $unicode;
+    }
+
+    protected static function unicodeToUTF8( &$str )
+    {
+        $utf8 = "";
+        foreach ( $str as $unicode )
+        {
+            if ( $unicode < 128 )
+            {
+                $utf8 .= ( $unicode );
+            }
+            else if ( $unicode < 2048 )
+            {
+                $utf8 .= ( 192 + ( $unicode - $unicode % 64 ) / 64 );
+                $utf8 .= ( 128 + $unicode % 64 );
+            }
+            else
+            {
+                $utf8 .= ( 224 + ( $unicode - $unicode % 4096 ) / 4096 );
+                $utf8 .= ( 128 + ( $unicode % 4096 - $unicode % 64 ) / 64 );
+                $utf8 .= ( 128 + $unicode % 64 );
+            }
+        }
+        return $utf8;
+    }
+
+    protected static function utf8ToUTF16BE( &$str, $bom = FALSE )
+    {
+        $out = $bom ? "þÿ" : "";
+        if ( ( "mb_convert_encoding" ) )
+        {
+            return $out.( $str, "UTF-16BE", "UTF-8" );
+        }
+        $uni = self::utf8tounicode( $str );
+        foreach ( $uni as $cp )
+        {
+            $out .= ( "n", $cp );
+        }
+        return $out;
+    }
+
+    protected static function utf16beToUTF8( &$str )
+    {
+        $uni = ( "n*", $str );
+        return self::unicodetoutf8( $uni );
+    }
+
+}
+
+?>

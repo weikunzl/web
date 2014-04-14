@@ -1,0 +1,62 @@
+/*******************************************************************************
+* 文 件 名：new.css
+* 文件用途：网站样式总控通用文件
+* 版权所有：OELOVE
+* 风格模版设计：OEdev
+*******************************************************************************/
+@charset "utf-8";
+/*样式总控文件*/
+*{padding:0px; margin:0px;}
+p,ul,li,h1,h2,h3,h4,h5,h6 {padding:0px; margin:0px;}
+ul,li {list-style:none;}
+img {border:0px;}
+body { margin:0px;font-family: Verdana, Geneva, sans-serif;font-size: 12px;color:#666666;}
+a {color:#666666;text-decoration: none;blr:expression(this.onFocus=this.blur());outline:none;}
+a:hover {text-decoration:none;color:#444444;}
+.clear {clear:both;}
+.floatl {float:left;}
+.floatr {float:right;}
+.border1 { border:1px #b9ccdb solid;}
+.warp {width:980px; margin:0 auto;}
+.blue {color:#336699;}
+.border1 {border:1px solid #dcdcdc; padding:1px;}
+.mt10 {margin-top:10px;}
+.mt15 {margin-top:15px;}
+.w298 {width:298px;}
+.clearfix:after {clear: both;content: "";display: block; font-size: 0;height: 0;line-height: 0;visibility: hidden;}
+.clear{clear:both;}
+
+
+/*页面总宽度*/
+.user-main{ width:1000px; margin: 0 auto;}
+.user-main {background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3) !important;}
+
+/*页面左边*/
+.user-main-left {
+    background: none repeat scroll 0 0 #fafafa;
+	/*
+    box-shadow: 1px 1px 10px 1px #E1E1E1;
+	*/
+	border:1px #dddddd solid;
+    float: left;
+    margin-top: 75px;
+    text-align: center;
+    width: 180px;
+}
+
+/*页面右边*/
+.user-main-right {
+	float:right;
+	margin:75px auto 0;
+	width:800px;
+}
+
+/*头部导航*/
+.user-top-nav{
+	width:100%; height:60px;  background:url("../images/96.gif") repeat scroll 0 0 #FFFFFF; position:absolute;
+	top:148px !important;
+	z-index:999;
+	margin:auto;
+	
+}
+

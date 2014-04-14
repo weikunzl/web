@@ -1,0 +1,13 @@
+@charset "utf-8";
+.pg_clearfix:after{content:".";clear:both;height:0;visibility:hidden;display:block;}            
+.pg_clearfix{display:inline-block;}                
+* html .pg_clearfix{height:1%;}        
+.pg_clearfix{display:block;}
+.pg_share{padding:5px;cursor:hand; font-size:12px;}
+.pg_share span{float:left;margin-left:10px;}
+.pg_share a{background:url("icon.gif") no-repeat 0 0;display:block;padding:0 0 0 18px;height:16px;line-height:16px;overflow:hidden;margin:2px 0 0;text-decoration:none;float:left;}
+.pg_share a:hover{color:#E05C23;}
+.pg_share .twitter{background-position:0 -16px;display:none;}
+.pg_share .renren{background-position:0 -32px;}
+.pg_share .qzone{background-position:0 -48px;}
+.pg_share .t_qq{background-position:0 -64px;}

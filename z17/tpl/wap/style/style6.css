@@ -1,0 +1,52 @@
+body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6 {margin:0; padding:0;}
+body { font-size:14px; line-height:21px; color:#000; font-family: Arial, Helvetica, sans-serif;}
+h3,h4 { line-height:26px; font-size:14px; }
+input,select { width:160px; margin:2px 0; }
+select { width:auto;}
+textarea { height:100px;word-wrap:break-word;}
+
+a,h3,h4 {color:#9D1424;}
+a {text-decoration:none; padding:1px;}
+a:hover { color:#fff; background:#9D1424;}
+a.a_img,a.a_img:hover { padding:0; background:#fff;}
+.grey {color:#999;}
+.red { color:#f00;}
+.green { color:#690;}
+.dark { color:#000;}
+.bold { font-weight:bold;}
+.double_l { margin:5px 0; padding:5px 0; border-top:1px dashed #666;}
+.submit_b { width:auto; height:auto; padding:2px 5px; }
+.index_p { padding:0 5px;}
+.logo {height:70px; background:#9D1424;}
+.slide_bg_d{ margin-bottom:5px; background:#9D1424; color:#fff;}
+.slide_bg_l{ margin-bottom:5px; padding:4px 0; background:#FFEEF0; color:#000;}
+
+.u_img100 { width:100px; height:100px; margin:5px 0;}
+.user_list { margin-top:5px; border-top:1px dashed #9D1424;}
+.page { margin-top:10px; padding:5px 0; border-top:1px dashed #9D1424;}
+.page .on {background:#9D1424; color: #FFFFFF;}
+input.page_in { display:inline-block; width:20px; height:auto; border-width:0; border-bottom:1px solid #333;} 
+.city { width:220px;}
+.top { margin:0 5px; border-bottom:1px solid #9D1424; margin-bottom:5px;}
+.bottom { margin-top:5px; padding:0 5px;}
+.bot1 { border-top:1px dotted #9D1424; padding:5px 0;}
+.bot2 { padding-top:5px; border-top-style:double; border-color:#9D1424;}
+.logo1 {height:50px; background:#9D1424;}
+.font_color { color:#9D1424;}
+.bottom_line { margin-bottom:5px; padding-bottom:5px; border-bottom: 1px solid #9D1424;}
+
+
+.t_cen { text-align:center;}
+.border_b { border-width:0 0 1px 0;}
+.u_img100 { width:80px; height:80px; margin:5px 0; }
+.u_img240 { width:240px; height:240px;}
+.u_img30 { width:30px; height:30px;}
+.icon_vip { display:inline-block; vertical-align:middle;}
+a.img_hover:hover { background:none;}
+input.width24 { display:inline-block; width:24px;}
+
+.pl_5 { padding-left:5px;}
+.op { padding:10px 0 ; border-bottom:1px dotted #9D1424; margin-bottom:5px;  }
+.op img { float:left; vertical-align:middle; padding-right:5px;}
+.slide_bg_d a { color:#fff; font-weight:normal;}
+.mb_0 { margin-bottom:0;}

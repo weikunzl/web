@@ -1,0 +1,128 @@
+html{color:#000;background:#fff}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{*font-size:100%}
+legend{color:#000}
+html,body{font:12px arial,simsun;line-height:150%;color:#000}
+img{border:0}
+b{font-weight:normal}
+.ft-b{font-weight:bold}
+.ft14{font-size:14px}
+a{color:#24d;text-decoration:none}
+a:hover{text-decoration:underline}
+a:visited{color:#551a8b}
+.menu,.nav{width:980px;margin:0 auto}
+.menu{overflow:hidden;color:#fff;height:32px;line-height:32px;background:#6a8fda url() repeat-x}
+.menu .changeCity{font-size:12px;width:144px;display:inline-block;padding:0 10px;background:#295caf url() repeat-x 0 -31px}
+.changeCity{float:left}
+.changeCity b{font-size:14px}
+.menu a{color:#fff;padding:0 2px;_padding:0}
+.menu a:visited{color:#fff}
+#userLoginMsg{float:right}
+#userLoginMsg a{display:block;float:left;padding:0 5px;background:#295caf url() repeat-x 0 -32px;margin-left:1px}
+#logo a{float:left;text-align:center;height:50px;width:161px}
+#logo a:hover{text-decoration:none}
+.nav_list li{float:left}
+.nav_list li a{display:block;height:32px;line-height:32px;padding:0 4px;float:left}
+.nav span{font-size:22px;font-weight:bold;line-height:54px;font-family:"Microsoft YaHei";_line-height:58px}
+#content{width:980px;margin:0 auto}
+#footer{padding-top:15px;padding-bottom:15px;text-align:center;clear:both}
+#footer a{color:#666}
+#footer li{padding:5px 0}
+.red{color:#f33}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}
+.clearfix:{*zoom:1}
+.fl{float:left}
+.fr{float:right}
+.twocolumn-wrap{margin:0 auto 80px auto;font-size:14px;width:980px}
+.reg-box,.login-box,.findpass-box{float:left;width:610px;padding-right:10px;border-right:1px solid #f0f0f0}
+.reg-box,.findpass-box{border-right:1px solid #eee}
+.right{width:330px;float:right;margin-top:52px}
+.tip-height{margin-top:100px}
+.login-qq{line-height:28px;margin-top:10px}
+.right h3{font-weight:bold}
+.login-box,.reg-box,.findpass-box{position:relative;margin:40px 0 0 12px;display:inline;_padding-top:6px}
+.field{text-align:left;padding-top:12px;vertical-align:middle;overflow:hidden;clear:both;_padding-top:6px}
+.field label{float:left;text-align:right;width:164px;line-height:32px}
+.findpass-box .field label{dispaly:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;text-align:right;width:152px}
+.input-text{background:#fff;float:left;border:1px solid #c8c8c8;height:26px;line-height:26px;margin-right:3px;padding:3px;vertical-align:middle;width:230px}
+.input-text-2{background:#fff;float:left;border:1px solid #c8c8c8;height:26px;line-height:26px;margin-right:3px;padding:3px;vertical-align:middle;width:100px}
+.reg-submit{padding:20px 0 0 164px}
+.findpass-submit{margin-top:12px;margin-left:156px}
+.login-submit{padding:16px 0 0 0}
+.login-btn{cursor:pointer;border:0;background:url(../images/reg-login.png) 0 -124px;display:block;height:46px;width:128px;text-indent:-9999em;float:left}
+.login-btn:hover{background-position:-1px -170px}
+.confirmpass-btn{cursor:pointer;border:0;background:url(../images/confirmpass.gif) 0 0;display:block;height:46px;width:128px;text-indent:-9999em}
+.confirmpass-btn:hover{background-position:0 -46px}
+.login-block{margin-top:50px;border-top:1px dotted #eee;padding-top:34px;margin-right:20px}
+.btn-res{margin-left:30px;height:46px;line-height:46px;display:inline-block;width:80px}
+.btn-res,.btn-res:visited{color:#24d}
+.top-login-p{padding:12px 0 0 12px}
+.top-login-p a:visited{color:#24d}
+.twocolumn-wrap .radio{padding-left:164px;clear:both}
+.reg-box .radio,.login-box .radio{height:32px;line-height:32px;padding-top:12px;_padding-top:6px}
+.forget-pw{margin-left:27px;display:inline-block;*display:inline;*zoom:1}
+.forget-pw,.forget-pw:visited{color:#999}
+.qq-method{margin-top:10px}
+.top-info{height:42px}
+.top-info-p{padding:12px 0 0 108px}
+.blue-box{border:1px solid #dfe3f0;background:#f1f4ff;position:relative}
+.reg-btn{cursor:pointer;border:0;background:url(../images/reg-login.png) 0 0;display:block;height:62px;width:188px;text-indent:-9999em}
+.reg-btn:hover{background-position:0 -62px}
+.ulsite{margin:20px 0 0 0}
+.sm{margin-top:14px;line-height:26px}
+.skip-page{width:752px;margin:66px auto 0 auto;background:#f6f7fc;padding:44px 0 60px 0;font-size:14px}
+.skip-page h2{text-align:center;margin:0 auto 44px auto;font-size:24px;line-height:24px;font-weight:bold;color:#063}
+.skip-page h2 img{vertical-align:bottom}
+.skip-page ul{width:300px;text-align:center;margin:0 auto}
+.skip-page ul li{float:left;padding:0 30px}
+.skip-page ul li a{text-decoration:underline}
+.brank-height{margin-bottom:80px}
+.redirect{text-align:center;margin:18px 0;margin-bottom:80px;color:#24d}
+.redirect a{text-decoration:underline}
+.green{color:#063;font-weight:bold}
+.red{color:#c00}
+.grey{color:#999}
+.fs16{font-size:16px}
+ul.login-ul{width:410px}
+ul.reg-ul{width:500px}
+.center{text-align:center}
+.pop-panel{font:12px/1.5 Arial,Helvetica,sans-serif}
+.pop-panel .top_c,.pop-panel .bottom_c,.pop-panel .mid_l,.pop-panel .mid_r{background:url() 0 0;height:5px;_background:url();_filter:alpha(opacity=70)}
+.layer-box{background:#fff}
+.layer-box .login-box .radio{_padding-top:30px}
+.pop-wrap{margin-bottom:24px}
+.layer-box .reg-box h3{width:120px;text-align:right;font-size:14px;font-weight:bold}
+.layer-box .login-box h3{font-size:14px;font-weight:bold}
+.pop-panel .top_l,.pop-panel .top_r,.pop-panel .bottom_l,.pop-panel .bottom_r{height:5px;width:5px;background:url() 0 0;_background:url()}
+.pop-panel .top_l{background-position:0 0}
+.pop-panel .top_r{background-position:-5px 0}
+.pop-panel .bottom_l{background-position:0 -5px}
+.pop-panel .bottom_r{background-position:-5px -5px}
+.layer-box a.close{width:13px;height:13px;position:absolute;background:url() no-repeat;right:20px;top:12px;overflow:hidden;text-indent:-9999em}
+.layer-box a.close:hover{background-position:0 -13px}
+.layer-box .right{width:230px}
+.pop-login-reg .pop-form{padding-bottom:25px;padding-left:33px}
+.pop-login-reg{padding-top:22px;position:relative;width:100%;_padding-top:11px}
+.layer-box .field label{float:left;text-align:right;width:124px;line-height:32px}
+.layer-box .reg-box{float:left;width:560px;padding-right:10px;border-right:1px solid #EEE;padding-bottom:10px}
+.layer-box .reg-submit{padding:16px 0 0 124px}
+.layer-box .login-submit{padding:16px 0 0 0}
+.layer-box .login-box{float:left;width:437px;border-right:1px solid #EEE;padding-bottom:10px;padding-left:30px}
+.layer-box .p1{padding:6px 0 14px 0;margin-right:10px}
+.user-pop-login{font-size:12px}
+.user-pop-login td{padding:6px 3px;line-height:34px}
+.user-pop-login .input-text{height:34px;line-height:34px}
+.user-pop-login .input-text-2{height:34px;line-height:34px}
+.centent_right #tip_span_trade,.centent_right #tip_span_house_type{display:block}
+.w980{width:980px;margin:0 auto}
+body.login_success .success,body.register_success .success,body.findjob_register_success .success,body.get_password_success .success,body.reset_password_success .success{background:#f6f7fc}

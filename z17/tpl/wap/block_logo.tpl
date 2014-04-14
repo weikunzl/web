@@ -1,0 +1,1 @@
+<div class="logo1"><img src="<!--{$wapskin}-->images/logo.png" /></div>

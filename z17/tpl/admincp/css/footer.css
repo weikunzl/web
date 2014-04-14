@@ -1,0 +1,4 @@
+@CHARSET "utf-8";
+body{background:#f0f0f0; font-size:12px; font-family:"verdana,Arial";  margin:0px; padding:0px; color:#404040; }
+.footer{text-align:center; height:30px; color:#666666; line-height:30px; font-size:12px; width:100%;}
+td{font-size:12px;}

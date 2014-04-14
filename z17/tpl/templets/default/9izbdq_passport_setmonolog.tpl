@@ -13,12 +13,12 @@
           <div class="form_li">
             <label>
 			内心独白 (<!--{$config.molminlen}--> ~ <!--{$config.molmaxlen}-->个字) <br />
-			可以是一篇日记，一段歌词，一句座右铭，一个有趣的签名档……
+			可以是一篇日记，一段歌词，一句座右铭，一个有趣的签名档……(<a id="auto_gen" href="javascript:void(0)">自动生成一个)</a>
 			</label>
-			<textarea name='content' id='content' style='width:85%;height:150px;overflow:auto;line-height:23px;' onkeydown="count_char('content', 'counter');" onkeyup="count_char('content', 'counter');"></textarea>
+			<textarea name='content' id='content' style='width:85%;height:150px;overflow:auto;line-height:23px;' onkeydown="count_char('content', 'counter');" onkeyup="count_char('content', 'counter');"><!--{$monolog}--></textarea>
 
 			<br />
-			<font color='#999999'>(限<!--{$config.molminlen}--> ~ <!--{$config.molmaxlen}-->个字，目前已输入<span id="counter">0</span>字)</font>
+			<font color='#999999'>(限<!--{$config.molminlen}--> ~ <!--{$config.molmaxlen}-->个字，目前已输入<span id="counter"><!--{$monolog_len}--></span>字)</font>
 
           </div>
           
@@ -40,8 +40,7 @@
   <div style="clear:both;"></div>
 </div>
 <!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_footer.tpl"}-->
-</body>
-</html>
+
 <script language='javascript'>
 function checkreg(){
 	var t = '';
@@ -65,4 +64,24 @@ function checkreg(){
 	$('#reg_form').submit();
 	return true;
 }
+
+$('#auto_gen').click(function(){
+	$.ajax({
+		type: "GET",
+		url: _ROOT_PATH + "index.php?c=passport&a=getmonolog",
+		cache: false,
+		success: function(data) {
+			if(data==''){
+				alert('获取失败，请重试！');
+			}else{
+				$('#content').text(data);
+			}
+		},
+		error: function() {
+			alert('获取失败，请重试！');
+		}
+	});
+});
 </script>
+</body>
+</html>

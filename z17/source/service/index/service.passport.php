@@ -471,7 +471,7 @@ class passportIService extends X {
         	$lovesort = strval($home['lovesort'])-1;
         }
         
-		$url = "http://10.10.0.188:7777/monolog.php?age=".$home['age']."&sex=".$sex."&want=".$lovesort;
+		$url = "http://localhost:6666/monolog.php?age=".$home['age']."&sex=".$sex."&want=".$lovesort;
 		$curl = parent::import('curl','util');
 		$data = $curl->get($url);
 		unset($curl);

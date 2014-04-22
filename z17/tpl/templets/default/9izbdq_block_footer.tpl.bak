@@ -8,6 +8,9 @@
 	<a href="<!--{$urlpath}-->index.php">返回首页</a>
 	</p>
     <p class="cr">
+	<!--{if !empty($config.sitefooter)}-->
+		<!--{$config.sitefooter}-->
+	<!--{/if}-->
 	<!--{if !empty($config.icpcode)}-->
 	&nbsp;&nbsp;<!--{$config.icpcode}-->
 	<!--{/if}-->

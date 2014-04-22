@@ -6,7 +6,7 @@
 <div class="user_main">
 
   <div class="main_right">
-    <div class="div_">诚信认证</div>
+    <div class="div_">个人中心 &gt;&gt; 诚信认证</div>
 	<div class="nav-tips">您当前诚信星级为：<b><font color="green"><!--{$u.star}--></font></b>级，每成功认证一项，诚信星级加一，并且点亮改认证图标。</div>
     <!--TAB BEGIN-->
     <div class="tab_list">

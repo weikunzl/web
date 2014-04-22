@@ -1,5 +1,5 @@
     <div class="hwrap">
-      <div class="logowrap"><a href="<!--{$urlpath}-->index.php"><img src="<!--{$config.logo}-->"  height="80" alt="<!--{$config.sitename}-->" /></a></div>
+      <div class="logowrap"><a href="<!--{$urlpath}-->index.php"><img src="<!--{$config.logo}-->" width="151" height="71" alt="<!--{$config.sitename}-->" /></a></div>
     </div>
 	<div class="topad">
 	<!--{assign var='topads' value=get_ads('top_banner')}-->

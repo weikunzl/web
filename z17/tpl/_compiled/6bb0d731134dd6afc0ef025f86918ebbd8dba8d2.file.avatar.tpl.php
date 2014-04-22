@@ -1,7 +1,43 @@
-<!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headinc.tpl"}-->
-<!--{assign var="menuid" value="avatar"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-22 16:23:29
+         compiled from "C:\svn\z17z17\web\z17\tpl\user\avatar.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:252115355cf0b28fac2-10083468%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '6bb0d731134dd6afc0ef025f86918ebbd8dba8d2' => 
+    array (
+      0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\user\\avatar.tpl',
+      1 => 1398154812,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '252115355cf0b28fac2-10083468',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5355cf0b3a7799_44044775',
+  'variables' => 
+  array (
+    'uctplpath' => 0,
+    'tplpath' => 0,
+    'tplpre' => 0,
+    'ucfile' => 0,
+    'a' => 0,
+    'u' => 0,
+    'urlpath' => 0,
+    'config' => 0,
+    'imgurl' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5355cf0b3a7799_44044775')) {function content_5355cf0b3a7799_44044775($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['uctplpath']->value)."block_head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_headinc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php $_smarty_tpl->tpl_vars["menuid"] = new Smarty_variable("avatar", null, 0);?>
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <div class="user_main">
   <div class="main_right">
     <div class="div_">设置形象照</div>
@@ -9,31 +45,38 @@
     <div class="tab_list">
 	  <div class="tab_nv">
 	    <ul>
-		  <li class="tab_item"><a href="<!--{$ucfile}-->?c=album">我的相册</a></li>
-		  <li class="tab_item"><a href="<!--{$ucfile}-->?c=album&a=upload">上传相册</a></li>
-		  <li class="tab_item current"><a href="<!--{$ucfile}-->?c=avatar">设置形象照</a></li>
+		  <li class="tab_item"><a href="<?php echo $_smarty_tpl->tpl_vars['ucfile']->value;?>
+?c=album">我的相册</a></li>
+		  <li class="tab_item"><a href="<?php echo $_smarty_tpl->tpl_vars['ucfile']->value;?>
+?c=album&a=upload">上传相册</a></li>
+		  <li class="tab_item current"><a href="<?php echo $_smarty_tpl->tpl_vars['ucfile']->value;?>
+?c=avatar">设置形象照</a></li>
 	    </ul>
 	  </div>
     </div>
 	<!--TAB END-->
     
-	<!--{if $a == 'run'}-->
+	<?php if ($_smarty_tpl->tpl_vars['a']->value=='run'){?>
 	<!--div_smallnav_content_hover Begin-->
 	<div class="div_smallnav_content_hover">
 	  <div class="item_title item_margin"><p>设置形象照</p><span class="shadow"></span></div>
 	  <div class="nav-tips">温馨提示：[√]表示审核通过，[X]表示审核未通过，[?]表示审核中。请上传您的单人真实照片，要求五官清晰。</div>
 	    
-		<form action="<!--{$ucfile}-->?c=avatar&a=saveupload&uploadpart=uploadpart" method="post" enctype="multipart/form-data" name="upload_form" id="upload_form">
+		<form action="<?php echo $_smarty_tpl->tpl_vars['ucfile']->value;?>
+?c=avatar&a=saveupload&uploadpart=uploadpart" method="post" enctype="multipart/form-data" name="upload_form" id="upload_form">
 		<table cellpadding='0' cellspacing='0' border='0' width="98%" class="user-table table-margin lh25">
 		  <tr>
 		    <td class="lblock" align="center" width="20%">
-			<!--{if !empty($u.avatar)}-->
+			<?php if (!empty($_smarty_tpl->tpl_vars['u']->value['avatar'])){?>
 			<div style="padding:5px;border:1px solid #DDD;width:112px;height:135px;">
-			<img src="<!--{$urlpath}--><!--{$u.avatar}-->" width="112px" height="135" />
+			<img src="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+<?php echo $_smarty_tpl->tpl_vars['u']->value['avatar'];?>
+" width="112px" height="135" />
 			</div>
-			<!--{else}-->
-			<!--{$u.useravatar}-->
-			<!--{/if}-->
+			<?php }else{ ?>
+			<?php echo $_smarty_tpl->tpl_vars['u']->value['useravatar'];?>
+
+			<?php }?>
 			当前形象照
 			</td>
 		    <td class="rblock" valign="top">
@@ -42,26 +85,30 @@
 			    <tr>
 				  <td width="15%" class="lblock">审核状态：</td>
 				  <td class="rblock">
-				  <!--{if $u.avatar != ''}-->
-				      <!--{if $u.avatarflag == '1'}-->
-					  <img src="<!--{$uctplpath}-->images/ok.gif" /> <font color="green">审核通过</font>
-					  <!--{elseif $u.avatarflag == '-2'}-->
-					  <img src="<!--{$uctplpath}-->images/icn_time.gif" /> <font color="gray">头像审核中</font> 
-					  <!--{elseif $u.avatarflag == '-1'}-->
-					  <img src="<!--{$uctplpath}-->images/cuo.gif" /> <font color="red">未通过审核</font> 
-					  <!--{/if}-->
-				  <!--{else}-->
+				  <?php if ($_smarty_tpl->tpl_vars['u']->value['avatar']!=''){?>
+				      <?php if ($_smarty_tpl->tpl_vars['u']->value['avatarflag']=='1'){?>
+					  <img src="<?php echo $_smarty_tpl->tpl_vars['uctplpath']->value;?>
+images/ok.gif" /> <font color="green">审核通过</font>
+					  <?php }elseif($_smarty_tpl->tpl_vars['u']->value['avatarflag']=='-2'){?>
+					  <img src="<?php echo $_smarty_tpl->tpl_vars['uctplpath']->value;?>
+images/icn_time.gif" /> <font color="gray">头像审核中</font> 
+					  <?php }elseif($_smarty_tpl->tpl_vars['u']->value['avatarflag']=='-1'){?>
+					  <img src="<?php echo $_smarty_tpl->tpl_vars['uctplpath']->value;?>
+images/cuo.gif" /> <font color="red">未通过审核</font> 
+					  <?php }?>
+				  <?php }else{ ?>
 				  还没设置形象照
-				  <!--{/if}-->
+				  <?php }?>
 				  </td>
 				</tr>
 				<!-- 删除 -->
 			    <tr>
 				  <td class="lblock">删除操作：</td>
 				  <td class="rblock">
-				  <!--{if $u.avatar != ''}-->
-				  <a class="btn_c2" href="<!--{$ucfile}-->?c=avatar&a=del" onClick="{if(confirm('确定要删除吗')){return true;} return false;}"><span>删除</span></a> 
-				  <!--{/if}-->
+				  <?php if ($_smarty_tpl->tpl_vars['u']->value['avatar']!=''){?>
+				  <a class="btn_c2" href="<?php echo $_smarty_tpl->tpl_vars['ucfile']->value;?>
+?c=avatar&a=del" onClick="{if(confirm('确定要删除吗')){return true;} return false;}"><span>删除</span></a> 
+				  <?php }?>
 				  &nbsp;
 				  </td>
 				</tr>
@@ -78,13 +125,15 @@
 				  <td class="lblock"></td>
 				  <td class="rblock">
 				    <input type="button" id="btn_upload" value="开始上传" class="button-red" />&nbsp;&nbsp;&nbsp;
-					<input type="button" id="btn_select" value="从相册选择形象照" class="button-green" onclick="javascript:window.location.href='<!--{$ucfile}-->?c=album';" />
+					<input type="button" id="btn_select" value="从相册选择形象照" class="button-green" onclick="javascript:window.location.href='<?php echo $_smarty_tpl->tpl_vars['ucfile']->value;?>
+?c=album';" />
 				  </td>
 				</tr>
 				<!-- 上传进度 -->
 				<tr id="id_loadingbar" style="display:none">
 				  <td class="left" class="lblock">上传头像：</td>
-				  <td class="right" class="rblock"><img src="<!--{$uctplpath}-->images/uploading.gif" alt="照片上传中" width="220" height="19" border="0" />照片上传中，请稍等...</td>
+				  <td class="right" class="rblock"><img src="<?php echo $_smarty_tpl->tpl_vars['uctplpath']->value;?>
+images/uploading.gif" alt="照片上传中" width="220" height="19" border="0" />照片上传中，请稍等...</td>
 				</tr>
 			  </table>
 			</td>
@@ -168,13 +217,17 @@ function avatar_del(id){
 </script>
 	</div>
 	<!--//div_smallnav_content_hover End-->
-	<!--{/if}-->
+	<?php }?>
 
-	<!--{if $a == 'setavatar'}-->
-	<script type="text/javascript" src="<!--{$urlpath}-->tpl/static/js/cropper/cropper.min.js"></script>
-	<script type="text/javascript" src="<!--{$urlpath}-->tpl/static/js/cropper/drag.min.js"></script>
-	<script type="text/javascript" src="<!--{$urlpath}-->tpl/static/js/cropper/resize.min.js"></script>
-	<link rel="stylesheet" href="<!--{$urlpath}-->tpl/static/js/cropper/default.css" />
+	<?php if ($_smarty_tpl->tpl_vars['a']->value=='setavatar'){?>
+	<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+tpl/static/js/cropper/cropper.min.js"></script>
+	<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+tpl/static/js/cropper/drag.min.js"></script>
+	<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+tpl/static/js/cropper/resize.min.js"></script>
+	<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+tpl/static/js/cropper/default.css" />
     <div class="div_smallnav_content_hover">
 	  <div class="item_title item_margin"><p>设置形象照</p><span class="shadow"></span></div>
 	  <table cellpadding='0' cellspacing='0' border='0' width="98%" class="user-table table-margin lh35">
@@ -204,13 +257,17 @@ function avatar_del(id){
 				<td align="center" valign="top">
 				  <table width="90%" border="0" cellspacing="0" cellpadding="0" class="user-table table-margin lh25" style="margin-left:10px;">
 					<tr>
-					  <td class="dragTable"><div id="viewDiv" style="width:<!--{$config.avatarwidth}-->px; height:<!--{$config.avatarheight}-->px;"></div></td>
+					  <td class="dragTable"><div id="viewDiv" style="width:<?php echo $_smarty_tpl->tpl_vars['config']->value['avatarwidth'];?>
+px; height:<?php echo $_smarty_tpl->tpl_vars['config']->value['avatarheight'];?>
+px;"></div></td>
 					</tr>
 					<tr>
 					  <td><b>效果预览</b></td>
 					</tr>
 					<tr>
-					  <td><font color="#999999">形象照大小为<!--{$config.avatarwidth}-->x<!--{$config.avatarheight}-->像素</font></td>
+					  <td><font color="#999999">形象照大小为<?php echo $_smarty_tpl->tpl_vars['config']->value['avatarwidth'];?>
+x<?php echo $_smarty_tpl->tpl_vars['config']->value['avatarheight'];?>
+像素</font></td>
 					</tr>
 					<tr>
 					  <td align="left">
@@ -229,14 +286,17 @@ function avatar_del(id){
 			  </tr>
 			</table>
 			<script type="text/javascript">
-			var ic = new ImgCropper("bgDiv", "dragDiv", "<!--{$imgurl}-->", {
+			var ic = new ImgCropper("bgDiv", "dragDiv", "<?php echo $_smarty_tpl->tpl_vars['imgurl']->value;?>
+", {
 				Width: 300, Height: 368, Color: "#ffffff",
 				Resize: true,
 				Scale: true,
 				Opacity: 80,
 				Right: "rRight", Left: "rLeft", Up:	"rUp", Down: "rDown",
 				RightDown: "rRightDown", LeftDown: "rLeftDown", RightUp: "rRightUp", LeftUp: "rLeftUp",
-				Preview: "viewDiv", viewWidth: <!--{$config.avatarwidth}-->, viewHeight: <!--{$config.avatarheight}-->
+				Preview: "viewDiv", viewWidth: <?php echo $_smarty_tpl->tpl_vars['config']->value['avatarwidth'];?>
+, viewHeight: <?php echo $_smarty_tpl->tpl_vars['config']->value['avatarheight'];?>
+
 			});
 			function cutImage() {
 				//需要会员登录
@@ -248,7 +308,8 @@ function avatar_del(id){
 				var h = o.Height;
 				var pw = ic._layBase.width;
 				var ph = ic._layBase.height;
-				setAvatar('<!--{$imgurl}-->', x, y, w, h, pw, ph, 'cp');
+				setAvatar('<?php echo $_smarty_tpl->tpl_vars['imgurl']->value;?>
+', x, y, w, h, pw, ph, 'cp');
 			}
 			</script>
 
@@ -258,13 +319,15 @@ function avatar_del(id){
 	  </table>
 	</div>
 	<!--//div_smallnav_content_hover End-->
-	<!--{/if}-->
+	<?php }?>
 
   </div>
   <div class="clear"> </div>
   <!--//main_right End-->
 </div>
 <div class="_margin"></div>
-<!--{include file="<!--{$uctplpath}-->block_footer.tpl"}-->
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['uctplpath']->value)."block_footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 </body>
 </html>
+<?php }} ?>

@@ -55,6 +55,8 @@
           </li>
 	  <li<!--{if $menuid=='message'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=message">我的消息</a>
           </li>
+	  <li<!--{if $menuid=='listen'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=listen">我的关注</a>
+          </li>
 	  <li<!--{if $menuid=='profile'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=profile">我的资料</a>
           </li>
 	  <li<!--{if $menuid=='vip'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=vip">服务</a>

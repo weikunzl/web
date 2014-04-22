@@ -148,7 +148,7 @@
 		  <!--{$volist.content|filterhtml:35}-->...
 		  </p>
 	      <!--{/foreach}-->
-	<div style="float:right"><a href="<!--{$urlpath}-->usercp.php?c=weibo" class="more3">查看更多&gt;&gt;</a> </div>
+	<div style="float:right"><a href="<!--{$appfile}-->?c=weibo" class="more3">查看更多&gt;&gt;</a> </div>
       </div>
 
 

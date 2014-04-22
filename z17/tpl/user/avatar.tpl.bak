@@ -4,7 +4,7 @@
 <!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 <div class="user_main">
   <div class="main_right">
-    <div class="div_">设置形象照</div>
+    <div class="div_">个人中心 &gt;&gt; 设置形象照</div>
     <!--TAB BEGIN-->
     <div class="tab_list">
 	  <div class="tab_nv">

@@ -1,10 +1,10 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headinc.tpl"}-->
-<!--{assign var="menuid" value="album"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
+<!--{include file="<!--{$uctplpath}-->block_top.tpl"}-->
+<!--{assign var="cp_menuid" value="album"}-->
 <div class="user_main">
+  <!--{include file="<!--{$uctplpath}-->block_menu.tpl"}-->
   <div class="main_right">
-    <div class="div_">我的相册</div>
+    <div class="div_">个人中心 &gt;&gt; 我的相册</div>
     <!--TAB BEGIN-->
     <div class="tab_list">
 	  <div class="tab_nv">

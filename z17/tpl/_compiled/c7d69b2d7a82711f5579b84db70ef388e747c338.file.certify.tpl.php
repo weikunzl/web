@@ -1,44 +1,89 @@
-<!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headinc.tpl"}-->
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-22 16:23:04
+         compiled from "C:\svn\z17z17\web\z17\tpl\user\certify.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12872535616a66ce829-12064807%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'c7d69b2d7a82711f5579b84db70ef388e747c338' => 
+    array (
+      0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\user\\certify.tpl',
+      1 => 1398154980,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '12872535616a66ce829-12064807',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_535616a687e443_60098189',
+  'variables' => 
+  array (
+    'uctplpath' => 0,
+    'tplpath' => 0,
+    'tplpre' => 0,
+    'u' => 0,
+    'ucfile' => 0,
+    'a' => 0,
+    'ucpath' => 0,
+    'urlpath' => 0,
+    'certify' => 0,
+    'volist' => 0,
+    'halttype' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_535616a687e443_60098189')) {function content_535616a687e443_60098189($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['uctplpath']->value)."block_head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-<!--{assign var="menuid" value="certify"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_headinc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+
+<?php $_smarty_tpl->tpl_vars["menuid"] = new Smarty_variable("certify", null, 0);?>
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <div class="user_main">
 
   <div class="main_right">
     <div class="div_">诚信认证</div>
-	<div class="nav-tips">您当前诚信星级为：<b><font color="green"><!--{$u.star}--></font></b>级，每成功认证一项，诚信星级加一，并且点亮改认证图标。</div>
+	<div class="nav-tips">您当前诚信星级为：<b><font color="green"><?php echo $_smarty_tpl->tpl_vars['u']->value['star'];?>
+</font></b>级，每成功认证一项，诚信星级加一，并且点亮改认证图标。</div>
     <!--TAB BEGIN-->
     <div class="tab_list">
 	  <div class="tab_nv">
 	    <ul>
-		  <li class="tab_item current"><a href="<!--{$ucfile}-->?c=certify">诚信认证</a></li>
+		  <li class="tab_item current"><a href="<?php echo $_smarty_tpl->tpl_vars['ucfile']->value;?>
+?c=certify">诚信认证</a></li>
 	    </ul>
 	  </div>
     </div>
 	<!--TAB END-->
 	<div class="div_smallnav_content_hover basicdata">
 
-	  <!--{if $a eq 'run'}--> 
+	  <?php if ($_smarty_tpl->tpl_vars['a']->value=='run'){?> 
 	  <ul>
 		<li class="auth_logo">
-		  <!--{if $u.emailrz=='1'}-->
-		  <img src="<!--{$ucpath}-->images/mail.png" title="已认证" />
-		  <!--{else}-->
-		  <img src="<!--{$ucpath}-->images/mail2.png" title="未认证" />
-		  <!--{/if}-->
+		  <?php if ($_smarty_tpl->tpl_vars['u']->value['emailrz']=='1'){?>
+		  <img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/mail.png" title="已认证" />
+		  <?php }else{ ?>
+		  <img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/mail2.png" title="未认证" />
+		  <?php }?>
 		  <span class="auth_title" ckl="email" title="用于找回密码，接收交友推荐邮件">邮箱认证</span>
 		</li>
 		<li class="auth_logo">
-		  <!--{if $u.videorz=='1'}-->
-		  <img src="<!--{$ucpath}-->images/vedio.png" title="已认证" />
-		  <!--{else}-->
-		  <img src="<!--{$ucpath}-->images/vedio2.png" title="未认证" />
-		  <!--{/if}-->
+		  <?php if ($_smarty_tpl->tpl_vars['u']->value['videorz']=='1'){?>
+		  <img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/vedio.png" title="已认证" />
+		  <?php }else{ ?>
+		  <img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/vedio2.png" title="未认证" />
+		  <?php }?>
 		  <span class="auth_title" ckl="vedio" title="表明您的视频信息已经认证">视频认证</span>
 		</li>
 		<li class="auth_logo">
-		  <img src="<!--{$ucpath}-->images/id2.png" title="未认证" />
+		  <img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/id2.png" title="未认证" />
 		  <span class="auth_title" ckl="id" title="表明您的身份证信息已经认证">身份认证</span>
 		</li>
 	  </ul>
@@ -50,12 +95,13 @@
 		  <tr>
 		    <td class="lblock" width="15%">您的注册邮箱：</td>
 			<td class="rblock" width="85%">
-			<!--{$u.email}-->&nbsp;&nbsp;&nbsp;
-			<!--{if $u.emailrz == '1'}-->
+			<?php echo $_smarty_tpl->tpl_vars['u']->value['email'];?>
+&nbsp;&nbsp;&nbsp;
+			<?php if ($_smarty_tpl->tpl_vars['u']->value['emailrz']=='1'){?>
 			<font color="green">已认证</font>
-			<!--{else}-->
+			<?php }else{ ?>
 			<input type="button" value="发送认证邮件" onclick="ajax_sendmailkey('response_tips', '');" class="button-red" /> <span id="response_tips"></span>
-			<!--{/if}-->
+			<?php }?>
 			</td>
 		  </tr>
 		</table>
@@ -75,15 +121,17 @@
       <!--视频认证 Begin-->
 	  <div class="auth_ck_detail" id="auth_ck_vedio">
 	    <div class="item_title item_margin"><p>视频认证</p><span class="shadow"></span></div>
-		<form name="qq_myform" id="qq_myform" action="<!--{$ucfile}-->?c=certify&a=rzqq" method="post">
+		<form name="qq_myform" id="qq_myform" action="<?php echo $_smarty_tpl->tpl_vars['ucfile']->value;?>
+?c=certify&a=rzqq" method="post">
 		<table cellpadding='0' cellspacing='0' border='0' width="98%" class="user-table table-margin lh35">
-		  <!--{if $u.videorz == '1'}-->
+		  <?php if ($_smarty_tpl->tpl_vars['u']->value['videorz']=='1'){?>
 		  <tr>
 		    <td class="lblock" width="15%">视频认证：</td>
 			<td class="rblock" width="85%"><font color="green">已认证</font></td>
 		  </tr>
-		  <!--{else}-->
-		  <script type="text/javascript" src="<!--{$urlpath}-->tpl/static/swf/webcam.js"></script>
+		  <?php }else{ ?>
+		  <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+tpl/static/swf/webcam.js"></script>
 		  <tr>
 		    <td colspan="2">
 				点击“拍照”后，系统将会自动拍照，并保存到您的资料中，可能有点慢，请您稍等...<br />
@@ -124,7 +172,7 @@
 			<td width="50%"><input type="button" value="点击拍照" onclick="take_snapshot();" class="button-red" /></td>
 			<td width="50%" id="tips_txt"></td>
 		  </tr>
-		  <!--{/if}-->
+		  <?php }?>
 		  <tr>
 			<td colspan="2">
 				为什么要视频认证？<br />
@@ -143,47 +191,71 @@
 		  <tr>
 		    <td class="lblock" width="15%">认证项目：</td>
 			<td class="rblock" width="85%">
-				身份认证：<!--{if $u.idnumberrz=='1'}--><img src="<!--{$ucpath}-->images/dui.gif" /><!--{else}--><img src="<!--{$ucpath}-->images/cuo.gif" /><!--{/if}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				身份认证：<?php if ($_smarty_tpl->tpl_vars['u']->value['idnumberrz']=='1'){?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/dui.gif" /><?php }else{ ?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/cuo.gif" /><?php }?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<!-- 婚姻认证 -->
-				婚姻认证&nbsp;&nbsp;<!--{if $u.marryrz==1}--><img src="<!--{$ucpath}-->images/dui.gif" /><!--{else}--><img src="<!--{$ucpath}-->images/cuo.gif" /><!--{/if}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				婚姻认证&nbsp;&nbsp;<?php if ($_smarty_tpl->tpl_vars['u']->value['marryrz']==1){?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/dui.gif" /><?php }else{ ?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/cuo.gif" /><?php }?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<!-- 学历认证 -->
-				学历认证&nbsp;&nbsp;<!--{if $u.educationrz==1}--><img src="<!--{$ucpath}-->images/dui.gif" /><!--{else}--><img src="<!--{$ucpath}-->images/cuo.gif" /><!--{/if}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				学历认证&nbsp;&nbsp;<?php if ($_smarty_tpl->tpl_vars['u']->value['educationrz']==1){?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/dui.gif" /><?php }else{ ?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/cuo.gif" /><?php }?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<!-- 房产认证 -->
-				房产认证&nbsp;&nbsp;<!--{if $u.houserz==1}--><img src="<!--{$ucpath}-->images/dui.gif" /><!--{else}--><img src="<!--{$ucpath}-->images/cuo.gif" /><!--{/if}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+				房产认证&nbsp;&nbsp;<?php if ($_smarty_tpl->tpl_vars['u']->value['houserz']==1){?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/dui.gif" /><?php }else{ ?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/cuo.gif" /><?php }?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 				<!-- 汽车认证 -->
-				汽车认证&nbsp;&nbsp;<!--{if $u.carrz==1}--><img src="<!--{$ucpath}-->images/dui.gif" /><!--{else}--><img src="<!--{$ucpath}-->images/cuo.gif" /><!--{/if}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				汽车认证&nbsp;&nbsp;<?php if ($_smarty_tpl->tpl_vars['u']->value['carrz']==1){?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/dui.gif" /><?php }else{ ?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/cuo.gif" /><?php }?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<!-- 收入认证 -->
-				收入认证&nbsp;&nbsp;<!--{if $u.incomerz==1}--><img src="<!--{$ucpath}-->images/dui.gif" /><!--{else}--><img src="<!--{$ucpath}-->images/cuo.gif" /><!--{/if}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				收入认证&nbsp;&nbsp;<?php if ($_smarty_tpl->tpl_vars['u']->value['incomerz']==1){?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/dui.gif" /><?php }else{ ?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/cuo.gif" /><?php }?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<!-- 身高认证 -->
-				身高认证&nbsp;&nbsp;<!--{if $u.heightrz==1}--><img src="<!--{$ucpath}-->images/dui.gif" /><!--{else}--><img src="<!--{$ucpath}-->images/cuo.gif" /><!--{/if}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				身高认证&nbsp;&nbsp;<?php if ($_smarty_tpl->tpl_vars['u']->value['heightrz']==1){?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/dui.gif" /><?php }else{ ?><img src="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+images/cuo.gif" /><?php }?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			</td>
 		  </tr>
 		  <tr>
 		    <td class="lblock">待审/锁定的证件：</td>
 			<td class="rblock">
-			    <!--{if empty($certify)}-->
+			    <?php if (empty($_smarty_tpl->tpl_vars['certify']->value)){?>
 				~~
-				<!--{else}-->
-				<!--{foreach $certify as $volist}-->
-				<a href="<!--{$volist.uploadfiles}-->" target="_blank"><!--{$volist.type}--></a>&nbsp;&nbsp;<a href="###" onclick="del(<!--{$volist.certifyid}-->);">删除</a>
+				<?php }else{ ?>
+				<?php  $_smarty_tpl->tpl_vars['volist'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['volist']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['certify']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['volist']->key => $_smarty_tpl->tpl_vars['volist']->value){
+$_smarty_tpl->tpl_vars['volist']->_loop = true;
+?>
+				<a href="<?php echo $_smarty_tpl->tpl_vars['volist']->value['uploadfiles'];?>
+" target="_blank"><?php echo $_smarty_tpl->tpl_vars['volist']->value['type'];?>
+</a>&nbsp;&nbsp;<a href="###" onclick="del(<?php echo $_smarty_tpl->tpl_vars['volist']->value['certifyid'];?>
+);">删除</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<!--{if $volist.i%4==0}-->
+				<?php if ($_smarty_tpl->tpl_vars['volist']->value['i']%4==0){?>
 				<br />
-				<!--{/if}-->
-				<!--{/foreach}-->
-				<!--{/if}-->
+				<?php }?>
+				<?php } ?>
+				<?php }?>
 			</td>
 		  </tr>
 		</table>
 		
 		<div class="item_title item_margin"><p>上传证件</p><span class="shadow"></span></div>
-		<form action="<!--{$ucfile}-->?c=certify&a=saveupload&uploadpart=sf_upfile" method="post" enctype="multipart/form-data" name="upload_form" id="upload_form">
-		<input type="hidden" name="halttype" value="<!--{$halttype}-->" />
+		<form action="<?php echo $_smarty_tpl->tpl_vars['ucfile']->value;?>
+?c=certify&a=saveupload&uploadpart=sf_upfile" method="post" enctype="multipart/form-data" name="upload_form" id="upload_form">
+		<input type="hidden" name="halttype" value="<?php echo $_smarty_tpl->tpl_vars['halttype']->value;?>
+" />
 		<table cellpadding='0' cellspacing='0' border='0' width="98%" class="user-table table-margin lh35">
 		  <!-- 证件类型 -->
 		  <tr>
 			<td class="lblock" width="15%">证件类别 <span class="f_red">*</font></td>
-			<td class="rblock" width="85%"><!--{hook mod='certify' type='select' name='certifytype' text='=请选择='}--> <span id="dcertifytype" class="f_red"></span></td>
+			<td class="rblock" width="85%"><?php echo cmd_hook(array('mod'=>'certify','type'=>'select','name'=>'certifytype','text'=>'=请选择='),$_smarty_tpl);?>
+ <span id="dcertifytype" class="f_red"></span></td>
 		  </tr>
 		  <!-- 选择证件 -->
 		  <tr>
@@ -200,7 +272,8 @@
 		  <!-- 上传提示 -->
 		  <tr id="id_loadingbar" style="display:none;">
 			<td class="lblock"></td>
-			<td class="rblock"><img src="<!--{$uctplpath}-->images/uploading.gif" alt="图片上传中，请稍等..." width="220" height="19" border="0" /> 图片上传中，请稍等...</td>
+			<td class="rblock"><img src="<?php echo $_smarty_tpl->tpl_vars['uctplpath']->value;?>
+images/uploading.gif" alt="图片上传中，请稍等..." width="220" height="19" border="0" /> 图片上传中，请稍等...</td>
 		  </tr>
 		</table>
 		</form>
@@ -228,7 +301,7 @@
 	  <!--//身份认证 End-->
 
 
-	  <!--{/if}-->
+	  <?php }?>
 
 
 	</div>
@@ -241,7 +314,8 @@
 </div>
 <!--//user_main End-->
 
-<!--{include file="<!--{$uctplpath}-->block_footer.tpl"}-->
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['uctplpath']->value)."block_footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 </body>
 </html>
 <script type="text/javascript">
@@ -439,4 +513,4 @@ function checkrzqq() {
 	}
 	return true;
 }
-</script>
+</script><?php }} ?>

@@ -21,7 +21,7 @@
           <div class="search_user_bg"> <a target="_blank" href="<!--{$volist.homeurl}-->"><!--{avatar width='112' height='135' css='img100' value=$volist.avatarurl}--></a> </div>
           <div class="search_user_inform">
             <p class="search_user_t1"><!--{$volist.levelimg}--><a target="_blank" href="<!--{$volist.homeurl}-->"><!--{$volist.username}--></a> </p>
-            <p class="search_user_add"><!--{$volist.age}-->岁<!--{$volist.provinceid}--> <!--{area type='text' value=$volist.provinceid}--> <!--{area type='text' value=$volist.cityid}--></p>
+            <p class="search_user_add"><!--{$volist.age}-->岁 <!--{area type='text' value=$volist.provinceid}--> <!--{area type='text' value=$volist.cityid}--></p>
             <p class="search_vt"> 
 				<a class="btn_bt1 chat sayHiBtn" href="###" onclick="artbox_hi(<!--{$volist.userid}-->);"><span><img src="<!--{$skinpath}-->themes/images/d.gif"></span></a> 
 				<a class="btn_bt2 mail sendEmailBtn" href="###" onclick="artbox_writemsg(<!--{$volist.userid}-->);"><span><img src="<!--{$skinpath}-->themes/images/r.gif"></span></a>
@@ -56,13 +56,6 @@
 		<!--{/foreach}-->
         <div style="clear:both;"></div>
       </div>
-      <div class="divtitle" style="margin-top:5px;">最新日记</div>
-      <ul class="list_so">
-	    <!--{assign var='diary' value=vo_list("mod={diary} orderby={v.hits DESC} num={15}")}-->
-		<!--{foreach $diary as $volist}-->
-        <li><a target="_blank" href="<!--{$volist.url}-->" title="<!--{$volist.title}-->"><!--{$volist.title|filterhtml:20}--></a> </li>
-		<!--{/foreach}-->
-      </ul>
       <div class="divtitle" style="margin-top:5px;">猜你喜欢</div>
       <div class="onhead">
 	    <!--{assign var='mchuser' value=vo_list("mod={matchuser} num={9}")}-->

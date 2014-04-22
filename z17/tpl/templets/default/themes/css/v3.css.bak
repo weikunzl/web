@@ -3019,7 +3019,7 @@ display: inline;
 .login_right_top .div_blue{background:#38CCD0;}
 .login_right_top .div_green{background:#4CD774;}
 
-.login_right_weibo{padding:8px 20px 8px 8px;overflow:hidden;}
+.login_right_weibo{padding:8px 0px 8px 20px;overflow:hidden;}
 .mood-textarea{
 	background-color: #FFFFFF;
     border: medium none;

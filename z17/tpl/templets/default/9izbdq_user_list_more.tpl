@@ -61,13 +61,6 @@
       <h2>猜你喜欢</h2>
 	  <!--{include file="<!--{$tplpath}--><!--{$tplpre}-->user_80x96.tpl"}-->
       <div style="clear:both;"></div>
-      <h2>热门日记</h2>
-      <ul class="list_blog">
-	    <!--{assign var='hotdiary' value=vo_list("mod={diary} orderby={v.hits DESC} num={15}")}-->
-		<!--{foreach $hotdiary as $volist}-->
-        <li><a target="_blank" href="<!--{$volist.url}-->" title="<!--{$volist.title}-->"><!--{$volist.title|filterhtml:20}--></a> </li>
-		<!--{/foreach}-->
-      </ul>
     </div>
     <div style="clear:both;"></div>
   </div>

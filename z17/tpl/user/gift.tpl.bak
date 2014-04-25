@@ -4,7 +4,7 @@
 <!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 
 <div class="user_main">
-  <!--{include file="<!--{$uctplpath}-->block_menu.tpl"}-->
+
   <div class="main_right">
     <div class="div_"> 个人中心 &gt;&gt; 我的礼物</div>
     <!--TAB BEGIN-->

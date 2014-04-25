@@ -18,14 +18,17 @@
 			  <script>alert('对不起，请先完善交友帐号信息，才能正常使用。');window.location.href="<!--{$urlpath}-->index.php?c=passport&a=perfect";</script> 
 			  <!--{/if}--> 
 			  <!--{/if}--> 
-          欢迎您： <!--{$login.info.levelimg}--><!--{$login.username}-->， <a href="<!--{$appfile}-->?c=passport&a=logout">退出登录</a> 
+		欢迎您： 
+		<!--{if !empty($login.info.levelimg)}-->
+			<!--{$login.info.levelimg}-->
+		<!--{else}-->
+			<!--{$u.levelimg}-->
+		<!--{/if}-->
+		<!--{$login.username}-->， <a href="<!--{$urlpath}-->index.php?c=passport&a=logout">退出登录</a> 
           <!--{else}--> 
           游客欢迎您 <a href="###" onclick="artbox_loginbox();">登录网站</a>&nbsp;
 		  <!--{assign var='connect' value=vo_list("mod={connect}")}-->
-		  <!--{foreach $connect as $volist}-->
-		  <a href="<!--{$volist.apiurl}-->" title="<!--{$volist.authname}-->" target="_top"><img src="<!--{$volist.logo}-->" style="vertical-align:middle;" alt="<!--{$volist.authname}-->" /></a>&nbsp;
-		  <!--{/foreach}-->
-		  |&nbsp;<a href="<!--{$appfile}-->?c=passport&a=reg">免费注册</a> 
+		  |&nbsp;<a href="<!--{$urlpath}-->index.php?c=passport&a=reg">免费注册</a> 
 
           <!--{/if}--> 
         </div>

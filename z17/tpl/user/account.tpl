@@ -1,11 +1,10 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$uctplpath}-->block_top.tpl"}-->
-<!--{assign var="cp_menuid" value="account"}-->
+<!--{assign var="menuid" value="account"}-->
+<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 <div class="user_main">
-  <!--{include file="<!--{$uctplpath}-->block_menu.tpl"}-->
 
   <div class="main_right">
-    <div class="div_"> 个人中心 &gt;&gt; 帐号信息</div>
+    <div class="div_"> 我的资料 &gt;&gt; 帐号信息</div>
     <!--TAB BEGIN-->
     <div class="tab_list">
 	  <div class="tab_nv">

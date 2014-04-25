@@ -1,5 +1,4 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headinc.tpl"}-->
 <!--{assign var="menuid" value="message"}-->
 <!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 

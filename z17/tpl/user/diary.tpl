@@ -1,6 +1,6 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$uctplpath}-->block_top.tpl"}-->
-<!--{assign var="cp_menuid" value="diary"}-->
+<!--{assign var="menuid" value="diary"}-->
+<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 <style>
 .diary_item{margin-top:10px;margin-bottom:20px; position: relative;}
 .diary_item .item_left{background:#f0f0f0;border:0px dashed #ccc; border-right:0px; padding:16px; float:left;}
@@ -30,7 +30,6 @@
 	});
 </script>
 <div class="user_main">
-  <!--{include file="<!--{$uctplpath}-->block_menu.tpl"}-->
   <div class="main_right">
     <div class="div_"> 个人中心 &gt;&gt; 我的日记</div>
     <!--TAB BEGIN-->

@@ -27,7 +27,8 @@ class XOption extends X
                 if ( in_array( $optionname, $need_unserialize ) )
                 {
                     parent::loadutil( "handle" );
-                    return XHandle::dounserialize( $data[$optionname] );
+ 					return @unserialize($data[$optionname]);
+                    //return XHandle::dounserialize( $data[$optionname] );
                 }
                 return $data[$optionname];
             }

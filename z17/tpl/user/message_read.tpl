@@ -1,6 +1,6 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$uctplpath}-->block_top.tpl"}-->
-<!--{assign var="cp_menuid" value="message"}-->
+<!--{assign var="menuid" value="message"}-->
+<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 <style type="text/css">
 .box-main{padding:10px;}
 .box-dialog-left{float:left;width:120px;}
@@ -28,9 +28,8 @@
 .box-dialog-button{float:right; margin-top:20px;margin-right:20px;}
 </style>
 <div class="user_main">
-  <!--{include file="<!--{$uctplpath}-->block_menu.tpl"}-->
   <div class="main_right">
-    <div class="div_">个人中心 &gt;&gt; 我的信件</div>
+    <div class="div_">我的消息 &gt;&gt; 我的信件</div>
     <!--TAB BEGIN-->
     <div class="tab_list">
 	  <div class="tab_nv">

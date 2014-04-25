@@ -1,6 +1,4 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headinc.tpl"}-->
-
 <!--{assign var="menuid" value="certify"}-->
 <!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 <div class="user_main">

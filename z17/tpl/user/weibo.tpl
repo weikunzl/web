@@ -1,6 +1,5 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
 <!--{assign var="cp_menuid" value="weibo"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headinc.tpl"}-->
 <!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
  <style>
  .hr-dashed{margin:10px 0px; border-bottom:1px dashed #e1e1e1; clear:both; width:100%;display:inline-block;}

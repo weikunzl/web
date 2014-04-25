@@ -1,12 +1,11 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headinc.tpl"}-->
 <!--{assign var="menuid" value="vip"}-->
 <!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 
 <div class="user_main">
 
   <div class="main_right">
-    <div class="div_"> 个人中心 &gt;&gt; 在线充值 </div>
+    <div class="div_"> 服务 &gt;&gt; 在线充值 </div>
 	<div class="nav-tips">
 	您当前剩余可用<!--{$lang.money}-->：<b><font color='green'><!--{$u.money}--></font></b>&nbsp;&nbsp;&nbsp;温馨提示：1金币=1元。</div>
     <!--TAB BEGIN-->

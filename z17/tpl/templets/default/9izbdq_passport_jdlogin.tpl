@@ -154,15 +154,7 @@ img {
 			&nbsp;&nbsp;<a href="<!--{$urlpath}-->index.php?c=passport&a=forget" target="_top">忘记密码？</a>
 		  </td>
 		</tr>
-		<tr>
-		  <td colspan="2"> 
-		  其他合作登录：
-		  <!--{assign var='connect' value=vo_list("mod={connect}")}-->
-		  <!--{foreach $connect as $volist}-->
-		  <a href="<!--{$volist.apiurl}-->" title="<!--{$volist.authname}-->" target="_top"><img src="<!--{$volist.logo}-->" style="vertical-align:middle;" alt="<!--{$volist.authname}-->" /></a>&nbsp;
-		  <!--{/foreach}-->
-		  </td>
-		</tr>
+
 	  </table>
 	  </form>
 	</div>

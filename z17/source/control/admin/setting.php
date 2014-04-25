@@ -19,7 +19,7 @@ class control extends adminbase {
 		$var_array = array ();
 		if (! empty ( $data )) {
 			parent::loadLib ( 'mod' );
-			$data ['tjcode'] = stripslashes ( $data ['tjcode'] );
+			//$data ['tjcode'] = stripslashes ( $data ['tjcode'] );
 			$data ['timezone_select'] = XMod::selectTimezone ( $data ['timezone'], 'timezone' );
 			$var_array = $data;
 		}
@@ -394,6 +394,7 @@ class control extends adminbase {
 				'usercpskin' 
 		) );
 		$tjcode = XRequest::getArgs ( 'tjcode', '', false );
+		//$tjcode = htmlspecialchars($tjcode);
 		if (empty ( $args ['sitename'] )) {
 			XHandle::halt ( '网站名称不能为空', '', 1 );
 		}

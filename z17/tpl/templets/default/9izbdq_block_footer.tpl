@@ -15,7 +15,6 @@
 	&nbsp;&nbsp;<!--{$config.tjcode|stripslashes}-->
 	<!--{/if}-->
 
-	<!--{$copyright_poweredby}-->
 	</p>
 	<!--{assign var='pluginevent' value=XHook::doAction('plugin_runtime')}-->
 	<!--{assign var='pluginevent' value=XHook::doAction('event_online')}-->

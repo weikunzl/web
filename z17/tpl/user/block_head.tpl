@@ -7,16 +7,16 @@
 <meta http-equiv="content-type" content="text/html; charset=<!--{$page_charset}-->" />
 <title><!--{$page_title}--></title>
 <link href="<!--{$ucpath}-->css/css.css" rel="stylesheet" />
-<script type='text/javascript'>
-var _ROOT_PATH = "<!--{$rootpath}-->";
-</script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/jquery.min.js'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/artdialog/jquery.artDialog.source.js?skin=default'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/artdialog/plugins/iframeTools.js'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/public.js'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/ajax.js'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/artbox.js'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/WdatePicker.js'></script>
+
+<!-- add default -->
+<link rel="stylesheet" href="<!--{$skinpath}-->themes/css/public.css" media="screen" />
+<link rel="stylesheet" href="<!--{$skinpath}-->themes/css/v3.css" media="screen" />
+<link rel="stylesheet" href="<!--{$skinpath}-->themes/css/n.css" media="screen" />
+<link rel="stylesheet" href="<!--{$skinpath}-->themes/css/button.css" />
+<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headjs.tpl"}-->
+<!-- end default -->
+
+
 <!--[if lt IE 7]>
 <script type='text/javascript' src='<!--{$urlpath}-->tpl/static/js/DD_belatedPNG-min.js'></script>
 <script>

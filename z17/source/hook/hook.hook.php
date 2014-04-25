@@ -19,7 +19,12 @@ function cmd_hook($extract) {
 		X::loadLib ( 'mod' );
 		if ($mod == 'var') {
 			if ($type == 'select' || $type == 'checkbox' || $type == 'multiple') {
-				return XMod::selectLoveParamter ( $item, $value, $name, $type, $text, array ('maxnum' => $maxnum, 'trnum' => $trnum, 'width' => $width, 'css' => $css ) );
+				return XMod::selectLoveParamter ( $item, $value, $name, $type, $text, array (
+						'maxnum' => $maxnum,
+						'trnum' => $trnum,
+						'width' => $width,
+						'css' => $css 
+				) );
 			} elseif ($type == 'text' || $type == 'multi') {
 				return XMod::getLoveParamter ( $item, $value, $type, $text );
 			}
@@ -42,7 +47,11 @@ function cmd_hook($extract) {
 		} elseif ($mod == 'lovesort' && $type == 'select') {
 			return XMod::selectLoveSort ( $value, $name, $text );
 		} elseif ($mod == 'lovesort' && $type == 'checkbox') {
-			return XMod::checkLoveSort ( $value, $name, array ('trnum' => $trnum, 'width' => $width, 'css' => $css ) );
+			return XMod::checkLoveSort ( $value, $name, array (
+					'trnum' => $trnum,
+					'width' => $width,
+					'css' => $css 
+			) );
 		} elseif ($mod == 'lovesort' && $type == 'multi') {
 			if (! empty ( $value )) {
 				return XMod::multiLoveSort ( $value );
@@ -52,7 +61,11 @@ function cmd_hook($extract) {
 		} elseif ($mod == 'usergroup' && $type == 'select') {
 			return XMod::selectUserGroup ( $value, $name, $text );
 		} elseif ($mod == 'usergroup' && $type == 'checkbox') {
-			return XMod::checkUserGroup ( $value, $name, array ('trnum' => $trnum, 'width' => $width, 'css' => $css ) );
+			return XMod::checkUserGroup ( $value, $name, array (
+					'trnum' => $trnum,
+					'width' => $width,
+					'css' => $css 
+			) );
 		} elseif ($mod == 'certify' && $type == 'select') {
 			return XMod::selectCerityType ( $value, $name, $text );
 		} elseif ($mod == 'certify' && $type == 'text') {

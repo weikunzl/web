@@ -1,8 +1,7 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$uctplpath}-->block_top.tpl"}-->
-<!--{assign var="cp_menuid" value="extend"}-->
+<!--{assign var="menuid" value="extend"}-->
+<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 <div class="user_main">
-  <!--{include file="<!--{$uctplpath}-->block_menu.tpl"}-->
 
   <div class="main_right">
     <div class="div_"> 个人中心 &gt;&gt; 

@@ -89,9 +89,10 @@ class cacheClass
         {
             $data = fread( $fp, filesize( $cachefile ) );
             fclose( $fp );
+   
             if ( !empty( $data ) )
             {
-                $cache_data = unserialize( $data );
+            	$cache_data = unserialize( $data );
             }
             return $cache_data;
         }

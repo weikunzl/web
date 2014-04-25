@@ -215,13 +215,10 @@ class messageUModel extends X {
 		} else {
 			if (parent::$wrap_user ['gender'] == 1 && intval ( $grp ['yxviewlimit'] ) == 1) {
 				$maxview = intval ( $grp ['yxviewnum'] );
-				echo $maxview;
-				echo 333;
 				if ($maxview == 0) {
 					$res = true;
 				} else {
 					$haveview = $this->countMsgViews ( $fromsex );
-					echo $haveview;
 					if ($haveview >= $maxview) {
 						$res = true;
 					}

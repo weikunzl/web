@@ -1,11 +1,9 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$uctplpath}-->block_top.tpl"}-->
-<!--{assign var="cp_menuid" value="points"}-->
+<!--{assign var="menuid" value="points"}-->
+<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 <div class="user_main">
-  <!--{include file="<!--{$uctplpath}-->block_menu.tpl"}-->
-
   <div class="main_right">
-    <div class="div_"> 个人中心 &gt;&gt; 积分记录 </div>
+    <div class="div_"> 服务 &gt;&gt; 积分记录 </div>
 	<div class="nav-tips">
 	您当前剩余积分：<b><font color='green'><!--{$u.points}--></font></b>
 	</div>

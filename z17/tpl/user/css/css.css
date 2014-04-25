@@ -750,11 +750,11 @@ padding:10px 0 10px 10px;
 .greet_main{padding:20px;}
 .greet_left_user{float:left; text-align:center; line-height:25px;}
 .greet_left_user .u_logo img{padding:5px; border:1px solid #dddddd;width:110px;height:130px;}
-.greet_right_phrase{float:right; margin-left:10px;}
+.greet_right_phrase{float:left; margin-left:10px;}
 .greet_item{width:400px; border:1px solid #e1e1e1; padding:5px 10px; margin:0px 0px 10px; line-height:20px; cursor:pointer; color:Gray;}
 .greet_item_hover{width:400px; border:1px solid red; padding:5px 10px; margin:0px 0px 10px; line-height:20px; background:#f0f0f0;}
 .greet_fun_list{float:right; margin-top:10px;}
-.show_leter{background: none repeat scroll 0 0 green;clear: both;color: White;margin-left: -20px;margin-top: 7px;padding: 10px;position: absolute;}
+.show_leter{background: none repeat scroll 0 0 green;clear: both;color: White;margin-left: 20px;margin-top: 7px;padding: 10px;position: absolute;}
 
 /*写信件弹窗*/
 .leter_main{padding:20px;}

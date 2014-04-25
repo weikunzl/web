@@ -6,7 +6,7 @@
  .hr-dashed{margin:10px 0px; border-bottom:1px dashed #e1e1e1; clear:both; width:100%;display:inline-block;}
 .weibo-item{margin-top:10px;}
 .weibo-left{
-	float:left; width:120px;
+	float:left; width:160px;
 }
 .weibo-left .weibo-time{
     padding:3px 5px; background:#f0f0f0;

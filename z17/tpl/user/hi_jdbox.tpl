@@ -18,13 +18,14 @@
     <!--{foreach $greet as $volist}-->
     <div class="greet_item" onclick="select_greet('<!--{$volist.greetid}-->');"><!--{$volist.greeting}--></div>
 	<!--{/foreach}-->
+    <div class="greet_fun_list">
+	<input type="button" value="打招呼" id="btn_greet" class="button-red" style="cursor:pointer;" />&nbsp;&nbsp;&nbsp;
+	<input type="button" id="btn_rnd" name="btn_rnd" value="换一组" onclick="javascript:window.location.href='<!--{$ucfile}-->?c=hi&a=hi&touid=<!--{$touid}-->&halttype=jdbox';" class="button-green" style="cursor:pointer;" />
+    </div>
   </div>
   <div class="clear"></div>
   <span class="show_leter">给会员打招呼</span>
-  <div class="greet_fun_list">
-  <input type="button" value="打招呼" id="btn_greet" class="button-red" style="cursor:pointer;" />&nbsp;&nbsp;&nbsp;
-  <input type="button" id="btn_rnd" name="btn_rnd" value="换一组" onclick="javascript:window.location.href='<!--{$ucfile}-->?c=hi&a=hi&touid=<!--{$touid}-->&halttype=jdbox';" class="button-green" style="cursor:pointer;" />
-  </div>
+  
 
 </div>
 </body>

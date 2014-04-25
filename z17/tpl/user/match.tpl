@@ -1,11 +1,9 @@
 <!--{include file="<!--{$uctplpath}-->block_head.tpl"}-->
-<!--{include file="<!--{$uctplpath}-->block_top.tpl"}-->
 <!--{assign var="cp_menuid" value="match"}-->
+<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_menu.tpl"}-->
 <div class="user_main">
-  <!--{include file="<!--{$uctplpath}-->block_menu.tpl"}-->
-
   <div class="main_right">
-    <div class="div_"> 个人中心 &gt;&gt; 缘分速配</div>
+    <div class="div_"> 我的资料 &gt;&gt; 缘分速配</div>
 	<div class="nav-tips">
 	以下是根据您设定的择友条件，每天给您速配的会员结果。
 	</div>

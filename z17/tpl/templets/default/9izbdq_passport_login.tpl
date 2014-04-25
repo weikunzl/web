@@ -32,13 +32,6 @@
         </div>
         <div class="cooperation">
           <p class="login_list clearfix color3"> <span class="li_d">·</span>没有账号？ <a class="no_ico" href="<!--{$urlpath}-->index.php?c=passport&a=reg">立即注册</a><br>
-		    
-            <span class="li_d" style='display:none;'>·用合作网站账号登录</span>
-			
-			<!--{assign var='connect' value=vo_list("mod={connect}")}-->
-			<!--{foreach $connect as $volist}-->
-			<a href="<!--{$volist.apiurl}-->"><img src="<!--{$volist.logo}-->" /><!--{$volist.authname}--></a>
-			<!--{/foreach}-->
 		  
 		  </p>
         </div>

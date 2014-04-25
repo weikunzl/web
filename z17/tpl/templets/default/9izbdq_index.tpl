@@ -41,7 +41,7 @@
 		<ul>
 		<li><a href="<!--{$urlpath}-->usercp.php?c=message"><div class="newmsgbox div_red"><img src="/tpl/user/images/menu/green/562810.png"><div>新信件(<!--{count mod='user' type='newmessage' value=$login.info.userid}-->)</div></div></a></li>
 		<li><a href="<!--{$urlpath}-->usercp.php?c=visitme"><div class="newmsgbox div_yellow"><img src="/tpl/user/images/menu/green/562779.png"><div>新访客(<!--{$login.info.hits}-->)</div></div></a></li>
-		<li><a href="<!--{$urlpath}-->usercp.php?c=fans"><div class="newmsgbox div_purple"><img src="/tpl/user/images/menu/green/562808.png"><div>新粉丝(<!--{count mod='user' type='newfan' value=$login.info.userid}-->)</div></div></a></li>
+		<li><a href="<!--{$urlpath}-->usercp.php?c=fans"><div class="newmsgbox div_purple"><img src="/tpl/user/images/menu/green/562808.png"><div>新粉丝(<!--{count mod='user' type='fans' value=$login.info.userid}-->)</div></div></a></li>
 		<li><a href="<!--{$urlpath}-->usercp.php?c=listen"><div class="newmsgbox div_blue"><img src="/tpl/user/images/menu/green/562709.png"><div>我的关注</div></div></a></li>
 		<li><a href="<!--{$urlpath}-->usercp.php?c=gift"><div class="newmsgbox div_green"><img src="/tpl/user/images/menu/green/562785.png"><div>新礼物(<!--{count mod='user' type='gift' value=$login.info.userid}-->)</div></div></a></li>
 		</ul>
@@ -71,12 +71,12 @@
     <div class="left3">
 	  
 	  <h2 class="hh3">
-	    <label><a id="tab_label_tag" href="###" class="nnn" onMouseOver="tab_label('0');">最新会员</a></label>
+	    <label><a id="tab_label_tag_0" href="###" class="nnn" onMouseOver="tab_label('0');">最新会员</a></label>
 	    <!--{if $login.info.gender==1}-->
-	    <label><a id="tab_label_tag" href="###" onMouseOver="tab_label('1');">推荐女会员</a></label> 
+	    <label><a id="tab_label_tag_1" href="###" onMouseOver="tab_label('1');">推荐女会员</a></label> 
 	    <!--{/if}-->
 	    <!--{if $login.info.gender==2}-->
-	    <label><a id="tab_label_tag" href="###" onMouseOver="tab_label('2');">推荐男会员</a></label>
+	    <label><a id="tab_label_tag_2" href="###" onMouseOver="tab_label('2');">推荐男会员</a></label>
 	    <!--{/if}-->
 		
 	    <a href="<!--{$appfile}-->?c=user" class="more3">查看更多&gt;&gt;</a> 
@@ -88,7 +88,7 @@
           <li><a href="<!--{$volist.homeurl}-->" target="_blank"><img src="<!--{$volist.avatarurl}-->" width='90px' height='110px' title="<!--{$volist.username}-->" alt="<!--{$volist.username}-->" /></a>
             
             <div class="areaf"> <span><!--{area type='text' value=$volist.cityid}--></span> <span><!--{$volist.age}-->岁</span> </div>
-			<div class="guangzh"><a href="###" onClick="jbox_hibox(<!--{$volist.userid}-->);">打招呼</a><a href="###" onClick="jbox_writebox(<!--{$volist.userid}-->);">写信件</a></div>
+	    <div><a href="javascript:void(0);" onclick="artbox_hi(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/r.gif"></span></a></div>
           </li>
           <!--{/foreach}-->
         </ul>
@@ -101,8 +101,8 @@
           <li><a href="<!--{$volist.homeurl}-->" target="_blank"><img src="<!--{$volist.avatarurl}-->" width='90px' height='110px' title="<!--{$volist.username}-->" alt="<!--{$volist.username}-->" /></a>
             
             <div class="areaf"> <span><!--{area type='text' value=$volist.cityid}--></span> <span><!--{$volist.age}-->岁</span> </div>
-			<div class="guangzh"><a href="###" onClick="jbox_hibox(<!--{$volist.userid}-->);">打招呼</a><a href="###" onClick="jbox_writebox(<!--{$volist.userid}-->);">写信件</a></div>
-          </li>
+	    <div><a href="javascript:void(0);" onclick="artbox_hi(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/r.gif"></span></a></div>	
+	  </li>
           <!--{/foreach}-->
         </ul>
       </div>
@@ -114,8 +114,8 @@
           <li><a href="<!--{$volist.homeurl}-->" target="_blank"><img src="<!--{$volist.avatarurl}-->" width='90px' height='110px' title="<!--{$volist.username}-->" alt="<!--{$volist.username}-->" /></a>
             
             <div class="areaf"> <span><!--{area type='text' value=$volist.cityid}--></span> <span><!--{$volist.age}-->岁</span> </div>
-			<div class="guangzh"><a href="###" onClick="jbox_hibox(<!--{$volist.userid}-->);">打招呼</a><a href="###" onClick="jbox_writebox(<!--{$volist.userid}-->);">写信件</a></div>
-          </li>
+	    <div><a href="javascript:void(0);" onclick="artbox_hi(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/r.gif"></span></a></div>
+	  </li>
           <!--{/foreach}-->
         </ul>
       </div>
@@ -123,14 +123,14 @@
 	<script>
 	//显示隐藏
 	function tab_label(tabid) {
-		var taglength = $("a[id='tab_label_tag']").length;
+		var taglength = 3;//$("a[id='tab_label_tag']").length;
 		for (i=0; i<taglength; i++){
 			if (tabid == i) {
-				$("a[id='tab_label_tag']").eq(i).addClass('nnn');
+				$('#tab_label_tag_'+i).addClass('nnn');
 				$('#tab_label_'+i).show();
 			}
 			else {
-				$("a[id='tab_label_tag']").eq(i).removeClass('nnn');
+				$('#tab_label_tag_'+i).removeClass('nnn');
 				$('#tab_label_'+i).hide();
 			}
 		}

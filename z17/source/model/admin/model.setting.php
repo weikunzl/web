@@ -23,6 +23,7 @@ class settingAModel extends X
     public function doSave( $option, $array )
     {
         $data = serialize( $array );
+        
         parent::loadlib( "option" );
         XOption::updateoption( $option, $data );
         return TRUE;

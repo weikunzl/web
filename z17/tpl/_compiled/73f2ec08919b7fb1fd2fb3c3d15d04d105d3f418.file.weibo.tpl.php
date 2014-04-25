@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-22 16:27:59
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-25 09:43:54
          compiled from "C:\svn\z17z17\web\z17\tpl\user\weibo.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:123865355d93adcd0b2-57988218%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '73f2ec08919b7fb1fd2fb3c3d15d04d105d3f418' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\user\\weibo.tpl',
-      1 => 1398155274,
+      1 => 1398326777,
       2 => 'file',
     ),
   ),
@@ -38,8 +38,6 @@ if (!is_callable('smarty_modifier_nl2br')) include 'C:\\svn\\z17z17\\web\\z17\\s
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['uctplpath']->value)."block_head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <?php $_smarty_tpl->tpl_vars["cp_menuid"] = new Smarty_variable("weibo", null, 0);?>
-<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_headinc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
  <style>

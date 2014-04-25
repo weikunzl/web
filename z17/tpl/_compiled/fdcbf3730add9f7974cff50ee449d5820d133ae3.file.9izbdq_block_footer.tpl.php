@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-21 16:21:59
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-25 13:56:06
          compiled from "C:\svn\z17z17\web\z17\tpl\templets\default\9izbdq_block_footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:73735354cd70197a16-91822215%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fdcbf3730add9f7974cff50ee449d5820d133ae3' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\templets\\default\\9izbdq_block_footer.tpl',
-      1 => 1398068515,
+      1 => 1398405359,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'volist' => 0,
     'urlpath' => 0,
     'config' => 0,
-    'copyright_poweredby' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -53,8 +52,6 @@ index.php">返回首页</a>
 	&nbsp;&nbsp;<?php echo smarty_modifier_stripslashes($_smarty_tpl->tpl_vars['config']->value['tjcode']);?>
 
 	<?php }?>
-
-	<?php echo $_smarty_tpl->tpl_vars['copyright_poweredby']->value;?>
 
 	</p>
 	<?php $_smarty_tpl->tpl_vars['pluginevent'] = new Smarty_variable(XHook::doAction('plugin_runtime'), null, 0);?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-21 17:41:49
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-25 13:47:07
          compiled from "C:\svn\z17z17\web\z17\tpl\user\listen.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:311965354e7dd5bb4c4-70153922%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6cbb344d82546953966940df9aaefe3269e0fb00' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\user\\listen.tpl',
-      1 => 1398066166,
+      1 => 1398326658,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5354e7dd7aa051_02561713',
   'variables' => 
   array (
     'uctplpath' => 0,
@@ -29,13 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'showpage' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5354e7dd7aa051_02561713',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5354e7dd7aa051_02561713')) {function content_5354e7dd7aa051_02561713($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_filterhtml')) include 'C:\\svn\\z17z17\\web\\z17\\source\\core\\smarty\\plugins\\modifier.filterhtml.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['uctplpath']->value)."block_head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
-<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_headinc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <?php $_smarty_tpl->tpl_vars["menuid"] = new Smarty_variable("listen", null, 0);?>
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

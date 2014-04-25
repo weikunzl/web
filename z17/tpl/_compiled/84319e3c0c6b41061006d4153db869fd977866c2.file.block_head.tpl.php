@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-21 17:40:09
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-24 17:29:51
          compiled from "C:\svn\z17z17\web\z17\tpl\user\block_head.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:116045354e779d48248-19978293%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '84319e3c0c6b41061006d4153db869fd977866c2' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\user\\block_head.tpl',
-      1 => 1398066164,
+      1 => 1398331778,
       2 => 'file',
     ),
   ),
@@ -15,17 +15,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5354e779dc0694_85001733',
   'variables' => 
   array (
     'page_charset' => 0,
     'page_title' => 0,
     'ucpath' => 0,
-    'rootpath' => 0,
+    'skinpath' => 0,
+    'tplpath' => 0,
+    'tplpre' => 0,
     'urlpath' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5354e779dc0694_85001733',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5354e779dc0694_85001733')) {function content_5354e779dc0694_85001733($_smarty_tpl) {?><!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -39,24 +41,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </title>
 <link href="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
 css/css.css" rel="stylesheet" />
-<script type='text/javascript'>
-var _ROOT_PATH = "<?php echo $_smarty_tpl->tpl_vars['rootpath']->value;?>
-";
-</script>
-<script type="text/javascript" src='<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-tpl/static/js/jquery.min.js'></script>
-<script type="text/javascript" src='<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-tpl/static/js/artdialog/jquery.artDialog.source.js?skin=default'></script>
-<script type="text/javascript" src='<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-tpl/static/js/artdialog/plugins/iframeTools.js'></script>
-<script type="text/javascript" src='<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-tpl/static/js/public.js'></script>
-<script type="text/javascript" src='<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-tpl/static/js/ajax.js'></script>
-<script type="text/javascript" src='<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-tpl/static/js/artbox.js'></script>
-<script type="text/javascript" src='<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-tpl/static/js/WdatePicker.js'></script>
+
+<!-- add default -->
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/css/public.css" media="screen" />
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/css/v3.css" media="screen" />
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/css/n.css" media="screen" />
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/css/button.css" />
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_headjs.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<!-- end default -->
+
+
 <!--[if lt IE 7]>
 <script type='text/javascript' src='<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
 tpl/static/js/DD_belatedPNG-min.js'></script>

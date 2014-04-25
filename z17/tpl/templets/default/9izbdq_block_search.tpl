@@ -8,9 +8,9 @@
 		  <option value='1'<!--{if $s_sex == 1}--> selected<!--{/if}-->>男会员</option>
 		  </select>
           &nbsp;年龄:
-          <!--{hook mod='age' name='s_sage' text='不限'}-->
+          <!--{hook mod='age' name='s_sage' text='不限' value=$s_sage}-->
           <span>~</span>
-          <!--{hook mod='age' name='s_eage' text='不限'}-->
+          <!--{hook mod='age' name='s_eage' text='不限' value=$s_eage}-->
           &nbsp;地区:
           <!--{area type='dist1' name='s_dist1' value=$s_dist1 ajax='1' cname='s_dist2' cajax='1' dname='s_dist3' text='=请选择='}-->&nbsp;
 		  <span id="json_s_dist2">

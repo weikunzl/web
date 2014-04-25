@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-21 16:02:23
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-25 10:17:22
          compiled from "C:\svn\z17z17\web\z17\tpl\templets\default\9izbdq_passport_jdlogin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:238595354d08f0d1986-23657610%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0a66694e0303840deb7f4282935c9b482fefc761' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\templets\\default\\9izbdq_passport_jdlogin.tpl',
-      1 => 1398066164,
+      1 => 1398392236,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5354d08f18b988_41881970',
   'variables' => 
   array (
     'tplpath' => 0,
@@ -23,12 +25,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'urlpath' => 0,
     'forward' => 0,
     'config' => 0,
-    'connect' => 0,
-    'volist' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5354d08f18b988_41881970',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5354d08f18b988_41881970')) {function content_5354d08f18b988_41881970($_smarty_tpl) {?><!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -192,23 +190,7 @@ source/include/imagecode.php?act=verifycode" align="middle" /> <a href="javascri
 index.php?c=passport&a=forget" target="_top">忘记密码？</a>
 		  </td>
 		</tr>
-		<tr>
-		  <td colspan="2"> 
-		  其他合作登录：
-		  <?php $_smarty_tpl->tpl_vars['connect'] = new Smarty_variable(vo_list("mod={connect}"), null, 0);?>
-		  <?php  $_smarty_tpl->tpl_vars['volist'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['volist']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['connect']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['volist']->key => $_smarty_tpl->tpl_vars['volist']->value){
-$_smarty_tpl->tpl_vars['volist']->_loop = true;
-?>
-		  <a href="<?php echo $_smarty_tpl->tpl_vars['volist']->value['apiurl'];?>
-" title="<?php echo $_smarty_tpl->tpl_vars['volist']->value['authname'];?>
-" target="_top"><img src="<?php echo $_smarty_tpl->tpl_vars['volist']->value['logo'];?>
-" style="vertical-align:middle;" alt="<?php echo $_smarty_tpl->tpl_vars['volist']->value['authname'];?>
-" /></a>&nbsp;
-		  <?php } ?>
-		  </td>
-		</tr>
+
 	  </table>
 	  </form>
 	</div>

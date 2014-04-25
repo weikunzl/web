@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-22 16:31:45
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-25 14:32:37
          compiled from "C:\svn\z17z17\web\z17\tpl\templets\default\9izbdq_index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:166675354cd6ebae772-81073803%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9c5fdb060bf27bf87f41051e0a72a3187912705d' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\templets\\default\\9izbdq_index.tpl',
-      1 => 1398155502,
+      1 => 1398407539,
       2 => 'file',
     ),
   ),
@@ -100,7 +100,7 @@ usercp.php?c=message"><div class="newmsgbox div_red"><img src="/tpl/user/images/
 usercp.php?c=visitme"><div class="newmsgbox div_yellow"><img src="/tpl/user/images/menu/green/562779.png"><div>新访客(<?php echo $_smarty_tpl->tpl_vars['login']->value['info']['hits'];?>
 )</div></div></a></li>
 		<li><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-usercp.php?c=fans"><div class="newmsgbox div_purple"><img src="/tpl/user/images/menu/green/562808.png"><div>新粉丝(<?php echo cmd_count(array('mod'=>'user','type'=>'newfan','value'=>$_smarty_tpl->tpl_vars['login']->value['info']['userid']),$_smarty_tpl);?>
+usercp.php?c=fans"><div class="newmsgbox div_purple"><img src="/tpl/user/images/menu/green/562808.png"><div>新粉丝(<?php echo cmd_count(array('mod'=>'user','type'=>'fans','value'=>$_smarty_tpl->tpl_vars['login']->value['info']['userid']),$_smarty_tpl);?>
 )</div></div></a></li>
 		<li><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
 usercp.php?c=listen"><div class="newmsgbox div_blue"><img src="/tpl/user/images/menu/green/562709.png"><div>我的关注</div></div></a></li>
@@ -135,12 +135,12 @@ images/button-mood.gif"></div>
     <div class="left3">
 	  
 	  <h2 class="hh3">
-	    <label><a id="tab_label_tag" href="###" class="nnn" onMouseOver="tab_label('0');">最新会员</a></label>
+	    <label><a id="tab_label_tag_0" href="###" class="nnn" onMouseOver="tab_label('0');">最新会员</a></label>
 	    <?php if ($_smarty_tpl->tpl_vars['login']->value['info']['gender']==1){?>
-	    <label><a id="tab_label_tag" href="###" onMouseOver="tab_label('1');">推荐女会员</a></label> 
+	    <label><a id="tab_label_tag_1" href="###" onMouseOver="tab_label('1');">推荐女会员</a></label> 
 	    <?php }?>
 	    <?php if ($_smarty_tpl->tpl_vars['login']->value['info']['gender']==2){?>
-	    <label><a id="tab_label_tag" href="###" onMouseOver="tab_label('2');">推荐男会员</a></label>
+	    <label><a id="tab_label_tag_2" href="###" onMouseOver="tab_label('2');">推荐男会员</a></label>
 	    <?php }?>
 		
 	    <a href="<?php echo $_smarty_tpl->tpl_vars['appfile']->value;?>
@@ -163,9 +163,11 @@ $_smarty_tpl->tpl_vars['volist']->_loop = true;
             <div class="areaf"> <span><?php echo cmd_area(array('type'=>'text','value'=>$_smarty_tpl->tpl_vars['volist']->value['cityid']),$_smarty_tpl);?>
 </span> <span><?php echo $_smarty_tpl->tpl_vars['volist']->value['age'];?>
 岁</span> </div>
-			<div class="guangzh"><a href="###" onClick="jbox_hibox(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);">打招呼</a><a href="###" onClick="jbox_writebox(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);">写信件</a></div>
+	    <div><a href="javascript:void(0);" onclick="artbox_hi(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/images/r.gif"></span></a></div>
           </li>
           <?php } ?>
         </ul>
@@ -188,10 +190,12 @@ $_smarty_tpl->tpl_vars['volist']->_loop = true;
             <div class="areaf"> <span><?php echo cmd_area(array('type'=>'text','value'=>$_smarty_tpl->tpl_vars['volist']->value['cityid']),$_smarty_tpl);?>
 </span> <span><?php echo $_smarty_tpl->tpl_vars['volist']->value['age'];?>
 岁</span> </div>
-			<div class="guangzh"><a href="###" onClick="jbox_hibox(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);">打招呼</a><a href="###" onClick="jbox_writebox(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);">写信件</a></div>
-          </li>
+	    <div><a href="javascript:void(0);" onclick="artbox_hi(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/images/r.gif"></span></a></div>	
+	  </li>
           <?php } ?>
         </ul>
       </div>
@@ -213,10 +217,12 @@ $_smarty_tpl->tpl_vars['volist']->_loop = true;
             <div class="areaf"> <span><?php echo cmd_area(array('type'=>'text','value'=>$_smarty_tpl->tpl_vars['volist']->value['cityid']),$_smarty_tpl);?>
 </span> <span><?php echo $_smarty_tpl->tpl_vars['volist']->value['age'];?>
 岁</span> </div>
-			<div class="guangzh"><a href="###" onClick="jbox_hibox(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);">打招呼</a><a href="###" onClick="jbox_writebox(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);">写信件</a></div>
-          </li>
+	    <div><a href="javascript:void(0);" onclick="artbox_hi(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/images/r.gif"></span></a></div>
+	  </li>
           <?php } ?>
         </ul>
       </div>
@@ -224,14 +230,14 @@ $_smarty_tpl->tpl_vars['volist']->_loop = true;
 	<script>
 	//显示隐藏
 	function tab_label(tabid) {
-		var taglength = $("a[id='tab_label_tag']").length;
+		var taglength = 3;//$("a[id='tab_label_tag']").length;
 		for (i=0; i<taglength; i++){
 			if (tabid == i) {
-				$("a[id='tab_label_tag']").eq(i).addClass('nnn');
+				$('#tab_label_tag_'+i).addClass('nnn');
 				$('#tab_label_'+i).show();
 			}
 			else {
-				$("a[id='tab_label_tag']").eq(i).removeClass('nnn');
+				$('#tab_label_tag_'+i).removeClass('nnn');
 				$('#tab_label_'+i).hide();
 			}
 		}

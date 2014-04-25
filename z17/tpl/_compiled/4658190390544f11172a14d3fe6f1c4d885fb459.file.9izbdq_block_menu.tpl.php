@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-22 10:14:53
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-25 10:11:14
          compiled from "C:\svn\z17z17\web\z17\tpl\templets\default\9izbdq_block_menu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10145354cd6eee6ee8-38303078%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4658190390544f11172a14d3fe6f1c4d885fb459' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\templets\\default\\9izbdq_block_menu.tpl',
-      1 => 1398132889,
+      1 => 1398391864,
       2 => 'file',
     ),
   ),
@@ -24,9 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'topads' => 0,
     'login' => 0,
     'a' => 0,
-    'appfile' => 0,
-    'connect' => 0,
-    'volist' => 0,
+    'u' => 0,
     'menuid' => 0,
     'yx_sex' => 0,
   ),
@@ -62,26 +60,22 @@ index.php"><img src="<?php echo $_smarty_tpl->tpl_vars['config']->value['logo'];
 index.php?c=passport&a=perfect";</script> 
 			  <?php }?> 
 			  <?php }?> 
-          欢迎您： <?php echo $_smarty_tpl->tpl_vars['login']->value['info']['levelimg'];?>
-<?php echo $_smarty_tpl->tpl_vars['login']->value['username'];?>
-， <a href="<?php echo $_smarty_tpl->tpl_vars['appfile']->value;?>
-?c=passport&a=logout">退出登录</a> 
+		欢迎您： 
+		<?php if (!empty($_smarty_tpl->tpl_vars['login']->value['info']['levelimg'])){?>
+			<?php echo $_smarty_tpl->tpl_vars['login']->value['info']['levelimg'];?>
+
+		<?php }else{ ?>
+			<?php echo $_smarty_tpl->tpl_vars['u']->value['levelimg'];?>
+
+		<?php }?>
+		<?php echo $_smarty_tpl->tpl_vars['login']->value['username'];?>
+， <a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+index.php?c=passport&a=logout">退出登录</a> 
           <?php }else{ ?> 
           游客欢迎您 <a href="###" onclick="artbox_loginbox();">登录网站</a>&nbsp;
 		  <?php $_smarty_tpl->tpl_vars['connect'] = new Smarty_variable(vo_list("mod={connect}"), null, 0);?>
-		  <?php  $_smarty_tpl->tpl_vars['volist'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['volist']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['connect']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['volist']->key => $_smarty_tpl->tpl_vars['volist']->value){
-$_smarty_tpl->tpl_vars['volist']->_loop = true;
-?>
-		  <a href="<?php echo $_smarty_tpl->tpl_vars['volist']->value['apiurl'];?>
-" title="<?php echo $_smarty_tpl->tpl_vars['volist']->value['authname'];?>
-" target="_top"><img src="<?php echo $_smarty_tpl->tpl_vars['volist']->value['logo'];?>
-" style="vertical-align:middle;" alt="<?php echo $_smarty_tpl->tpl_vars['volist']->value['authname'];?>
-" /></a>&nbsp;
-		  <?php } ?>
-		  |&nbsp;<a href="<?php echo $_smarty_tpl->tpl_vars['appfile']->value;?>
-?c=passport&a=reg">免费注册</a> 
+		  |&nbsp;<a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+index.php?c=passport&a=reg">免费注册</a> 
 
           <?php }?> 
         </div>

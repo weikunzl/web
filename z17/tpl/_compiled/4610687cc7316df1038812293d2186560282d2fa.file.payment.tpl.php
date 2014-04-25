@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-22 10:32:46
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-23 11:23:48
          compiled from "C:\svn\z17z17\web\z17\tpl\user\payment.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:275475355d4cea19030-50032759%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4610687cc7316df1038812293d2186560282d2fa' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\user\\payment.tpl',
-      1 => 1398066166,
+      1 => 1398223172,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5355d4ceb20ee1_85298819',
   'variables' => 
   array (
     'uctplpath' => 0,
@@ -29,8 +31,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'volist' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5355d4ceb20ee1_85298819',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5355d4ceb20ee1_85298819')) {function content_5355d4ceb20ee1_85298819($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_nl2br')) include 'C:\\svn\\z17z17\\web\\z17\\source\\core\\smarty\\plugins\\modifier.nl2br.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['uctplpath']->value)."block_head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -44,7 +44,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="user_main">
 
   <div class="main_right">
-    <div class="div_"> 个人中心 &gt;&gt; 在线充值 </div>
+    <div class="div_"> 服务 &gt;&gt; 在线充值 </div>
 	<div class="nav-tips">
 	您当前剩余可用<?php echo $_smarty_tpl->tpl_vars['lang']->value['money'];?>
 ：<b><font color='green'><?php echo $_smarty_tpl->tpl_vars['u']->value['money'];?>

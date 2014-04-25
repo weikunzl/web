@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-22 15:48:30
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-25 10:14:46
          compiled from "C:\svn\z17z17\web\z17\tpl\templets\default\9izbdq_passport_login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:469253561ece0e53d4-41112785%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '38edbea93dfa187f554e1262e8e8155de09592cc' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\templets\\default\\9izbdq_passport_login.tpl',
-      1 => 1398066164,
+      1 => 1398392064,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_53561ece236152_92828718',
   'variables' => 
   array (
     'tplpath' => 0,
@@ -22,12 +24,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'urlpath' => 0,
     'forward' => 0,
     'config' => 0,
-    'connect' => 0,
-    'volist' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_53561ece236152_92828718',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_53561ece236152_92828718')) {function content_53561ece236152_92828718($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_headinc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -70,20 +68,6 @@ index.php?c=passport&a=forget">忘记密码</a></div>
         <div class="cooperation">
           <p class="login_list clearfix color3"> <span class="li_d">·</span>没有账号？ <a class="no_ico" href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
 index.php?c=passport&a=reg">立即注册</a><br>
-		    
-            <span class="li_d" style='display:none;'>·用合作网站账号登录</span>
-			
-			<?php $_smarty_tpl->tpl_vars['connect'] = new Smarty_variable(vo_list("mod={connect}"), null, 0);?>
-			<?php  $_smarty_tpl->tpl_vars['volist'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['volist']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['connect']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['volist']->key => $_smarty_tpl->tpl_vars['volist']->value){
-$_smarty_tpl->tpl_vars['volist']->_loop = true;
-?>
-			<a href="<?php echo $_smarty_tpl->tpl_vars['volist']->value['apiurl'];?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['volist']->value['logo'];?>
-" /><?php echo $_smarty_tpl->tpl_vars['volist']->value['authname'];?>
-</a>
-			<?php } ?>
 		  
 		  </p>
         </div>

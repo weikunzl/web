@@ -38,7 +38,7 @@
 		<!--{else}-->
 			<!--{if !empty($volist.commer)}-->
 			<!--{foreach $volist.commer as $val}-->
-			<input type="radio" name="viptype" id="viptype" value="<!--{$volist.groupid}-->_<!--{$val.orders}-->" />&nbsp;有效<!--{$val.days}-->天，支付<!--{$lang.money}--><!--{$val.money}--><!--{$lang.money_dot}-->，赠送<!--{$lang.points}--><!--{$val.points}--><br />
+			<input type="radio" name="viptype" id="viptype" value="<!--{$volist.groupid}-->_<!--{$val.orders}-->" />&nbsp;有效<!--{$val.days}-->天，支付<!--{$lang.money}--><!--{$val.money}--><!--{$lang.money_dot}--><br />
 			<!--{/foreach}-->
 			<!--{/if}-->
 		<!--{/if}-->
@@ -61,7 +61,7 @@
 		<!--{foreach $group as $volist}-->
         <div class="tq_list_title"><!--{$volist.groupname}-->特权</div>
         <div class="tq_list"> 
-		<span class="tq_item">每天登录积分(<!--{$volist.loginpoints}-->)</span> 
+		<!-- span class="tq_item">每天登录积分(<!--{$volist.loginpoints}-->)</span--> 
 		<span class="tq_item">上传照片(<!--{if $volist.photo.photolimit==1}--><!--{$volist.photo.photonum}-->张 <!--{else}--> 不限<!--{/if}-->)</span> 
 		<span class="tq_item">关注好友(<!--{if $volist.friend.friendlimit==1}--><!--{$volist.friend.friendnum}--> 个 <!--{else}--> 不限<!--{/if}-->)</span> 
 

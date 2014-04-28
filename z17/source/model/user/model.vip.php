@@ -22,7 +22,7 @@ class vipUModel extends X
             if ( $orders == $value['orders'] )
             {
                 $array = array( 
-			days" => $value['days'], 
+			"days" => $value['days'], 
 			"money" => $value['money'], 
 			"points" => $value['points']
 		);
@@ -34,7 +34,7 @@ class vipUModel extends X
 
     public function doSaveVip( $group, $commer )
     {
-        $result = parent::$wrap_user( DB_PREFIX."user", array( "groupid" => intval( $group['groupid'] ) ), "userid='".parent::$wrap_user['userid']."'" );
+        $result = parent::$obj->update( DB_PREFIX."user", array( "groupid" => intval( $group['groupid'] ) ), "userid='".parent::$wrap_user['userid']."'" );
         if ( TRUE === $result )
         {
             $int_startdate = strtotime( date( "Y-m-d", time( ) ) );

@@ -64,6 +64,42 @@ class accountUModel extends X
             "lovestatus" => $lovestatus
         ), "userid='".parent::$wrap_user['userid']."'" );
     }
+    
+    public function doCreatInviteCodes($num)
+    {
+    	$effectCode = array();
+    	$effectCode = parent::$obj->getall("select code from ".DB_PREFIX."invite where userid='".parent::$wrap_user['userid']."' and stat=1;" );
+    	if(count($effectCode) >= 10) return $effectCode;
+    	$num = $num-count($effectCode);
+    	
+    	for($i=0;$i<$num;$i++){
+	    	do{
+	    		$code = rand(100000,999999);
+	    		$rows = parent::$obj->fetch_first("select * from ".DB_PREFIX."invite where code='".$code."' and stat=1;" );
+	    	}while(!empty($rows));
+	    	
+	    	$args = array(
+	    			'userid'=>parent::$wrap_user['userid'],
+	    			'stat'=>1,
+	    			'code'=>$code
+	    	);
+	    	if(parent::$obj->insert(DB_PREFIX.'invite',$args)) array_push($effectCode,array('code'=>$code));
+    	}
+    	return $effectCode;
+    }
+    
+    public function doCheckInviteCode($invitecode)
+    {
+    	return parent::$obj->fetch_first(
+    			"select userid from ".DB_PREFIX."invite where code='"
+    			.$invitecode."' and stat=1;" );
+    }
+    public function doDelInviteCode($invitecode)
+    {
+    	 return parent::$obj->update( DB_PREFIX."invite", array(
+            "stat" => 2
+        ), "code='".$invitecode."'" );
+    }
 
 }
 

@@ -30,6 +30,15 @@
             <label><font color="red">*</font> 登录邮箱：</label>
             <input type="text" name="email" id="email" class="w1" onblur="ajax_email('email','tip_email');" /> <font color="red">*</font> <span id="tip_email"><font color="#999999"> 请输入有效邮箱地址</font></span>
           </div>
+	  <div class="form_li">
+            <label><font color="red">*</font> 邀请注册码：</label>
+		<!--{if $invite_code}-->
+		<!--{$invite_code}-->
+		<input type="hidden" name="invitecode" id="invitecode" value="<!--{$invite_code}-->" />
+		<!--{else}-->
+		<input type="text" name="invitecode" id="invitecode" class="w1" /> <font color="red">*</font> <font color="#999999"> 请输入邀请注册码</font>
+		<!--{/if}-->
+          </div>
 		  <!--{if $config.regcode == '1'}-->
           <div class="form_li">
             <label><font color="red">*</font> 验&nbsp;证&nbsp;码&nbsp;：</label>
@@ -183,6 +192,14 @@ function checkreg(){
 	v = $("#"+t).val();
 	if(v=="") {
 		alert("邮箱不能为空");
+		$('#'+t).focus();
+		return false;
+	}
+
+	t = "invitecode";
+	v = $("#"+t).val();
+	if(v=="") {
+		alert("邀请注册码不能为空");
 		$('#'+t).focus();
 		return false;
 	}

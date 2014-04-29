@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-25 14:32:37
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-29 15:21:53
          compiled from "C:\svn\z17z17\web\z17\tpl\templets\default\9izbdq_index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:166675354cd6ebae772-81073803%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4017535dff63307588-98432183%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9c5fdb060bf27bf87f41051e0a72a3187912705d' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\templets\\default\\9izbdq_index.tpl',
-      1 => 1398407539,
+      1 => 1398756110,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '166675354cd6ebae772-81073803',
+  'nocache_hash' => '4017535dff63307588-98432183',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5354cd6ee580a5_74701141',
+  'unifunc' => 'content_535dff6359a354_95911149',
   'variables' => 
   array (
     'tplpath' => 0,
@@ -34,7 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5354cd6ee580a5_74701141')) {function content_5354cd6ee580a5_74701141($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_filterhtml')) include 'C:\\svn\\z17z17\\web\\z17\\source\\core\\smarty\\plugins\\modifier.filterhtml.php';
+<?php if ($_valid && !is_callable('content_535dff6359a354_95911149')) {function content_535dff6359a354_95911149($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_filterhtml')) include 'C:\\svn\\z17z17\\web\\z17\\source\\core\\smarty\\plugins\\modifier.filterhtml.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_headinc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
@@ -80,10 +80,18 @@ themes/images/email<?php if ($_smarty_tpl->tpl_vars['login']->value['info']['ema
 星&nbsp;&nbsp;<a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
 usercp.php?c=certify">诚信认证</a></div>
                   <div><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-usercp.php?c=avatar">更新形象</a></div>
+usercp.php?c=avatar">更新头像</a></div>
+		  <div><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+usercp.php?c=visitme">访问(<?php echo $_smarty_tpl->tpl_vars['login']->value['info']['hits'];?>
+</a>)&nbsp;|&nbsp;<a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+usercp.php?c=fans">粉丝(<?php echo cmd_count(array('mod'=>'user','type'=>'fans','value'=>$_smarty_tpl->tpl_vars['login']->value['info']['userid']),$_smarty_tpl);?>
+)</a></div>
                   <div><a href="<?php echo $_smarty_tpl->tpl_vars['appfile']->value;?>
-?c=passport&a=logout">退出登录</a>&nbsp;|&nbsp;<a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-usercp.php?c=payment">充值</a></div>
+?c=passport&a=logout">退出</a>
+			<!--&nbsp;|&nbsp;<a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+usercp.php?c=payment">充值</a>-->
+			&nbsp;|&nbsp;<a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+usercp.php?c=account&a=invite">邀请</a></div>
                 </div>
                 <div class="c"></div>
               </div>
@@ -97,10 +105,7 @@ usercp.php?c=payment">充值</a></div>
 usercp.php?c=message"><div class="newmsgbox div_red"><img src="/tpl/user/images/menu/green/562810.png"><div>新信件(<?php echo cmd_count(array('mod'=>'user','type'=>'newmessage','value'=>$_smarty_tpl->tpl_vars['login']->value['info']['userid']),$_smarty_tpl);?>
 )</div></div></a></li>
 		<li><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-usercp.php?c=visitme"><div class="newmsgbox div_yellow"><img src="/tpl/user/images/menu/green/562779.png"><div>新访客(<?php echo $_smarty_tpl->tpl_vars['login']->value['info']['hits'];?>
-)</div></div></a></li>
-		<li><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-usercp.php?c=fans"><div class="newmsgbox div_purple"><img src="/tpl/user/images/menu/green/562808.png"><div>新粉丝(<?php echo cmd_count(array('mod'=>'user','type'=>'fans','value'=>$_smarty_tpl->tpl_vars['login']->value['info']['userid']),$_smarty_tpl);?>
+usercp.php?c=hi"><div class="newmsgbox div_yellow"><img src="/tpl/user/images/menu/green/562779.png"><div>新问候(<?php echo cmd_count(array('mod'=>'user','type'=>'newhi','value'=>$_smarty_tpl->tpl_vars['login']->value['info']['userid']),$_smarty_tpl);?>
 )</div></div></a></li>
 		<li><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
 usercp.php?c=listen"><div class="newmsgbox div_blue"><img src="/tpl/user/images/menu/green/562709.png"><div>我的关注</div></div></a></li>
@@ -163,11 +168,9 @@ $_smarty_tpl->tpl_vars['volist']->_loop = true;
             <div class="areaf"> <span><?php echo cmd_area(array('type'=>'text','value'=>$_smarty_tpl->tpl_vars['volist']->value['cityid']),$_smarty_tpl);?>
 </span> <span><?php echo $_smarty_tpl->tpl_vars['volist']->value['age'];?>
 岁</span> </div>
-	    <div><a href="javascript:void(0);" onclick="artbox_hi(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
-themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
-themes/images/r.gif"></span></a></div>
+	    <div class="guangzh"><a href="javascript:void(0);" onclick="artbox_hi(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);">打招呼</a><a href="javascript:void(0);" onclick="artbox_writemsg(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);">写信件</a></div>
           </li>
           <?php } ?>
         </ul>
@@ -190,12 +193,10 @@ $_smarty_tpl->tpl_vars['volist']->_loop = true;
             <div class="areaf"> <span><?php echo cmd_area(array('type'=>'text','value'=>$_smarty_tpl->tpl_vars['volist']->value['cityid']),$_smarty_tpl);?>
 </span> <span><?php echo $_smarty_tpl->tpl_vars['volist']->value['age'];?>
 岁</span> </div>
-	    <div><a href="javascript:void(0);" onclick="artbox_hi(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
-themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
-themes/images/r.gif"></span></a></div>	
-	  </li>
+	    <div class="guangzh"><a href="javascript:void(0);" onclick="artbox_hi(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);">打招呼</a><a href="javascript:void(0);" onclick="artbox_writemsg(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);">写信件</a></div>
+          </li>
           <?php } ?>
         </ul>
       </div>
@@ -217,12 +218,10 @@ $_smarty_tpl->tpl_vars['volist']->_loop = true;
             <div class="areaf"> <span><?php echo cmd_area(array('type'=>'text','value'=>$_smarty_tpl->tpl_vars['volist']->value['cityid']),$_smarty_tpl);?>
 </span> <span><?php echo $_smarty_tpl->tpl_vars['volist']->value['age'];?>
 岁</span> </div>
-	    <div><a href="javascript:void(0);" onclick="artbox_hi(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
-themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
-);"><span><img width="45px" src="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
-themes/images/r.gif"></span></a></div>
-	  </li>
+	    <div class="guangzh"><a href="javascript:void(0);" onclick="artbox_hi(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);">打招呼</a><a href="javascript:void(0);" onclick="artbox_writemsg(<?php echo $_smarty_tpl->tpl_vars['volist']->value['userid'];?>
+);">写信件</a></div>
+          </li>
           <?php } ?>
         </ul>
       </div>

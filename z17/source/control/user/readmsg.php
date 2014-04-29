@@ -28,7 +28,6 @@ class control extends userbase {
 		}
 		else {
 			if ($data['readflag'] == 0) {
-				var_dump($this->g['msg']);
 				$m = parent::model('message','um');
 				$needpay = $m->checkViewNeedPay($data['frominfo']['gender'],$this->g['msg']);
 				unset($m);

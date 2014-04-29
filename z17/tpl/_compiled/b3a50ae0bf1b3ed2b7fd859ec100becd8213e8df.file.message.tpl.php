@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-24 15:59:42
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-28 15:12:37
          compiled from "C:\svn\z17z17\web\z17\tpl\user\message.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:265335355cf29cd6b38-36871295%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23535dff65b940a3-73173644%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,12 +11,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '265335355cf29cd6b38-36871295',
+  'nocache_hash' => '23535dff65b940a3-73173644',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5355cf29ee43a2_14664779',
   'variables' => 
   array (
     'uctplpath' => 0,
@@ -35,8 +33,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'u' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_535dff65d6d473_58776701',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5355cf29ee43a2_14664779')) {function content_5355cf29ee43a2_14664779($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\svn\\z17z17\\web\\z17\\source\\core\\smarty\\plugins\\modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_535dff65d6d473_58776701')) {function content_535dff65d6d473_58776701($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\svn\\z17z17\\web\\z17\\source\\core\\smarty\\plugins\\modifier.date_format.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['uctplpath']->value)."block_head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <?php $_smarty_tpl->tpl_vars["menuid"] = new Smarty_variable("message", null, 0);?>

@@ -28,8 +28,11 @@
 			
 		  </div>
 		  <div> <!--{$login.info.star}-->星&nbsp;&nbsp;<a href="<!--{$urlpath}-->usercp.php?c=certify">诚信认证</a></div>
-                  <div><a href="<!--{$urlpath}-->usercp.php?c=avatar">更新形象</a></div>
-                  <div><a href="<!--{$appfile}-->?c=passport&a=logout">退出登录</a>&nbsp;|&nbsp;<a href="<!--{$urlpath}-->usercp.php?c=payment">充值</a></div>
+                  <div><a href="<!--{$urlpath}-->usercp.php?c=avatar">更新头像</a></div>
+		  <div><a href="<!--{$urlpath}-->usercp.php?c=visitme">访问(<!--{$login.info.hits}--></a>)&nbsp;|&nbsp;<a href="<!--{$urlpath}-->usercp.php?c=fans">粉丝(<!--{count mod='user' type='fans' value=$login.info.userid}-->)</a></div>
+                  <div><a href="<!--{$appfile}-->?c=passport&a=logout">退出</a>
+			<!--&nbsp;|&nbsp;<a href="<!--{$urlpath}-->usercp.php?c=payment">充值</a>-->
+			&nbsp;|&nbsp;<a href="<!--{$urlpath}-->usercp.php?c=account&a=invite">邀请</a></div>
                 </div>
                 <div class="c"></div>
               </div>
@@ -40,8 +43,7 @@
 		<div class="login_right_top">
 		<ul>
 		<li><a href="<!--{$urlpath}-->usercp.php?c=message"><div class="newmsgbox div_red"><img src="/tpl/user/images/menu/green/562810.png"><div>新信件(<!--{count mod='user' type='newmessage' value=$login.info.userid}-->)</div></div></a></li>
-		<li><a href="<!--{$urlpath}-->usercp.php?c=visitme"><div class="newmsgbox div_yellow"><img src="/tpl/user/images/menu/green/562779.png"><div>新访客(<!--{$login.info.hits}-->)</div></div></a></li>
-		<li><a href="<!--{$urlpath}-->usercp.php?c=fans"><div class="newmsgbox div_purple"><img src="/tpl/user/images/menu/green/562808.png"><div>新粉丝(<!--{count mod='user' type='fans' value=$login.info.userid}-->)</div></div></a></li>
+		<li><a href="<!--{$urlpath}-->usercp.php?c=hi"><div class="newmsgbox div_yellow"><img src="/tpl/user/images/menu/green/562779.png"><div>新问候(<!--{count mod='user' type='newhi' value=$login.info.userid}-->)</div></div></a></li>
 		<li><a href="<!--{$urlpath}-->usercp.php?c=listen"><div class="newmsgbox div_blue"><img src="/tpl/user/images/menu/green/562709.png"><div>我的关注</div></div></a></li>
 		<li><a href="<!--{$urlpath}-->usercp.php?c=gift"><div class="newmsgbox div_green"><img src="/tpl/user/images/menu/green/562785.png"><div>新礼物(<!--{count mod='user' type='gift' value=$login.info.userid}-->)</div></div></a></li>
 		</ul>
@@ -88,7 +90,7 @@
           <li><a href="<!--{$volist.homeurl}-->" target="_blank"><img src="<!--{$volist.avatarurl}-->" width='90px' height='110px' title="<!--{$volist.username}-->" alt="<!--{$volist.username}-->" /></a>
             
             <div class="areaf"> <span><!--{area type='text' value=$volist.cityid}--></span> <span><!--{$volist.age}-->岁</span> </div>
-	    <div><a href="javascript:void(0);" onclick="artbox_hi(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/r.gif"></span></a></div>
+	    <div class="guangzh"><a href="javascript:void(0);" onclick="artbox_hi(<!--{$volist.userid}-->);">打招呼</a><a href="javascript:void(0);" onclick="artbox_writemsg(<!--{$volist.userid}-->);">写信件</a></div>
           </li>
           <!--{/foreach}-->
         </ul>
@@ -101,8 +103,8 @@
           <li><a href="<!--{$volist.homeurl}-->" target="_blank"><img src="<!--{$volist.avatarurl}-->" width='90px' height='110px' title="<!--{$volist.username}-->" alt="<!--{$volist.username}-->" /></a>
             
             <div class="areaf"> <span><!--{area type='text' value=$volist.cityid}--></span> <span><!--{$volist.age}-->岁</span> </div>
-	    <div><a href="javascript:void(0);" onclick="artbox_hi(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/r.gif"></span></a></div>	
-	  </li>
+	    <div class="guangzh"><a href="javascript:void(0);" onclick="artbox_hi(<!--{$volist.userid}-->);">打招呼</a><a href="javascript:void(0);" onclick="artbox_writemsg(<!--{$volist.userid}-->);">写信件</a></div>
+          </li>
           <!--{/foreach}-->
         </ul>
       </div>
@@ -114,8 +116,8 @@
           <li><a href="<!--{$volist.homeurl}-->" target="_blank"><img src="<!--{$volist.avatarurl}-->" width='90px' height='110px' title="<!--{$volist.username}-->" alt="<!--{$volist.username}-->" /></a>
             
             <div class="areaf"> <span><!--{area type='text' value=$volist.cityid}--></span> <span><!--{$volist.age}-->岁</span> </div>
-	    <div><a href="javascript:void(0);" onclick="artbox_hi(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/d.gif"></span></a><a href="javascript:void(0);" onclick="artbox_writemsg(<!--{$volist.userid}-->);"><span><img width="45px" src="<!--{$skinpath}-->themes/images/r.gif"></span></a></div>
-	  </li>
+	    <div class="guangzh"><a href="javascript:void(0);" onclick="artbox_hi(<!--{$volist.userid}-->);">打招呼</a><a href="javascript:void(0);" onclick="artbox_writemsg(<!--{$volist.userid}-->);">写信件</a></div>
+          </li>
           <!--{/foreach}-->
         </ul>
       </div>

@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-04-25 10:11:14
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-29 15:22:34
          compiled from "C:\svn\z17z17\web\z17\tpl\templets\default\9izbdq_block_menu.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10145354cd6eee6ee8-38303078%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:29667535db4b84fc015-40389398%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4658190390544f11172a14d3fe6f1c4d885fb459' => 
     array (
       0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\templets\\default\\9izbdq_block_menu.tpl',
-      1 => 1398391864,
+      1 => 1398756143,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10145354cd6eee6ee8-38303078',
+  'nocache_hash' => '29667535db4b84fc015-40389398',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5354cd6f0b5813_89904770',
+  'unifunc' => 'content_535db4b86a0754_44908431',
   'variables' => 
   array (
     'urlpath' => 0,
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5354cd6f0b5813_89904770')) {function content_5354cd6f0b5813_89904770($_smarty_tpl) {?><div id="header">
+<?php if ($_valid && !is_callable('content_535db4b86a0754_44908431')) {function content_535db4b86a0754_44908431($_smarty_tpl) {?><div id="header">
   <div class="n_top">
     <div class="nn_top">
       <div class="n_logo"> <a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
@@ -87,7 +87,7 @@ index.php?c=passport&a=reg">免费注册</a>
       <div class="n_navleft">
         <ul>
           <li<?php if ($_smarty_tpl->tpl_vars['menuid']->value=='index'){?> class='current first'<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-">交友首页</a></li>
+">首页</a></li>
 		  <li <?php if ($_smarty_tpl->tpl_vars['menuid']->value=='user'){?> class='current'<?php }?>>
 		  <?php if ($_smarty_tpl->tpl_vars['login']->value['status']=='1'){?>
 		    <?php if ($_smarty_tpl->tpl_vars['login']->value['info']['gender']=='1'){?>
@@ -101,24 +101,26 @@ index.php?c=passport&a=reg">免费注册</a>
 index.php?c=user&s_sex=<?php echo $_smarty_tpl->tpl_vars['yx_sex']->value;?>
 &s_dist1=<?php echo $_smarty_tpl->tpl_vars['login']->value['info']['provinceid'];?>
 &s_dist2=<?php echo $_smarty_tpl->tpl_vars['login']->value['info']['cityid'];?>
-">缘分搜索</a>
+">搜索</a>
 		  <?php }else{ ?>
 		  <a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-index.php?c=user">缘分搜索</a>
+index.php?c=user">搜索</a>
 		  <?php }?>
 		  </li>
           <li<?php if ($_smarty_tpl->tpl_vars['menuid']->value=='online'){?> class='current'<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-index.php?c=online">在线会员</a>
+index.php?c=online">在线</a>
           </li>
 	  <li<?php if ($_smarty_tpl->tpl_vars['menuid']->value=='message'){?> class='current'<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-usercp.php?c=message">我的消息</a>
+usercp.php?c=message">消息</a>
           </li>
 	  <li<?php if ($_smarty_tpl->tpl_vars['menuid']->value=='profile'){?> class='current'<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
-usercp.php?c=profile">我的资料</a>
+usercp.php?c=profile">资料</a>
           </li>
+	  <!--
 	  <li<?php if ($_smarty_tpl->tpl_vars['menuid']->value=='vip'){?> class='current'<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
 usercp.php?c=vip">服务</a>
           </li>
+	  -->
         </ul>
       </div>
      

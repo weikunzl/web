@@ -10,6 +10,7 @@
 	  <div class="tab_nv">
 	    <ul>
 		  <li class="tab_item<!--{if $a=='run'}--> current<!--{/if}-->"><a href="<!--{$ucfile}-->?c=account">我的帐号</a></li>
+		  <li class="tab_item<!--{if $a=='invite'}--> current<!--{/if}-->"><a href="<!--{$ucfile}-->?c=account&a=invite">邀请注册</a></li>
 		  <li class="tab_item<!--{if $a=='editpassword'}--> current<!--{/if}-->"><a href="<!--{$ucfile}-->?c=account&a=editpassword">修改密码</a></li>
 		  <li class="tab_item<!--{if $a=='recall'}--> current<!--{/if}-->"><a href="<!--{$ucfile}-->?c=account&a=recall">邮件接收</a></li>
 		  <li class="tab_item<!--{if $a=='setstatus'}--> current<!--{/if}-->"><a href="<!--{$ucfile}-->?c=account&a=setstatus">设置状态</a></li>
@@ -103,6 +104,28 @@
 			<td class="rblock"><!--{$u.logintime|date_format:"%Y-%m-%d %H:%M:%S"}--></td>
 		  </tr>
       </table>
+	  <!--{/if}-->
+
+	  <!--{if $a eq 'invite'}--> 
+	<table cellpadding='0' cellspacing='0' border='0' width="98%" class="user-table table-margin lh35">
+		  <tr>
+			<td colspan="3" style="padding-bottom:10px;"><div class="item_title" style="width:100%"><p>邀请好友注册</p><span class="shadow"></span></div></td>
+		  </tr>
+		  <tr>
+			<td width='20%'>序号 </td>
+			<td width='20%'>邀请码 </td>
+			<td width='60%'>邀请链接 </td>
+		  </tr>
+		  <!--{foreach $code_list as $k=>$icode}-->
+		  <tr>
+			<td ><!--{$k}--></td>
+			<td ><!--{$icode.code}--> </td>
+			<td>http://www.z17z17.cn/index.php?c=passport&a=reg&code=<!--{$icode.code}--></td>
+		  </tr>
+		  <!--{/foreach}-->
+
+
+	</table>
 	  <!--{/if}-->
 
 	  <!--{if $a eq 'editpassword'}--> 
@@ -202,6 +225,7 @@
   <div class="right_kj">
     <ul>
       <li><a href="<!--{$ucfile}-->?c=account">帐号信息</a></li>
+      <li><a href="<!--{$ucfile}-->?c=account&a=invite">邀请注册</a></li>
       <li><a href="<!--{$ucfile}-->?c=account&a=editpassword">修改密码</a></li>
       <li><a href="<!--{$ucfile}-->?c=account&a=recall">邮件接收</a></li>
 	  <li><a href="<!--{$ucfile}-->?c=account&a=setstatus">设置状态</a></li>

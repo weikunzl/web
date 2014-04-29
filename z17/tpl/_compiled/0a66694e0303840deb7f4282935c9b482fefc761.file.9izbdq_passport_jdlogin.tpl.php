@@ -1,4 +1,34 @@
-<!doctype html>
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-28 15:13:19
+         compiled from "C:\svn\z17z17\web\z17\tpl\templets\default\9izbdq_passport_jdlogin.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:30885535dff8f292b25-84075949%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0a66694e0303840deb7f4282935c9b482fefc761' => 
+    array (
+      0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\templets\\default\\9izbdq_passport_jdlogin.tpl',
+      1 => 1398392236,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '30885535dff8f292b25-84075949',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'tplpath' => 0,
+    'tplpre' => 0,
+    'skinpath' => 0,
+    'urlpath' => 0,
+    'forward' => 0,
+    'config' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_535dff8f3536f2_56170226',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_535dff8f3536f2_56170226')) {function content_535dff8f3536f2_56170226($_smarty_tpl) {?><!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if gt IE 8]><![endif]-->
@@ -6,7 +36,8 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>会员登录</title>
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headjs.tpl"}-->
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_headjs.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <style type="text/css">
 body {
 	padding:0px;
@@ -102,7 +133,8 @@ img {
 	height:320px;
 	text-align:center;
 	width:40%;
-	background:url("<!--{$skinpath}-->images/login_regbg.png") no-repeat scroll 60px 200px transparent;
+	background:url("<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+images/login_regbg.png") no-repeat scroll 60px 200px transparent;
 	background-color:#f8f8f8;
 }
 .login_dialog_right h2 {
@@ -127,7 +159,9 @@ img {
   <div class="login_dialog_left">
 	<h2>会员登录</h2>
 	<div class="login_dialog_form">
-	  <form method="post" action="<!--{$urlpath}-->index.php?c=passport&a=loginpost&halttype=jdbox&forward=<!--{$forward}-->" name="login_form" id="login_form" />
+	  <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+index.php?c=passport&a=loginpost&halttype=jdbox&forward=<?php echo $_smarty_tpl->tpl_vars['forward']->value;?>
+" name="login_form" id="login_form" />
 	  <table>
 		<tr>
 		  <td>帐号：</td>
@@ -137,32 +171,26 @@ img {
 		  <td>密码：</td>
 		  <td><input type="password" name="password" id="password" class="input_text" /></td>
 		</tr>
-		<!--{if $config.logincode == '1'}-->
+		<?php if ($_smarty_tpl->tpl_vars['config']->value['logincode']=='1'){?>
 		<tr>
 		  <td>验证码：</td>
 		  <td>
 		    <input type="text" class="small_text" id="checkcode" name="checkcode" value="" />
 			&nbsp;&nbsp;
-			<img id="checkCodeImg" src="<!--{$urlpath}-->source/include/imagecode.php?act=verifycode" align="middle" /> <a href="javascript:refreshCode();"> 换一张</a>
+			<img id="checkCodeImg" src="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+source/include/imagecode.php?act=verifycode" align="middle" /> <a href="javascript:refreshCode();"> 换一张</a>
 		  </td>
 		</tr>
-		<!--{/if}-->
+		<?php }?>
 		<tr>
 		  <td height="40"></td>
 		  <td style="line-height:20px;">
 		    <input type="button" class="btn_red" id="btnlogin" value="登 录" onclick="check_login();" />
-			&nbsp;&nbsp;<a href="<!--{$urlpath}-->index.php?c=passport&a=forget" target="_top">忘记密码？</a>
+			&nbsp;&nbsp;<a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+index.php?c=passport&a=forget" target="_top">忘记密码？</a>
 		  </td>
 		</tr>
-		<tr>
-		  <td colspan="2"> 
-		  其他合作登录：
-		  <!--{assign var='connect' value=vo_list("mod={connect}")}-->
-		  <!--{foreach $connect as $volist}-->
-		  <a href="<!--{$volist.apiurl}-->" title="<!--{$volist.authname}-->" target="_top"><img src="<!--{$volist.logo}-->" style="vertical-align:middle;" alt="<!--{$volist.authname}-->" /></a>&nbsp;
-		  <!--{/foreach}-->
-		  </td>
-		</tr>
+
 	  </table>
 	  </form>
 	</div>
@@ -171,7 +199,8 @@ img {
 	<h2>新会员注册</h2>
 	<div class="reg_dialog">
 	  <p>还没有注册会员？</p>
-	  <a href="<!--{$urlpath}-->index.php?c=passport&a=reg" class="btn_green" target="_top">马上注册</a> 
+	  <a href="<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+index.php?c=passport&a=reg" class="btn_green" target="_top">马上注册</a> 
 	</div>
   </div>
 </div>
@@ -192,12 +221,12 @@ function check_login() {
 		return false;
 	} 
 
-	<!--{if $config.logincode=='1'}-->
+	<?php if ($_smarty_tpl->tpl_vars['config']->value['logincode']=='1'){?>
 	if ($("#checkcode").val() == "") {
 		$.dialog.tips("验证码不能为空", 3);
 		return false;
 	}
-	<!--{/if}-->
+	<?php }?>
 
 	$('#login_form').submit();
 }
@@ -222,4 +251,4 @@ function refreshCode() {
 		ccImg.src= ccImg.src + '&' +Math.random();
 	}
 }
-</script>
+</script><?php }} ?>

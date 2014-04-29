@@ -1,32 +1,64 @@
-<!doctype html>
+<?php /* Smarty version Smarty-3.1.14, created on 2014-04-28 09:54:00
+         compiled from "C:\svn\z17z17\web\z17\tpl\user\block_head.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:29597535db4b841a953-01565393%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '84319e3c0c6b41061006d4153db869fd977866c2' => 
+    array (
+      0 => 'C:\\svn\\z17z17\\web\\z17\\tpl\\user\\block_head.tpl',
+      1 => 1398331778,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '29597535db4b841a953-01565393',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'page_charset' => 0,
+    'page_title' => 0,
+    'ucpath' => 0,
+    'skinpath' => 0,
+    'tplpath' => 0,
+    'tplpre' => 0,
+    'urlpath' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_535db4b844eb56_03293004',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_535db4b844eb56_03293004')) {function content_535db4b844eb56_03293004($_smarty_tpl) {?><!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if gt IE 8]><![endif]-->
 <html class="no-js" lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=<!--{$page_charset}-->" />
-<title><!--{$page_title}--></title>
-<link href="<!--{$ucpath}-->css/css.css" rel="stylesheet" />
+<meta http-equiv="content-type" content="text/html; charset=<?php echo $_smarty_tpl->tpl_vars['page_charset']->value;?>
+" />
+<title><?php echo $_smarty_tpl->tpl_vars['page_title']->value;?>
+</title>
+<link href="<?php echo $_smarty_tpl->tpl_vars['ucpath']->value;?>
+css/css.css" rel="stylesheet" />
 
 <!-- add default -->
-<link rel="stylesheet" href="<!--{$skinpath}-->themes/css/public.css" media="screen" />
-<link rel="stylesheet" href="<!--{$skinpath}-->themes/css/v3.css" media="screen" />
-<link rel="stylesheet" href="<!--{$skinpath}-->themes/css/n.css" media="screen" />
-<link rel="stylesheet" href="<!--{$skinpath}-->themes/css/button.css" />
-<!--{include file="<!--{$tplpath}--><!--{$tplpre}-->block_headjs.tpl"}-->
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/css/public.css" media="screen" />
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/css/v3.css" media="screen" />
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/css/n.css" media="screen" />
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['skinpath']->value;?>
+themes/css/button.css" />
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplpath']->value).((string)$_smarty_tpl->tpl_vars['tplpre']->value)."block_headjs.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <!-- end default -->
 
-<script type='text/javascript'>
-var _ROOT_PATH = "<!--{$rootpath}-->";
-</script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/jquery.min.js'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/artdialog/jquery.artDialog.source.js?skin=default'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/artdialog/plugins/iframeTools.js'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/public.js'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/ajax.js'></script>
-<script type="text/javascript" src='<!--{$urlpath}-->tpl/static/js/WdatePicker.js'></script>
+
 <!--[if lt IE 7]>
-<script type='text/javascript' src='<!--{$urlpath}-->tpl/static/js/DD_belatedPNG-min.js'></script>
+<script type='text/javascript' src='<?php echo $_smarty_tpl->tpl_vars['urlpath']->value;?>
+tpl/static/js/DD_belatedPNG-min.js'></script>
 <script>
 DD_belatedPNG.fix('.user_logo, .shadow');
 </script>
@@ -270,4 +302,4 @@ function obj_cancel_wbcontent(content_id) {
 }
 </script>
 </head>
-<body>
+<body><?php }} ?>

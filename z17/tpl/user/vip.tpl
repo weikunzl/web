@@ -96,11 +96,6 @@
     <ul>
       <li><a href="<!--{$ucfile}-->?c=vip">会员升级</a></li>
       <li><a href="<!--{$ucfile}-->?c=payment">在线充值</a></li>
-	  <!--{if $config.app.card=='1'}-->
-      <li><a href="<!--{$ucfile}-->?c=card">充值卡充值</a></li>
-	  <!--{/if}-->
-      <li><a href="<!--{$ucfile}-->?c=buysms">购买短信</a></li>
-	  <li><a href="<!--{$ucfile}-->?c=buypostage">购买邮票</a></li>
     </ul>
   </div>
 </div>

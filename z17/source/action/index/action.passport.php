@@ -20,7 +20,11 @@ class passportIAction extends indexbase {
 			XHandle::halt ( '对不起，您已经登录了网站！', $this->appfile, 4 );
 		}
 		$this->getMeta ( 'ch_reg_step1' );
-		$var_array = array ('page_title' => $this->metawrap ['title'], 'page_keyword' => $this->metawrap ['keyword'], 'page_description' => $this->metawrap ['description'] );
+		$var_array = array (
+				'page_title' => $this->metawrap ['title'], 
+				'page_keyword' => $this->metawrap ['keyword'], 
+				'page_description' => $this->metawrap ['description'],
+				'invite_code'=> XRequest::getArgs('code') );
 		$this->_tplfile = $this->getTPLFile ( 'passport_reg' );
 		TPL::assign ( $var_array );
 		TPL::display ( $this->_tplfile );
@@ -123,6 +127,18 @@ class passportIAction extends indexbase {
 	}
 	public function action_regpost() {
 		$this->_new ();
+		
+		//添加注册邀请码
+		$invite_code = XRequest::getArgs ( 'invitecode' );
+		if(empty($invite_code))
+			XHandle::halt ( '对不起，注册需要邀请码！', '', 1 );
+		$model = parent::model ( 'account', 'um' );
+		$inviteUser = $model->doCheckInviteCode($invite_code);
+		unset ( $model );
+		if(empty($inviteUser))
+			XHandle::halt ( '对不起，注册邀请码无效或已过期！', '', 1 );
+		//
+		
 		list ( $main_args, $profile_args, $contact_args, $params_arags ) = $this->service->validReg ();
 		$this->_unset ();
 		$uc_model = parent::model ( 'uc', 'im' );
@@ -135,6 +151,11 @@ class passportIAction extends indexbase {
 		list ( $result, $uid ) = $model->doReg ( $main_args, $profile_args, $contact_args, $params_arags, 1 );
 		unset ( $model );
 		if (true === $result) {
+			//注册完成,邀请码失效
+			$model = parent::model ( 'account', 'um' );
+			$model->doDelInviteCode($invite_code);
+			unset ( $model );
+			//
 			XHandle::redirect ( $this->appfile . '?c=passport&a=setmonolog' );
 		} else {
 			XHandle::halt ( '对不起，会员注册失败！', '', 1 );

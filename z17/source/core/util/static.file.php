@@ -154,7 +154,7 @@ class XFile
                 }
                 if ( !file_exists( BASE_ROOT.$edirm ) && !is_dir( BASE_ROOT.$edirm ) )
                 {
-                    @mkdir( BASE_ROOT.$edirm, 511 );
+                    @mkdir( BASE_ROOT.$edirm, 777 );
                 }
             }
         }

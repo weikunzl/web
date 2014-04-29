@@ -39,7 +39,7 @@
     <div class="n_ul">
       <div class="n_navleft">
         <ul>
-          <li<!--{if $menuid=='index'}--> class='current first'<!--{/if}-->><a href="<!--{$urlpath}-->">交友首页</a></li>
+          <li<!--{if $menuid=='index'}--> class='current first'<!--{/if}-->><a href="<!--{$urlpath}-->">首页</a></li>
 		  <li <!--{if $menuid=='user'}--> class='current'<!--{/if}-->>
 		  <!--{if $login.status == '1'}-->
 		    <!--{if $login.info.gender == '1'}-->
@@ -49,19 +49,21 @@
 			<!--{else}-->
 			<!--{assign var='yx_sex' value='0'}-->
 			<!--{/if}-->
-          <a href="<!--{$urlpath}-->index.php?c=user&s_sex=<!--{$yx_sex}-->&s_dist1=<!--{$login.info.provinceid}-->&s_dist2=<!--{$login.info.cityid}-->">缘分搜索</a>
+          <a href="<!--{$urlpath}-->index.php?c=user&s_sex=<!--{$yx_sex}-->&s_dist1=<!--{$login.info.provinceid}-->&s_dist2=<!--{$login.info.cityid}-->">搜索</a>
 		  <!--{else}-->
-		  <a href="<!--{$urlpath}-->index.php?c=user">缘分搜索</a>
+		  <a href="<!--{$urlpath}-->index.php?c=user">搜索</a>
 		  <!--{/if}-->
 		  </li>
-          <li<!--{if $menuid=='online'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->index.php?c=online">在线会员</a>
+          <li<!--{if $menuid=='online'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->index.php?c=online">在线</a>
           </li>
-	  <li<!--{if $menuid=='message'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=message">我的消息</a>
+	  <li<!--{if $menuid=='message'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=message">消息</a>
           </li>
-	  <li<!--{if $menuid=='profile'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=profile">我的资料</a>
+	  <li<!--{if $menuid=='profile'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=profile">资料</a>
           </li>
+	  <!--
 	  <li<!--{if $menuid=='vip'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=vip">服务</a>
           </li>
+	  -->
         </ul>
       </div>
      

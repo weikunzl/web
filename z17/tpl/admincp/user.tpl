@@ -178,7 +178,7 @@
 		<!--{/if}-->
         </td>
 		<td align="center">
-		<a href="javascript:void(0);" onclick="tbox_addmoney('添加会员帐号现金(金币)', '<!--{$volist.userid}-->');" class="icon-add">现金</a>
+		<a href="javascript:void(0);" onclick="tbox_addmoney('添加会员帐号现金(元)', '<!--{$volist.userid}-->');" class="icon-add">现金</a>
 		<a href="javascript:void(0);" onclick="tbox_addpoints('添加会员积分', '<!--{$volist.userid}-->');" class="icon-add">积分</a>
 		<a href="<!--{$cpfile}-->?c=user&a=edit&id=<!--{$volist.userid}-->&page=<!--{$page}-->&<!--{$urlitem}-->" class="icon-edit">管理</a>
 		<a href="<!--{$cpfile}-->?c=user&a=del&id[]=<!--{$volist.userid}-->&page=<!--{$page}-->&<!--{$urlitem}-->" onClick="{if(confirm('确定要删除吗？一旦删除无法恢复。')){return true;} return false;}" class="icon-del">删除</a>
@@ -842,7 +842,7 @@
 		  <div class="item">
 			<label>会员操作 </label>
 
-		    <input type="button" name="btn_money" id="btn_money" value="金币管理" onclick="tbox_addmoney('现金(金币)管理', '<!--{$user.userid}-->');" />&nbsp;
+		    <input type="button" name="btn_money" id="btn_money" value="现金管理" onclick="tbox_addmoney('现金管理', '<!--{$user.userid}-->');" />&nbsp;
 			<input type="button" name="btn_points" id="btn_points" value="积分管理" onclick="tbox_addpoints('积分管理', '<!--{$user.userid}-->');" />&nbsp;
 			<input type="button" name="btn_editpass" id="btn_editpass" value="修改密码" onclick="tbox_editpass('修改会员密码', '<!--{$user.userid}-->')" />&nbsp;
 			<input type='button' name='btn_vip' id='btn_vip' value='升级VIP' onclick="tbox_uservip('会员VIP操作', '<!--{$user.userid}-->')" />&nbsp;
@@ -981,7 +981,7 @@
 				<td class='hback'><!--{$user.loginip}--></td>
 			  </tr>
 			  <tr>
-			    <td class='hback_1'>现金(金币) </td>
+			    <td class='hback_1'>现金(元) </td>
 				<td class='hback'><!--{$user.money}--></td>
 			    <td class='hback_1'>积分 </td>
 				<td class='hback'><!--{$user.points}--></td>
@@ -1541,7 +1541,7 @@
 		<td class='hback' width='30%'><!--{$user.username}--> </td>
 	  </tr>
 	  <tr>
-	    <td class='hback_1'>剩余(现金/金币) </td>
+	    <td class='hback_1'>剩余(现金) </td>
 		<td class='hback'> <!--{$user.money}--></td>
 		<td class='hback_1'>所在会员组 </td>
 		<td class='hback'><!--{$user.levelimg}--><!--{$user.groupname}--> </td>
@@ -1577,7 +1577,7 @@
 					  <td class="hback_c3" width="25%"><!--{$volist.groupname}--></td>
 					  <td class="hback" width="75%">
 						<!--{foreach $volist.commer as $val}-->
-					    <input type="radio" name="viptype" id="viptype" value="<!--{$volist.groupid}-->_<!--{$val.orders}-->" />&nbsp;有效<!--{$val.days}-->天，需要现金(金币)<!--{$val.money}-->，赠送积分<!--{$val.points}--><br />
+					    <input type="radio" name="viptype" id="viptype" value="<!--{$volist.groupid}-->_<!--{$val.orders}-->" />&nbsp;有效<!--{$val.days}-->天，需要现金<!--{$val.money}-->，赠送积分<!--{$val.points}--><br />
 						<!--{/foreach}-->
 					  </td>
 					</tr>
@@ -1625,7 +1625,7 @@
 				<td class='hback'><input type="text" name="vipenddate" id="vipenddate" class="input-100" readonly onClick="WdatePicker();" /><span id='dvipenddate' class='f_red'></span>  <font color="#999999">(请设置VIP到期日期)</font></td>
 			  </tr>
 			  <tr>
-				<td class='hback_1'>扣除现金(金币) <span class='f_red'></span></td>
+				<td class='hback_1'>扣除现金 <span class='f_red'></span></td>
 				<td class='hback'><input type="text" name="deductmoney" id="deductmoney" class="input-s" /> <span id='ddeductmoney' class='f_red'></span> <font color='#999999'>(不填写或者0表示不扣除)</font></td>
 			  </tr>
 			  <tr>
@@ -1651,7 +1651,7 @@
 				<td class='hback_c3' colspan="2" align="center"><b>取消VIP会员组</b></td>
 			  </tr>
 			  <tr>
-				<td class='hback_1' width='20%'>返还现金(金币) <span class='f_red'></span></td>
+				<td class='hback_1' width='20%'>返还现金 <span class='f_red'></span></td>
 				<td class='hback' width='80%'><input type="text" name="returnmoney" id="returnmoney" class="input-s" /> <span id='dreturnmoney' class='f_red'></span> <font color="#999999">(不填写或者0表示不返还)</font></td>
 			  </tr>
 			  <tr>
@@ -1718,7 +1718,7 @@
 		<td class="hback_yellow"><!--{$user.logintime|date_format:"%Y-%m-%d %H:%M:%S"}-->&nbsp;&nbsp;<br /><!--{$user.loginip}-->&nbsp;&nbsp;(<!--{$user.logintimes}-->)</td>
 	  </tr>
 	  <tr>
-		<td class='hback_1'>金币</td>
+		<td class='hback_1'>现金</td>
 		<td class="hback_yellow"><!--{$user.money}--></td>
 		<td class='hback_1'>积分</td>
 		<td class="hback_yellow"><!--{$user.points}--></td>

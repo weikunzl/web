@@ -13,9 +13,9 @@
       <br />
     </form>
 	<br />
-	您当前剩余金币：<font color="green"><b><!--{$login.info.money}--></b></font>个，如果不够支付，请先充值&gt;&gt;<br />
+	您当前余额：<font color="green"><b><!--{$login.info.money}--></b></font>元，如果不够支付，请先充值&gt;&gt;<br />
 	<!--{if true === $paystatus}-->
-	您必须支付<font color="red"><b><!--{$fee}--></b></font>个金币才可以给TA写这封信。
+	您必须支付<font color="red"><b><!--{$fee}--></b></font>元才可以给TA写这封信。
 	<!--{else}-->
 	您可以免费给TA写信件，信件内容必须是健康。
 	<!--{/if}-->

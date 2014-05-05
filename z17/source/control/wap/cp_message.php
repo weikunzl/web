@@ -114,7 +114,7 @@ if ($fee <=0 ) {
 $fee = 1;
 }
 if (parent::$wrap_user['money'] <$fee) {
-XHandle::wapHalt('金币不足，无法支付查看信件','',1);
+XHandle::wapHalt('余额不足，无法支付查看信件','',1);
 }
 else {
 $model = parent::model('readmsg','um');

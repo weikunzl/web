@@ -33,7 +33,7 @@ class promotionAModel extends X
         {
             $args['promotion_flag'] = "false";
         }
-        $config = "<?php\r\n/**\r\n * @Brief 推广注册配置文件\r\n**/\r\nreturn array (\r\n    //开启true, 关闭false\r\n\t'promotion'=>".$args['promotion_flag'].",\r\n\t//注册邮箱有效_必选\r\n\t'emailvalid'=>1,\r\n\t//上传头像有效_可选\r\n\t'avatarvalid'=>".$args['avatarvalid'].",\r\n\t//每推广一个有效会员奖励金币个数\r\n\t'onemoney'=>".$args['onemoney'].",\r\n\t//每推广一个有效会员奖励积分个数\r\n\t'onepoints'=>".$args['onepoints'].",\r\n\t//累计推广达到几个有效会员自动结算\r\n\t'settlecounts'=>".$args['settlecounts'].",\r\n\t//推广链接跳转地址,1-注册页，2-首页\r\n\t'jumptype'=>".$args['jumptype'].",\r\n);\r\n?>";
+        $config = "<?php\r\n/**\r\n * @Brief 推广注册配置文件\r\n**/\r\nreturn array (\r\n    //开启true, 关闭false\r\n\t'promotion'=>".$args['promotion_flag'].",\r\n\t//注册邮箱有效_必选\r\n\t'emailvalid'=>1,\r\n\t//上传头像有效_可选\r\n\t'avatarvalid'=>".$args['avatarvalid'].",\r\n\t//每推广一个有效会员奖励\r\n\t'onemoney'=>".$args['onemoney']."元,\r\n\t//每推广一个有效会员奖励积分个数\r\n\t'onepoints'=>".$args['onepoints'].",\r\n\t//累计推广达到几个有效会员自动结算\r\n\t'settlecounts'=>".$args['settlecounts'].",\r\n\t//推广链接跳转地址,1-注册页，2-首页\r\n\t'jumptype'=>".$args['jumptype'].",\r\n);\r\n?>";
         $file = "source/conf/promotion.inc.php";
         parent::loadutil( "file" );
         XFile::createfile( $file );

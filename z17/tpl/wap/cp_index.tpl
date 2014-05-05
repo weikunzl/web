@@ -5,7 +5,7 @@
 <div class="index_p"> 
 <a href="<!--{$wapfile}-->?c=cp_info">资料修改</a>&nbsp;&nbsp;
 <a href="<!--{$wapfile}-->?c=home&uid=<!--{$login.userid}-->">预览</a><br/>
-我的金币：<!--{$login.info.money}-->&nbsp;&nbsp;<br/>
+我的余额：<!--{$login.info.money}-->&nbsp;&nbsp;<br/>
 我的积分：<!--{$login.info.points}-->&nbsp;&nbsp;<br />
 </div>
 <h3 class="slide_bg_d">【会员中心】</h3>
@@ -15,7 +15,7 @@
   <a href="<!--{$wapfile}-->?c=cp_listen">我关注的会员</a><br/>
   <a href="<!--{$wapfile}-->?c=cp_fans">关注我的会员</a><br/>
   <div class="bot1"> </div>
-  <a href="<!--{$wapfile}-->?c=cp_money">金币记录</a>|<a href="<!--{$wapfile}-->?c=cp_points">积分记录</a><br/>
+  <a href="<!--{$wapfile}-->?c=cp_money">金额记录</a>|<a href="<!--{$wapfile}-->?c=cp_points">积分记录</a><br/>
   <a href="<!--{$wapfile}-->?c=cp_info&a=editpassword">修改密码</a>|<a href="<!--{$wapfile}-->?c=passport&a=logout">退出登录</a><br/>
 </div>
 <p class="slide_bg_l pl_5">

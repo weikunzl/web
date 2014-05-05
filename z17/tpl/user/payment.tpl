@@ -7,7 +7,7 @@
   <div class="main_right">
     <div class="div_"> 服务 &gt;&gt; 在线充值 </div>
 	<div class="nav-tips">
-	您当前剩余可用<!--{$lang.money}-->：<b><font color='green'><!--{$u.money}--></font></b>&nbsp;&nbsp;&nbsp;温馨提示：1金币=1元。</div>
+	您当前余额：<b><font color='green'><!--{$u.money}--></font></b>&nbsp;&nbsp;&nbsp;</div>
     <!--TAB BEGIN-->
     <div class="tab_list">
 	  <div class="tab_nv">
@@ -50,7 +50,7 @@
 		  </td>
 		</tr>
 		<tr>
-		  <td class="lblock" colspan='2'>温馨提示：（支付后如果浏览器没有自动返回，请手动点击“返回商城取货”来完成最后支付步骤）</td>
+		  <td class="lblock" colspan='2'></td>
 		</tr>
 		<tr>
 		  <td class='lblock'></td>

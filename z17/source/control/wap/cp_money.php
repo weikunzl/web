@@ -57,7 +57,7 @@ class control extends wapbase
             "total" => $datacount,
             "showpage" => $showpage,
             "money" => $data,
-            "page_title" => "金币记录"
+            "page_title" => "金额记录"
         );
         $this->_tplfile = $this->getTPLFile( "cp_money" );
         TPL::assign( $var_array );

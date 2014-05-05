@@ -352,7 +352,7 @@
 			  <td class='hback_1' align="center" width='20%'>序号</td>
 			  <td class='hback_1' align="center" width='20%'>排序</td>
 			  <td class='hback_1' align="center" width='20%'>短信条数</td>
-			  <td class='hback_1' align="center" width='20%'>需要现金(金币)</td>
+			  <td class='hback_1' align="center" width='20%'>需要现金(元)</td>
 			  <td class='hback_1' align="center">操作</td>
 			</tr>
 			<!--{if !empty($smsfee)}-->
@@ -655,7 +655,7 @@
 		<td class="hback_none">
 		<!--{$usergroup_select}--> ，
 		注册赠送积分：<input type='text' name='regpoints' id='regpoints' class='input-s' value="<!--{$regpoints}-->" />，
-		注册赠送金币(现金)：<input type='text' name='regmoney' id='regmoney' class='input-s' value="<!--{$regmoney}-->" />
+		注册赠送人民币：<input type='text' name='regmoney' id='regmoney' class='input-s' value="<!--{$regmoney}-->" />元
 		<br /><font color="#999999">（新会员注册，默认所属会员组）
 		</td>
 	  </tr>

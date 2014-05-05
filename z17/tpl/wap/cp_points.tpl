@@ -2,7 +2,7 @@
 <!--{include file="<!--{$waptpl}-->block_logo.tpl"}-->
 <!--{include file="<!--{$waptpl}-->block_cpmenu.tpl"}-->
 <p class="slide_bg_l pl_5 mb_0"> 
-  <a href="<!--{$wapfile}-->?c=cp_money">金币记录</a>|<a href="<!--{$wapfile}-->?c=cp_points">积分记录</a>
+  <a href="<!--{$wapfile}-->?c=cp_money">金额记录</a>|<a href="<!--{$wapfile}-->?c=cp_points">积分记录</a>
 </p>
 <h3 class="slide_bg_d mb_0">【积分记录】</h3>
 <div class="index_p">

@@ -118,7 +118,7 @@
 		<td class='hback_1'>关联订单号 <span class="f_red"></span> </td>
 		<td class='hback'><input type="text" name="ordernum" id="ordernum" class="input-150" />  <span id='dordernum' class='f_red'></span><br /> (例如会员的汇款单号) </td>
 		<td class='hback_1'>操作记录 <span class="f_red">*</span></td>
-		<td class='hback'><textarea name="logcontent" id="logcontent" style="width:95%;height:80px;display:;overflow:auto;"></textarea><br /><span id='dlogcontent' class='f_red'></span> 描述下增加/减少金币的原因</td>
+		<td class='hback'><textarea name="logcontent" id="logcontent" style="width:95%;height:80px;display:;overflow:auto;"></textarea><br /><span id='dlogcontent' class='f_red'></span> 描述下增加/减少钱的原因</td>
 	  </tr>
 	  <tr>
 

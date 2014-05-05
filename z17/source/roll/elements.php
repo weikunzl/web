@@ -312,8 +312,8 @@ function roll_elements () {
             'videorz_edit'=>'编辑视频认证',
             'videorz_del'=>'删除视频认证',
             
-            'money_volist'=>'金币记录',
-            'money_add'=>'添加金币',
+            'money_volist'=>'金额记录',
+            'money_add'=>'充值',
             'points_volist'=>'积分记录',
             'points_add'=>'添加积分',
             'mbsms_volist'=>'短信记录',

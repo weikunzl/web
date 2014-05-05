@@ -5,14 +5,14 @@
   <!--{include file="<!--{$uctplpath}-->block_menu.tpl"}-->
 
   <div class="main_right">
-    <div class="div_"> 个人中心 &gt;&gt; 金币记录 </div>
+    <div class="div_"> 个人中心 &gt;&gt; 金额记录 </div>
 	<div class="nav-tips">
-	您当前剩余<!--{$lang.money}-->：<b><font color='green'><!--{$u.money}--></font></b></div>
+	您的当前余额：<b><font color='green'><!--{$u.money}--></font></b></div>
     <!--TAB BEGIN-->
     <div class="tab_list">
 	  <div class="tab_nv">
 	    <ul>
-		  <li class="tab_item current"><a href="<!--{$ucfile}-->?c=money">金币记录</a></li>
+		  <li class="tab_item current"><a href="<!--{$ucfile}-->?c=money">金额记录</a></li>
 		  <li class="tab_item"><a href="<!--{$ucfile}-->?c=points">积分记录</a></li>
 	    </ul>
 	  </div>
@@ -64,7 +64,7 @@
 
   <div class="right_kj">
     <ul>
-      <li><a href="<!--{$ucfile}-->?c=money">金币记录</a></li>
+      <li><a href="<!--{$ucfile}-->?c=money">金额记录</a></li>
       <li><a href="<!--{$ucfile}-->?c=points">积分记录</a></li>
     </ul>
   </div>

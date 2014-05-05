@@ -78,9 +78,9 @@
 			<td class="lblock">积 分：</td>
 			<td class="rblock"><font color="blue"><b><!--{$u.points}--></b></font> </td>
 		  </tr>
-		  <!-- 剩余金币 -->
+		  <!-- 剩余 -->
 		  <tr>
-			<td class="lblock">金 币：</td>
+			<td class="lblock">余 额：</td>
 			<td class="rblock"><font color="green"><b><!--{$u.money}--></b></font> &nbsp;&nbsp;&nbsp;
 			<input type="button" value="在线充值" class="button-qing" onclick="javascript:window.location.href='<!--{$ucfile}-->?c=payment';" />&nbsp;&nbsp;&nbsp;
 			<!--{if $config.app.card=='1'}-->

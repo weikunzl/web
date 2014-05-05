@@ -105,7 +105,7 @@
 			<td width='12%' align='center'>邮箱</td>
 			<td width='12%' align='center'>头像</td>
 			<td width='15%' align='center'>注册时间</td>
-			<td width='12%' align='center'>奖励金币</td>
+			<td width='12%' align='center'>奖励金额</td>
 			<td width='12%' align='center'>奖励积分</td>
 			<td align='center'>状态</td>
 		  </tr>
@@ -156,7 +156,7 @@
 		  <tr>
 			<td colspan="2" style="padding-top:5px;padding-bottom:10px;"><div class="item_title" style="width:100%"><p><!--{$lang.points}-->转换<!--{$lang.money}--></p><span class="shadow"></span></div></td>
 		  </tr>
-		  <!-- 积分转换金币 -->
+		  <!-- 积分转换 -->
 		  <!--{if true === $transfer['trade_money']}-->
 		  <form name="my_moneyform" id="my_moneyform" action="<!--{$ucfile}-->?c=extend&a=transfermoney" method="post" >
 		  <tr>
@@ -183,7 +183,7 @@
 		  </tr>
 		  <!--{/if}-->
 
-		  <!-- 金币转换积分 -->
+		  <!-- 转换积分 -->
 		  <tr>
 			<td colspan="2" style="padding-top:10px;padding-bottom:10px;"><div class="item_title" style="width:100%"><p><!--{$lang.money}-->转换<!--{$lang.points}--></p><span class="shadow"></span></div></td>
 		  </tr>
@@ -242,7 +242,7 @@
 </html>
 <script type='text/javascript'>
 $(function(){
-	//积分转换金币
+	//积分转换
 	$('#btn_money').click(function(){
 		var quantity_money = $('#quantity_money').val();
 		if (quantity_money < 1) {
@@ -281,7 +281,7 @@ $(function(){
 		}
 	});
 
-	//金币转换积分
+	//转换积分
 	$('#btn_points').click(function(){
 		var quantity_points = $('#quantity_points').val();
 		if (quantity_points < 1) {

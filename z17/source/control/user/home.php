@@ -40,10 +40,10 @@ class control extends userbase {
 		$this->_getItems ();
 		$fee = floatval ( $this->g ['fee'] ['contactfee'] );
 		if ($fee <= 0) {
-			XHandle::artTips ( '', '支付金币错误' );
+			XHandle::artTips ( '', '余额支付错误' );
 		} else {
 			if ($this->u ['money'] < $fee) {
-				XHandle::artTips ( "", "对不起，您的金币不足支付本次费用，<a href='" . $this->ucfile . "?c=payment' target='_top'>请先充值</a>！" );
+				XHandle::artTips ( "", "对不起，您的余额不足支付本次费用，<a href='" . $this->ucfile . "?c=payment' target='_top'>请先充值</a>！" );
 			}
 			$model = parent::model ( 'home', 'um' );
 			$result = $model->doPayContact ( $this->uid, $fee );

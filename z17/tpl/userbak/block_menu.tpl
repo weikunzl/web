@@ -23,7 +23,7 @@
 		<!--{/if}-->
 		<a href="<!--{$ucfile}-->?c=account&a=setstatus">修改</a>
 		<br />
-		帐户金币：<!--{$u.money}-->
+		帐户余额：<!--{$u.money}-->
 	  </p>
 	</div>
 	<div class="user-info-tip">
@@ -109,7 +109,7 @@
         <li<!--{if $cp_menuid=='extend' && $a=='connect'}--> class="current"<!--{/if}-->><img src="<!--{$ucpath}-->images/menu/green/562804.png" /><a href="<!--{$ucfile}-->?c=extend&a=connect">绑定登录</a></li>
         <li<!--{if $cp_menuid=='extend' && $a=='cpa'}--> class="current"<!--{/if}-->><img src="<!--{$ucpath}-->images/menu/green/562848.png" /><a href="<!--{$ucfile}-->?c=extend&a=cpa">推广注册</a></li>
         <li<!--{if $cp_menuid=='extend' && $a=='transfer'}--> class="current"<!--{/if}-->><img src="<!--{$ucpath}-->images/menu/green/562743.png" /><a href="<!--{$ucfile}-->?c=extend&a=transfer">积分转换</a></li>
-        <li<!--{if $cp_menuid=='money'}--> class="current"<!--{/if}-->><img src="<!--{$ucpath}-->images/menu/green/562763.png" /><a href="<!--{$ucfile}-->?c=money">金币记录</a></li>
+        <li<!--{if $cp_menuid=='money'}--> class="current"<!--{/if}-->><img src="<!--{$ucpath}-->images/menu/green/562763.png" /><a href="<!--{$ucfile}-->?c=money">金额记录</a></li>
         <li<!--{if $cp_menuid=='points'}--> class="current"<!--{/if}-->><img src="<!--{$ucpath}-->images/menu/green/562875.png" /><a href="<!--{$ucfile}-->?c=points">积分记录</a></li>
       </ul>
 	  <div class="clear"></div>

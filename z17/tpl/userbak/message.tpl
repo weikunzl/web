@@ -30,7 +30,7 @@
 	    <br />
 		每天阅读同性会员信件：<!--{if $g.msg.txviewlimit==1}--><!--{$g.msg.txviewnum}--> 封 <!--{else}--> 不限<!--{/if}-->&nbsp;&nbsp;&nbsp;
 		每天阅读异性会员信件：<!--{if $g.msg.yxviewlimit==1}--><!--{$g.msg.yxviewnum}--> 封 <!--{else}--> 不限<!--{/if}--><br />
-		如果没有阅读权限，需要支付&nbsp;<font color="blue"><b><!--{$g.fee.viewmsgfee}--></b></font>&nbsp;个金币阅读每封信件。
+		如果没有阅读权限，需要支付&nbsp;<font color="blue"><b><!--{$g.fee.viewmsgfee}--></b></font>&nbsp;元阅读每封信件。
 
 	  </div>
 	  <form action="<!--{$ucfile}-->?c=message&type=<!--{$type}-->" method="post" name="myform" id="myform">
@@ -136,14 +136,14 @@ function read_payfee(id, type, page) {
 		syspafee = 1;
 	}
 	if (parseFloat(umoney) < parseFloat(syspafee)) {
-		$.dialog.tips("对不起，你的金币不足，不能看这封信，请先充值。", 3);
+		$.dialog.tips("对不起，你的余额不足，不能看这封信，请先充值。", 3);
 		return false;
 	}
 	else {
 		$.dialog({
 			lock:true,
 			title: '温馨提示',
-			content: '确定使用'+syspafee+'个金币阅读这封信件吗？', 
+			content: '确定使用'+syspafee+'元阅读这封信件吗？', 
 			icon: 'warning',
 			button: [
 				{

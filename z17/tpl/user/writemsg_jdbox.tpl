@@ -64,9 +64,9 @@
 	<div class="clear"></div>
 	<p>
 	<div class="nav-tips">
-	您当前剩余金币：<font color="green"><b><!--{$u.money}--></b></font>个，如果不够支付，<a href="<!--{$ucfile}-->?c=payment" target="_top">请先充值&gt;&gt;</a><br />
+	您当前余额：<font color="green"><b><!--{$u.money}--></b></font>，如果不够支付，<a href="<!--{$ucfile}-->?c=payment" target="_top">请先充值&gt;&gt;</a><br />
 	<!--{if true === $paystatus}-->
-	您必须支付<font color="red"><b><!--{$g.fee.sendmsgfee}--></b></font>个金币才可以给TA写这封信。
+	您必须支付<font color="red"><b><!--{$g.fee.sendmsgfee}--></b></font>元才可以给TA写这封信。
 	<!--{else}-->
 	您可以免费给TA写信件，信件内容必须是健康。
 	<!--{/if}-->
@@ -126,7 +126,7 @@ $(function(){
 		}
 		<!--{if (true === $paystatus)}-->
 		if (<!--{$u.money}--> < payfee) {
-			$.dialog.tips("对不起，你的金币不足，不能发信！", 3);
+			$.dialog.tips("对不起，你的余额不足，不能发信！", 3);
 			return false;
 		}
 		<!--{/if}-->

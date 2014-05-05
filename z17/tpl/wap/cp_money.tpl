@@ -2,9 +2,9 @@
 <!--{include file="<!--{$waptpl}-->block_logo.tpl"}-->
 <!--{include file="<!--{$waptpl}-->block_cpmenu.tpl"}-->
 <p class="slide_bg_l pl_5 mb_0"> 
-  <a href="<!--{$wapfile}-->?c=cp_money">金币记录</a>|<a href="<!--{$wapfile}-->?c=cp_points">积分记录</a>
+  <a href="<!--{$wapfile}-->?c=cp_money">金额记录</a>|<a href="<!--{$wapfile}-->?c=cp_points">积分记录</a>
 </p>
-<h3 class="slide_bg_d mb_0">【金币记录】</h3>
+<h3 class="slide_bg_d mb_0">【金额记录】</h3>
 <div class="index_p">
   <table cellpadding='0' cellspacing='0' border='1' width='100%' style="margin-top:10px;border-collapse:collapse; border-color:#f2f2f2">
     <tr>
@@ -37,7 +37,7 @@
 </div>
 
 <p class="slide_bg_l pl_5">
-当前位置：<a href="<!--{$wapfile}-->">首页</a> &gt;&gt; <a href="<!--{$wapfile}-->?c=cp">会员中心</a> &gt;&gt; <a href="<!--{$wapfile}-->?c=cp_money">金币记录</a>
+当前位置：<a href="<!--{$wapfile}-->">首页</a> &gt;&gt; <a href="<!--{$wapfile}-->?c=cp">会员中心</a> &gt;&gt; <a href="<!--{$wapfile}-->?c=cp_money">金额记录</a>
 </p>
 <!--{include file="<!--{$waptpl}-->block_bottom.tpl"}-->
 </html>

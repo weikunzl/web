@@ -123,7 +123,7 @@ class control extends userbase {
 					$paymoney = 1;
 				}
 				if (parent::$wrap_user ['money'] < $paymoney) {
-					$msg .= "金币不足，无法写信件。<br />";
+					$msg .= "余额不足，无法写信件。<br />";
 				}
 			}
 		}
@@ -161,7 +161,7 @@ class control extends userbase {
 			$fee = 1;
 		}
 		if ($this->u ['money'] < $fee) {
-			$msg = "金币不足，请先充值";
+			$msg = "余额不足，请先充值";
 		} else {
 			$model = parent::model ( 'readmsg', 'um' );
 			$fromuid = $model->getFromUid ( $id );

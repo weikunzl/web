@@ -643,7 +643,7 @@ class ajaxIAction extends indexbase {
 				}
 			} else {
 				if ($uinfo ['money'] < floatval ( $ginfo ['fee'] ['smsfee'] )) {
-					$error .= "对不起，您的帐号可用金币不足！";
+					$error .= "对不起，您的帐号可用余额不足！";
 				}
 			}
 			if (empty ( $error )) {

@@ -306,7 +306,7 @@ XHandle::halt('会员信息不存在','',1);
 }
 else {
 if ($user['money']<$money) {
-XHandle::halt('对不起，会员剩余现金(金币)不足，无法执行升级操作！','',1);
+XHandle::halt('对不起，会员余额不足，无法执行升级操作！','',1);
 }
 }
 }
@@ -348,7 +348,7 @@ XHandle::halt('会员信息不存在','',1);
 }
 else {
 if ($user['money']<$deductmoney) {
-XHandle::halt('对不起，会员剩余现金(金币)不足，无法执行操作！','',1);
+XHandle::halt('对不起，会员余额不足，无法执行操作！','',1);
 }
 }
 }

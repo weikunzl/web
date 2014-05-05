@@ -32,10 +32,10 @@ id="promotion" value="0"<!--{if $promotion.promotion===false}--> checked<!--{/if
 	  </tr>
 
 	  <tr>
-		<td class='hback_c3' colspan='2'>每成功推广一个会员，奖励金币和积分，以及达到几个会员后自动结算</td>
+		<td class='hback_c3' colspan='2'>每成功推广一个会员，奖励钱和积分，以及达到几个会员后自动结算</td>
 	  </tr>
 	  <tr>
-		<td class='hback_none'>奖励金币个数：</td>
+		<td class='hback_none'>奖励钱数：</td>
 		<td class='hback_none'><input name="onemoney" id="onemoney" value="<!--{$promotion.onemoney}-->" class="input-s" type="text" /><span id="donemoney"></span></td>
 	  </tr>
 	  <tr>
@@ -66,7 +66,7 @@ id="promotion" value="0"<!--{if $promotion.promotion===false}--> checked<!--{/if
 		<th width="18%"><div class="th-gap">注册时间</div></th>
 		<th width="8%"><div class="th-gap">邮箱</div></th>
 		<th width="8%"><div class="th-gap">头像</div></th>
-		<th width="10%"><div class="th-gap">奖励金币</div></th>
+		<th width="10%"><div class="th-gap">奖励钱</div></th>
 		<th width="10%"><div class="th-gap">奖励积分</div></th>
 		<th><div class="th-gap">状态</div></th>
 	  </tr>

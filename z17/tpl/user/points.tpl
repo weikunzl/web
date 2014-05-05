@@ -11,7 +11,7 @@
     <div class="tab_list">
 	  <div class="tab_nv">
 	    <ul>
-		  <li class="tab_item"><a href="<!--{$ucfile}-->?c=money">金币记录</a></li>
+		  <li class="tab_item"><a href="<!--{$ucfile}-->?c=money">金额记录</a></li>
 		  <li class="tab_item current"><a href="<!--{$ucfile}-->?c=points">积分记录</a></li>
 	    </ul>
 	  </div>
@@ -63,7 +63,7 @@
 
   <div class="right_kj">
     <ul>
-      <li><a href="<!--{$ucfile}-->?c=money">金币记录</a></li>
+      <li><a href="<!--{$ucfile}-->?c=money">金额记录</a></li>
       <li><a href="<!--{$ucfile}-->?c=points">积分记录</a></li>
     </ul>
   </div>

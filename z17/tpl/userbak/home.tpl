@@ -61,10 +61,10 @@
 	</div>
 	<p>
 	<div class="nav-tips">
-	对不起，你需要支付 <font color="red"><b><!--{$g.fee.contactfee}--></b></font> 个金币才可以查看TA的联系方式。<br />
+	对不起，你需要支付 <font color="red"><b><!--{$g.fee.contactfee}--></b></font> 元才可以查看TA的联系方式。<br />
 	<b>温馨提示：</b><br />
-	只需付一次费用，以后查看对方的联系方式不再需要支付金币<br />如果您不够金币支付，<a href="<!--{$urlpath}-->usercp.php?c=payment" target="_top" style="color:#3A6391;">请先充值&gt;&gt;</a> 或者<a href="<!--{$urlpath}-->usercp.php?c=vip" target="_top" style="color:#3A6391;">升级会员&gt;&gt;</a><br /><br />
-	（您的帐号剩余可用金币：<b><font color="green"><!--{$u.money}--></font></b> 个）
+	只需付一次费用，以后查看对方的联系方式不再需要支付<br />如果您的余额不够支付，<a href="<!--{$urlpath}-->usercp.php?c=payment" target="_top" style="color:#3A6391;">请先充值&gt;&gt;</a> 或者<a href="<!--{$urlpath}-->usercp.php?c=vip" target="_top" style="color:#3A6391;">升级会员&gt;&gt;</a><br /><br />
+	（您的帐号余额：<b><font color="green"><!--{$u.money}--></font></b> 元）
 	</div>
 	</p>
 	<div class="box-dialog-button">
@@ -176,7 +176,7 @@
 	<p>
 	<div class="nav-tips">
 	  温馨提示：
-	 <font color="green">你的会员级别可以查看联系方式或已支付过查看费用；</font><br />如果您不够金币支付，<a href="<!--{$urlpath}-->usercp.php?c=payment" target="_top" style="color:#3A6391;">请先充值</a>&gt;&gt;&nbsp;&nbsp;&nbsp;或者<a href="<!--{$urlpath}-->usercp.php?c=vip" target="_top" style="color:#3A6391;">升级会员&gt;&gt;</a>
+	 <font color="green">你的会员级别可以查看联系方式或已支付过查看费用；</font><br />如果您的余额不够支付，<a href="<!--{$urlpath}-->usercp.php?c=payment" target="_top" style="color:#3A6391;">请先充值</a>&gt;&gt;&nbsp;&nbsp;&nbsp;或者<a href="<!--{$urlpath}-->usercp.php?c=vip" target="_top" style="color:#3A6391;">升级会员&gt;&gt;</a>
 	</div>
 	</p>
 	<div class="clear"></div>
@@ -193,7 +193,7 @@ function confirm_pay() {
 	var needpay = '<!--{$g.fee.contactfee}-->';
 	var mypay = '<!--{$u.money}-->';
 	if (parseFloat(mypay) < parseFloat(needpay)) {
-		$.dialog.tips("对不起，你的金币不足，请先充值！", 3);
+		$.dialog.tips("对不起，你的余额不足，请先充值！", 3);
 		return false;
 	}
 	$("#myform").submit();

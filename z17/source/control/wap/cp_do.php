@@ -112,7 +112,7 @@ if ($paymoney <= 0) {
 $paymoney = 1;
 }
 if (parent::$wrap_user['money'] <$paymoney) {
-XHandle::wapHalt('金币不足，无法写信件。','',1);
+XHandle::wapHalt('余额不足，无法写信件。','',1);
 }
 }
 $result = $model->doWriteMsg($message,$touid,$touser['gender'],$touser['username'],$paymoney,array('g'=>$this->login_groupwrap));

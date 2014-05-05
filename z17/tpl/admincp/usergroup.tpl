@@ -53,7 +53,7 @@
 		<td align="left">
 		<!--{if !empty($volist.commer)}-->
 		<!--{foreach $volist.commer as $val}-->
-		类别<!--{$val.orders}-->：<!--{$val.days}-->天，<!--{$val.money}-->现金(金币)，赠送<!--{$val.points}-->分
+		类别<!--{$val.orders}-->：<!--{$val.days}-->天，<!--{$val.money}-->现金，赠送<!--{$val.points}-->分
 		<br />
 		<!--{/foreach}-->
 		<!--{/if}-->
@@ -127,7 +127,7 @@
 		<td class='hback' colspan="3">
 		<!--
 		注册赠送积分：<input type="text" name="regpoints" id="regpoints" class="input-s" />
-		注册赠送现金(金币)：<input type="text" name="regmoney" id="regmoney" class="input-s" />
+		注册赠送现金：<input type="text" name="regmoney" id="regmoney" class="input-s" />
 		-->
 		每天登录积分：<input type="text" name="loginpoints" id="loginpoints" class="input-s" />
 		</td>
@@ -148,7 +148,7 @@
 			  <td class='hback_1' align="center" width='10%'>序号</td>
 			  <td class='hback_1' align="center" width='10%'>排序</td>
 			  <td class='hback_1' align="center" width='18%'>有效天数</td>
-			  <td class='hback_1' align="center" width='18%'>需要现金(金币)</td>
+			  <td class='hback_1' align="center" width='18%'>需要现金</td>
 			  <td class='hback_1' align="center" width='18%'>赠送积分</td>
 			  <td class='hback_1' align="center" width='18%'>赠送短信</td>
 			  <td class='hback_1' align="center">操作</td>
@@ -240,7 +240,7 @@
 	    <td colspan="4" class="hback_c1" align="center"><b>扣费设置</b> （当无法满足以上权限时，可通过扣费方式获得相应权限，不开启扣费请设置为0）</td>
 	  </tr>
 	  <tr>
-		<td class='hback_c2'>扣费项<br />（单位：元/金币） <span class='f_red'></span></td>
+		<td class='hback_c2'>扣费项<br />（单位：元） <span class='f_red'></span></td>
 		<td class='hback' colspan="3">
 		查看联系方式：<input type='text' name='contactfee' id='contactfee' class='input-s' />，
 		查看信件：<input type='text' name='viewmsgfee' id='viewmsgfee' class='input-s' />，
@@ -296,7 +296,7 @@
 		<td class='hback' colspan="3">
 		<!--
 		注册赠送积分：<input type="text" name="regpoints" id="regpoints" class="input-s" value="<!--{$usergroup.regpoints}-->" />
-		注册赠送现金(金币)：<input type="text" name="regmoney" id="regmoney" class="input-s" value="<!--{$usergroup.regmoney}-->" />
+		注册赠送现金：<input type="text" name="regmoney" id="regmoney" class="input-s" value="<!--{$usergroup.regmoney}-->" />
 		-->
 		每天登录积分：<input type="text" name="loginpoints" id="loginpoints" class="input-s" value="<!--{$usergroup.loginpoints}-->" />
 		</td>
@@ -317,7 +317,7 @@
 			  <td class='hback_1' align="center" width='10%'>序号</td>
 			  <td class='hback_1' align="center" width='10%'>排序</td>
 			  <td class='hback_1' align="center" width='18%'>有效天数</td>
-			  <td class='hback_1' align="center" width='18%'>需要现金(金币)</td>
+			  <td class='hback_1' align="center" width='18%'>需要现金</td>
 			  <td class='hback_1' align="center" width='18%'>赠送积分</td>
 			  <td class='hback_1' align="center" width='18%'>赠送短信</td>
 			  <td class='hback_1' align="center">操作</td>
@@ -421,7 +421,7 @@
 	    <td colspan="4" class="hback_c1" align="center"><b>扣费设置</b> （当无法满足以上权限时，可通过扣费方式获得相应权限，不开启扣费请设置为0）</td>
 	  </tr>
 	  <tr>
-		<td class='hback_c2'>扣费项<br />（单位：元/金币） <span class='f_red'></span></td>
+		<td class='hback_c2'>扣费项<br />（单位：元） <span class='f_red'></span></td>
 		<td class='hback' colspan="3">
 		查看联系方式：<input type='text' name='contactfee' id='contactfee' class='input-s' value="<!--{$usergroup.fee.contactfee}-->" />，
 		查看信件：<input type='text' name='viewmsgfee' id='viewmsgfee' class='input-s' value="<!--{$usergroup.fee.viewmsgfee}-->" />，

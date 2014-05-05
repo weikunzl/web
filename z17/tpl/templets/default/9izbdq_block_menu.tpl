@@ -56,11 +56,14 @@
 		  </li>
           <li<!--{if $menuid=='online'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->index.php?c=online">在线</a>
           </li>
+		  <li<!--{if $menuid=='userapp'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php">空间</a>
+          </li>
+	  <!--
 	  <li<!--{if $menuid=='message'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=message">消息</a>
           </li>
 	  <li<!--{if $menuid=='profile'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=profile">资料</a>
           </li>
-	  <!--
+	
 	  <li<!--{if $menuid=='vip'}--> class='current'<!--{/if}-->><a href="<!--{$urlpath}-->usercp.php?c=vip">服务</a>
           </li>
 	  -->

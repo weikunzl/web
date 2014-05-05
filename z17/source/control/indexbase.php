@@ -60,15 +60,26 @@ class indexbase extends X {
 	public function loadLoginStatus() {
 		$model_login = parent::model ( 'passport', 'im' );
 		if (false === $model_login->checkLogin ()) {
-			parent::$wrap_user ['userid'] = 0;
-			$var_login = array (
-					'login' => array (
-							'status' => 0,
-							'userid' => 0,
-							'username' => '',
-							'gender' => 0 
-					) 
-			);
+			if($GLOBALS ['c'] == 'passport' || $GLOBALS ['c'] == 'about'){
+				parent::$wrap_user ['userid'] = 0;
+				$var_login = array (
+						'login' => array (
+								'status' => 0,
+								'userid' => 0,
+								'username' => '',
+								'gender' => 0
+						)
+				);
+			}else{
+				if ($this->halttype == 'jdbox') {
+					XHandle::redirect ( PATH_URL . 'index.php?c=passport&a=jdlogin' );
+					die ();
+				} else {
+					XHandle::redirect ( PATH_URL . 'index.php?c=passport&a=login' );
+					die ();
+				}
+			}
+			
 		} else {
 			list ( $logininfo, $groupinfo ) = $model_login->getLoginUserInfo ( parent::$wrap_user ['userid'] );
 			$var_login = array (

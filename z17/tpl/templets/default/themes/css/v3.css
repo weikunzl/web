@@ -2451,7 +2451,7 @@ display: inline;
 .indexbg{width:100%; overflow:hidden; margin: 0 auto;}
 
 /* 登录wrap */
-.index .loginwrap{ width:938px; height:170px; background:#fff; overflow:hidden; padding-left:5px; padding-right:5px;}
+.index .loginwrap{ width:938px; height:190px; background:#fff; overflow:hidden; padding-left:5px; padding-right:5px;}
 /* 首页幻灯片  */
 .index .ads{ width:689px; height:300px; background:#f7f7f7; float:left; margin:5px 0px 5px 0px;}
 /* 首页幻灯片 */
@@ -2464,7 +2464,7 @@ display: inline;
 }
 
 /* 首页登录框 */
-.huar{ height:160px;  margin-top:5px; background:#F7F4F2; padding:0px 10px 0px 10px;}
+.huar{ height:180px;  margin-top:5px; background:#F7F4F2; padding:0px 10px 0px 10px;}
 
 .llgo .shuo  {
     display: block;
@@ -2571,7 +2571,7 @@ display: inline;
 .guangzh{ background:#f7f7f7; margin-top:2px;}
  .guangzh a{ background:#f274a3;color:#fff; padding:0px 4px 0px 3px; margin-right:1px;margin-left:1px;}
 .righth3{ line-height:44px; padding-left:10px; overflow:hidden; height:44px;color:#D83473; background:url(../images/val.png) right no-repeat; border-bottom:1px solid #E6E1E2; font-size:14px; font-weight:bold;font-family:"微软雅黑";}
-.right3ser{ padding:10px 0px 10px 10px;}
+.right3ser{ padding:10px 0px 20px 10px;}
 .right3ser .fitem-i{padding-left:5px;}
 .right3ser .fitem-btn{ padding-top:10px; padding-left:12px;}
 .right3s3 {
@@ -2808,11 +2808,12 @@ display: inline;
 
 .index5{width:948px; border:1px solid #E6E1E2; margin:0 auto;background:#fff;}
 
-.head5{ width:110px;float:left;padding-top:10px; }
-.headr5{ width:110px;float:right;  padding-top:20px;}
-.headr5_1{ height:70px; overflow:hidden;float:left; }
-.headr5_2{ color:#fff; background:#f274a3; padding:2px 5px 5px 5px;}
-.headr5_3{ text-align:left; color:#999}
+.right_vip{ width:110px;float:left;padding-top:10px; }
+.right_vip_head{ width:110px;float:right;  padding-top:20px;}
+.right_vip_head_name{ color:#fff; background:#f274a3; padding:2px 5px 5px 5px;}
+
+.right_vip_info{width:100%;float:left; }
+.right_vip_op{width:100%;text-align:left; color:#999}
 .d3{ float:right;}
 .d4{ float:right;  margin-right:10px;}
 .d3 .icon24 {
@@ -2995,11 +2996,13 @@ display: inline;
 .abright .jian{margin-top:10px; background:#fff6f6; text-align:center; line-height:25px;}
 /* 登录状态 */
 .toplogin{ float:right; width:300px; padding-top:20px; padding-right:10px; text-align:right;}
-.login_gooo{padding-top:10px; float:left; width:230px; overflow:hidden;}
-.login_gohead{width:118px; height:142px; display:block; overflow:hidden; float:left;}
+.login_gooo{padding-top:10px; float:left; width:330px; overflow:hidden;}
+.login_gohead{width:118px; height:170px; display:block; overflow:hidden; float:left;}
 .login_gohead img{width:112px; height:135px; border:1px solid #fff; padding:2px;}
-.login_xxxxx{ height:150px; overflow:hidden;}
-.login_xinxi{ float:left; padding:left; width:100px;overflow:hidden; padding-left:7px;}
+.login_gohead_img{width:118px; display:block; overflow:hidden; float:left;}
+.login_gohead_up{width:118px; display:block; overflow:hidden; float:left; text-align:center;}
+.login_xxxxx{ height:160px; overflow:hidden;}
+.login_xinxi{ float:left; padding:left; width:170px;overflow:hidden; padding-left:15px;}
 .login_xinxi div{line-height:22px; border-bottom:1px dashed #fff;}
 .login_goge{ text-align:center;  height:35px; overflow:hidden; line-height:35px;}
 .login_goge a{ background:#D83473; color: #FFFFFF;  width:230px;display:block; font-size:18px; font-weight:bold; text-align:center;}
@@ -3008,16 +3011,33 @@ display: inline;
 .login_hudong div img{ vertical-align:middle; margin-right:5px;}
 .login_hudong span{display:block;padding-bottom:2px;}
 .login_hudong span img{vertical-align:middle;}
-.login_right{padding-top:10px; float:right;width:600px; overflow:hidden;}
+.login_right{padding-top:10px; float:right;width:570px; overflow:hidden;}
 .login_right_top{overflow:hidden;}
 .login_right_top li{float:left; margin:8px 8px 8px 8px;width:100px; height:60px;}
 .login_right_top .newmsgbox{color: #FFFFFF; font-size:14px; font-weight:bold;text-align:center; width:100px; height:60px;}
 .login_right_top .newmsgbox img{vertical-align:middle;width:30px;height:30px;padding:4px;}
-.login_right_top .div_red{background:#FF81A6;}
-.login_right_top .div_purple{background:#D858F2;}
-.login_right_top .div_yellow{background:#FDB86D;}
-.login_right_top .div_blue{background:#38CCD0;}
-.login_right_top .div_green{background:#4CD774;}
+
+.div_red{background:#FF81A6;}
+.div_purple{background:#D858F2;}
+.div_yellow{background:#FDB86D;}
+.div_blue{background:#38CCD0;}
+.div_green{background:#4CD774;}
+
+/*个人主页*/
+.myinfo_left{ width:690px; float:left; border-right:1px solid #E6E1E2; overflow:hidden;padding-bottom:5px;}
+.myinfo{padding-top:10px; float:left; overflow:hidden;}
+.myinfo_head{width:118px; height:180px; display:block; overflow:hidden; float:left;}
+.myinfo_head div{line-height:22px; float:left;text-align:center;width:100%;}
+.myinfo_op{background:#F0EDEB; margin:0px 10px 5px 10px; padding-top:10px;float:right;width:545px;height:160px; overflow:hidden;text-align:center;}
+.myinfo_op_top{margin:10px 20px;}
+.myinfo_op_top li{float:left; margin:8px 8px 8px 8px;width:100px; height:30px;}
+.myinfo_op_top .myinfo_op_box{color:#ffffff;font-size:14px; line-height:35px; font-weight:bold;text-align:center;height:30px;}
+
+.myinfo_righth3{ line-height:44px; padding-left:10px; overflow:hidden; height:44px;color:#D83473; border-bottom:1px solid #E6E1E2; font-size:14px; font-weight:bold;font-family:"微软雅黑";}
+.myinfo_right3ser{ padding:10px 0px 20px 10px;height:116px;}
+.myinfo_account_l {width:48%;float:left;}
+.myinfo_account_r {width:48%;float:right;}
+
 
 .login_right_weibo{padding:8px 20px 8px 8px;overflow:hidden;}
 .mood-textarea{

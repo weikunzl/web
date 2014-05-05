@@ -10,6 +10,15 @@
 	  <form method="post" action="<!--{$urlpath}-->index.php?c=passport&a=regpost" name="register_form" id="register_form" />
         <div class="form_box">
           <input type="hidden" value="<!--{$forward}-->" name="forward">
+	  <div class="form_li">
+            <label><font color="red">* 邀请注册码: </font></label>
+		<!--{if $invite_code}-->
+		<!--{$invite_code}-->
+		<input type="hidden" name="invitecode" id="invitecode" value="<!--{$invite_code}-->" />
+		<!--{else}-->
+		<input type="text" name="invitecode" id="invitecode" class="w1" /> <font color="red">*</font> <font color="#999999"> 请输入邀请注册码</font>
+		<!--{/if}-->
+          </div>
           
 		  <div class='reg_tips_center'>账号信息 带*号必填</div>
           <div id="div_email" class="form_li">
@@ -30,15 +39,7 @@
             <label><font color="red">*</font> 登录邮箱：</label>
             <input type="text" name="email" id="email" class="w1" onblur="ajax_email('email','tip_email');" /> <font color="red">*</font> <span id="tip_email"><font color="#999999"> 请输入有效邮箱地址</font></span>
           </div>
-	  <div class="form_li">
-            <label><font color="red">*</font> 邀请注册码：</label>
-		<!--{if $invite_code}-->
-		<!--{$invite_code}-->
-		<input type="hidden" name="invitecode" id="invitecode" value="<!--{$invite_code}-->" />
-		<!--{else}-->
-		<input type="text" name="invitecode" id="invitecode" class="w1" /> <font color="red">*</font> <font color="#999999"> 请输入邀请注册码</font>
-		<!--{/if}-->
-          </div>
+	  
 		  <!--{if $config.regcode == '1'}-->
           <div class="form_li">
             <label><font color="red">*</font> 验&nbsp;证&nbsp;码&nbsp;：</label>

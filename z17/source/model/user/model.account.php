@@ -18,7 +18,7 @@ class accountUModel extends X
     {
         $md5password = md5( $password );
         $array = array( "`password`" => $md5password );
-        $result = parent::$wrap_user( DB_PREFIX."user", $array, "userid='".intval( parent::$wrap_user['userid'] )."'" );
+        $result = parent::$obj->update( DB_PREFIX."user", $array, "userid='".intval( parent::$wrap_user['userid'] )."'" );
         if ( TRUE === $result )
         {
             $cookies_array = array(

@@ -260,13 +260,15 @@ class XHandle {
 			if ($type == 1) {
 				echo ("<script>parent.location.reload();</script>");
 			} else {
-				echo ("<script>parent.JqueryDialog.Close();</script>");
+				//echo ("<script>parent.JqueryDialog.Close();</script>");
+				echo ("<script>parent.location.reload();</script>");
 			}
 		} else {
 			if ($type == 1) {
 				echo ("<script>parent.location.reload();</script>");
 			} else {
-				echo ("<script>parent.JqueryDialog.Close();</script>");
+				//echo ("<script>parent.JqueryDialog.Close();</script>");
+				echo ("<script>parent.location.reload();</script>");
 			}
 		}
 		die ();

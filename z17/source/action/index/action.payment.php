@@ -58,7 +58,18 @@ class paymentIAction extends indexbase {
 		$this->_getCallBackItems ();
 		$model_sdk = parent::model ( $this->payment ['sdkname'], 'im' );
 		$model_sdk->_get ( $this->payment, $this->backdata );
-		$model_sdk->doCallBack ();
+		
+		if($this->payment ['sdkname']=='tenpay'){		//财付通
+			$model_login = parent::model ( 'passport', 'im' );
+			if($model_login->checkLogin ()){
+				$model_sdk->doCallBack ();
+			}else{
+				$model_sdk->doCallBack2();
+			}
+		}else{
+			$model_sdk->doCallBack ();
+		}
+		
 		unset ( $model_sdk );
 	}
 }

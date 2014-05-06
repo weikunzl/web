@@ -71,12 +71,16 @@ class indexbase extends X {
 						)
 				);
 			}else{
-				if ($this->halttype == 'jdbox') {
-					XHandle::redirect ( PATH_URL . 'index.php?c=passport&a=jdlogin' );
-					die ();
-				} else {
-					XHandle::redirect ( PATH_URL . 'index.php?c=passport&a=login' );
-					die ();
+				if (isset($_GET['out_trade_no']) || isset($_POST['out_trade_no']) || isset($_GET['sp_billno']) || isset($_POST['sp_billno']) || isset($_GET['v_oid']) || isset($_POST['v_oid'])) {
+					//支付返回的情况，不能做登录判断
+				}else{
+					if ($this->halttype == 'jdbox') {
+						XHandle::redirect ( PATH_URL . 'index.php?c=passport&a=jdlogin' );
+						die ();
+					} else {
+						XHandle::redirect ( PATH_URL . 'index.php?c=passport&a=login' );
+						die ();
+					}
 				}
 			}
 			
